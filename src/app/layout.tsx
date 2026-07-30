@@ -100,7 +100,10 @@ if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)
 function scan(){d.querySelectorAll('.reveal').forEach(function(e){
 if(!seen.has(e)){seen.add(e);io.observe(e)}})}
 var mo=new MutationObserver(scan);mo.observe(r,{childList:true,subtree:true});
-d.addEventListener('DOMContentLoaded',function(){scan();mo.disconnect()});
+var mio=new IntersectionObserver(function(es){es.forEach(function(e){
+e.target.classList.toggle('is-idle',!e.isIntersecting)})});
+d.addEventListener('DOMContentLoaded',function(){scan();mo.disconnect();
+d.querySelectorAll('[data-motion]').forEach(function(e){mio.observe(e)})});
 setTimeout(all,3000)})()`,
           }}
         />

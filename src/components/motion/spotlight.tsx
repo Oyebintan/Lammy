@@ -29,19 +29,23 @@ export function SpotlightCard({
     if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
     let frame = 0;
-    let x = 0;
-    let y = 0;
+    let clientX = 0;
+    let clientY = 0;
 
+    // The rect is read inside the frame callback, not in the event handler.
+    // Reading it per event forced a synchronous layout on every pointer move —
+    // a mouse reports far more often than the screen refreshes, so that was
+    // several forced layouts per painted frame for one gradient.
     const paint = () => {
       frame = 0;
-      el.style.setProperty('--mx', `${x}px`);
-      el.style.setProperty('--my', `${y}px`);
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${clientX - rect.left}px`);
+      el.style.setProperty('--my', `${clientY - rect.top}px`);
     };
 
     const onMove = (event: PointerEvent) => {
-      const rect = el.getBoundingClientRect();
-      x = event.clientX - rect.left;
-      y = event.clientY - rect.top;
+      clientX = event.clientX;
+      clientY = event.clientY;
       frame ||= requestAnimationFrame(paint);
     };
 

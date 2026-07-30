@@ -29,21 +29,40 @@ export function Hero() {
     // plus a little breathing room. It used to clear it by another 56px, which
     // on a laptop window left a fifth of the screen empty before anything
     // started — and pushed the stats row below the fold.
-    <section className="grain relative overflow-hidden px-5 pt-24 pb-16 sm:px-8 sm:pt-26 lg:pb-24">
+    <section
+      data-motion
+      className="grain relative overflow-hidden px-5 pt-24 pb-16 sm:px-8 sm:pt-26 lg:pb-24"
+    >
       {/* Aurora field. Three slow-drifting blooms give the black background
           depth without competing with the type. */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        {/* The gradients carry their own falloff — see `.aurora` in
+            globals.css for why there is no blur filter here any more. */}
+        {/* No blur filter — see `.aurora` in globals.css. The stop ramps below
+            approximate a gaussian falloff and every one of them ends at alpha
+            zero in its own hue rather than at the `transparent` keyword, which
+            interpolates through a different colour and leaves a visible ring
+            against pure black. */}
         <div
-          className="aurora aurora-a -left-[10%] -top-[20%] h-[34rem] w-[34rem]"
-          style={{ background: 'radial-gradient(circle, oklch(0.55 0.19 265 / 0.5), transparent 68%)' }}
+          className="aurora aurora-a -left-[18%] -top-[30%] h-[46rem] w-[46rem]"
+          style={{
+            background:
+              'radial-gradient(circle, oklch(0.55 0.19 265 / 0.34) 0%, oklch(0.55 0.19 265 / 0.26) 20%, oklch(0.55 0.19 265 / 0.17) 36%, oklch(0.55 0.19 265 / 0.09) 52%, oklch(0.55 0.19 265 / 0.04) 68%, oklch(0.55 0.19 265 / 0.01) 84%, oklch(0.55 0.19 265 / 0) 100%)',
+          }}
         />
         <div
-          className="aurora aurora-b left-[42%] -top-[28%] h-[30rem] w-[38rem]"
-          style={{ background: 'radial-gradient(circle, oklch(0.6 0.16 190 / 0.32), transparent 66%)' }}
+          className="aurora aurora-b left-[34%] -top-[38%] h-[40rem] w-[50rem]"
+          style={{
+            background:
+              'radial-gradient(circle, oklch(0.6 0.16 190 / 0.22) 0%, oklch(0.6 0.16 190 / 0.17) 20%, oklch(0.6 0.16 190 / 0.11) 36%, oklch(0.6 0.16 190 / 0.06) 52%, oklch(0.6 0.16 190 / 0.03) 68%, oklch(0.6 0.16 190 / 0.01) 84%, oklch(0.6 0.16 190 / 0) 100%)',
+          }}
         />
         <div
-          className="aurora aurora-c right-[-8%] top-[8%] h-[28rem] w-[28rem]"
-          style={{ background: 'radial-gradient(circle, oklch(0.6 0.2 320 / 0.28), transparent 66%)' }}
+          className="aurora aurora-c right-[-16%] -top-[4%] h-[38rem] w-[38rem]"
+          style={{
+            background:
+              'radial-gradient(circle, oklch(0.6 0.2 320 / 0.2) 0%, oklch(0.6 0.2 320 / 0.15) 20%, oklch(0.6 0.2 320 / 0.1) 36%, oklch(0.6 0.2 320 / 0.055) 52%, oklch(0.6 0.2 320 / 0.025) 68%, oklch(0.6 0.2 320 / 0.008) 84%, oklch(0.6 0.2 320 / 0) 100%)',
+          }}
         />
       </div>
       <div

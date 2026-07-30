@@ -12,7 +12,8 @@
     "capture": "NODE_USE_ENV_PROXY=1 node scripts/capture.mjs",
     "refresh": "npm run discover && npm run capture",
     "a11y": "node scripts/a11y.mjs",
-    "scroll": "node scripts/scroll.mjs"
+    "scroll": "node scripts/scroll.mjs",
+    "jank": "node scripts/jank.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",
