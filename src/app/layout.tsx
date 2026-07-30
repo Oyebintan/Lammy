@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { sans, mono } from '@/fonts';
 import { Nav } from '@/components/layout/nav';
 import { Footer } from '@/components/layout/footer';
 import { ChatWidget } from '@/components/chat/chat-widget';
@@ -60,11 +59,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
+      className={`${sans.variable} ${mono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
-        {/* Reveal machinery, deliberately inline and framework-free.
+        {/* Reveal machinery and scroll handling, deliberately inline and
+            framework-free.
 
             It runs while the HTML is still parsing, so sections reveal as the
             browser reaches them rather than waiting on the React bundle. When
@@ -73,12 +73,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             page sat blank and scrolling did nothing for seconds.
 
             `revealAll` on a timer is the safety net: whatever happens to the
-            observer, content is never left hidden. */}
+            observer, content is never left hidden.
+
+            The scroll block turns off the browser's automatic restore for
+            reloads and fresh visits, so a refresh starts at the top of the
+            page instead of dropping the visitor back where they left off
+            hours ago. Back and forward navigation keeps its position, which
+            is the one case where restoring is what the visitor asked for.
+            This has to happen before first paint or the browser has already
+            jumped by the time it runs. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var d=document,r=d.documentElement;r.classList.add('js');
+            __html: `(function(){var d=document,r=d.documentElement,w=window;r.classList.add('js');
+try{var nav=(performance.getEntriesByType('navigation')||[])[0],t=nav&&nav.type;
+if('scrollRestoration'in history)
+history.scrollRestoration=t==='back_forward'?'auto':'manual'}catch(e){}
+var hidden=0;d.addEventListener('visibilitychange',function(){
+if(d.visibilityState==='hidden')hidden=Date.now()});
+w.addEventListener('pageshow',function(e){
+if(e.persisted&&hidden&&Date.now()-hidden>18e5&&!location.hash)w.scrollTo(0,0)});
 function all(){d.querySelectorAll('.reveal').forEach(function(e){e.classList.add('is-visible')})}
-if(!('IntersectionObserver'in window)){d.addEventListener('DOMContentLoaded',all);return}
+if(!('IntersectionObserver'in w)){d.addEventListener('DOMContentLoaded',all);return}
 var seen=new WeakSet(),io=new IntersectionObserver(function(es){es.forEach(function(e){
 if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}})},
 {rootMargin:'0px 0px 300px 0px'});

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { GitMerge, GitCommitHorizontal, Rocket, Tag } from 'lucide-react';
+import { IntentLink } from '@/components/ui/intent-link';
 import { Badge, EmptyState, Section, SectionHeading } from '@/components/ui/primitives';
 import { Reveal } from '@/components/motion/reveal';
 import { formatDate, projects, shipLog, shipLogByMonth } from '@/lib/projects';
@@ -40,7 +40,7 @@ export default function ShipLogPage() {
 
   return (
     <Section className="pt-36">
-      <Reveal>
+      <Reveal immediate>
         <SectionHeading
           eyebrow="Ship log"
           title="Everything that went out the door"
@@ -54,7 +54,7 @@ export default function ShipLogPage() {
           <ul className="mt-12 flex flex-col divide-y divide-[var(--border)] border-y border-border-hair">
             {launches.map((p) => (
               <li key={p.slug} data-accent={p.accent}>
-                <Link
+                <IntentLink
                   href={`/work/${p.slug}`}
                   className="group flex items-center justify-between gap-4 py-4 transition-colors"
                 >
@@ -75,7 +75,7 @@ export default function ShipLogPage() {
                       timeZone: 'UTC',
                     })}
                   </span>
-                </Link>
+                </IntentLink>
               </li>
             ))}
           </ul>

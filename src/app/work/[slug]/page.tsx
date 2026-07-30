@@ -167,7 +167,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {/* Hero shot */}
       <div className="px-5 sm:px-8">
-        <Reveal>
+        <Reveal immediate>
           <Surface
             tone="card"
             radius="xl"

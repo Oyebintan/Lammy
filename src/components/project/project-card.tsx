@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { IntentLink } from '@/components/ui/intent-link';
 import { GithubMark } from '@/components/ui/icons';
 import { Badge, StatusDot } from '@/components/ui/primitives';
 import { ProjectShot } from './project-shot';
@@ -76,12 +76,12 @@ export function ProjectCard({
               featured ? 'text-h2' : 'text-h3',
             )}
           >
-            <Link
+            <IntentLink
               href={`/work/${project.slug}`}
               className="after:absolute after:inset-0 after:z-[3] after:content-['']"
             >
               {project.name}
-            </Link>
+            </IntentLink>
           </h3>
           <p
             className={cn(

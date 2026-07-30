@@ -35,7 +35,7 @@ export default function WorkPage() {
       />
 
       <Section className="pt-36">
-        <Reveal>
+        <Reveal immediate>
           <SectionHeading
             eyebrow={`${projects.length} projects`}
             title="Everything I've shipped"
@@ -53,7 +53,16 @@ export default function WorkPage() {
         ) : (
           <div className="mt-14 grid gap-4 md:grid-cols-2">
             {projects.map((project, i) => (
-              <Reveal key={project.slug} delay={Math.min(i, 5) * 0.05}>
+              /* The first two cards are on screen when the page opens, so they
+                 animate on load rather than on intersection — a card fading up
+                 from nothing is also a card the browser will not count as
+                 painted, which delayed the largest paint by the length of the
+                 animation. */
+              <Reveal
+                key={project.slug}
+                immediate={i < 2}
+                delay={Math.min(i, 5) * 0.05}
+              >
                 <ProjectCard project={project} priority={i < 2} />
               </Reveal>
             ))}
