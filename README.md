@@ -129,9 +129,15 @@ Neither is needed to build or run the site.
 ## Stack
 
 Next.js 16 (App Router, Turbopack) · React 19 · TypeScript · Tailwind CSS v4 ·
-Framer Motion · Playwright · sharp
+Playwright · sharp
 
 ### Notes on the implementation
+
+**There is no animation library.** Framer Motion was in the original plan, but
+once reveals moved to CSS its only remaining job was counting a number up in the
+hero. That cost 59 KB of JavaScript for one effect a 20-line
+`requestAnimationFrame` loop handles, so it was removed. Re-add it the moment
+something genuinely needs shared layout or gesture animation.
 
 **Scroll reveals are CSS, not JavaScript.** A motion library that
 server-renders its `initial` state emits `opacity: 0` into the HTML, which means
