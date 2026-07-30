@@ -1,30 +1,42 @@
 {
   "siwes-finder": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/siwes-finder/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:24:45.500Z",
+    "lastCheckedAt": "2026-07-30T21:24:45.500Z",
+    "status": "ok",
+    "phash": "20060004381c7e1c3f1c30c00400301c7a1800003ff8381c3e1c0000fde3f7ff",
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwC+SCHw5evHdrCogAD+741I+8ginTJp8RJiwQiWVXdFw0+yt783K+hy7O4Go3m2jZ1rSLAAAA=="
   },
   "brandforge": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/brandforge/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:24:50.781Z",
+    "lastCheckedAt": "2026-07-30T21:24:50.781Z",
+    "status": "ok",
+    "phash": "ff9df81ff997fb9c33ce07ee07e003c0034007c0030000000000092008000800",
+    "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZwC2yCHw9KETOEJTCOgYAAD+7pd3xF/V2tB7Zdno9L3/u+Bj1ZHLlicAAA=="
   },
   "lammydeart": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/lammydeart/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:24:55.612Z",
+    "lastCheckedAt": "2026-07-30T21:24:55.612Z",
+    "status": "ok",
+    "phash": "0006000061fe78fe30fe00fe00fe701c00ff00ff00bf001b0000000000000000",
+    "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAA0APu1kqU4ppaOiMAgBMB2JQBdgMXSbjZ6yNBRE5Z9uAAD+7Nl8Wdtqm5WEcsX89PbY7wMQhf6PzXykcyagn+xjHSq2cNCdi0MglaE62wu6AaK/0DEzttfJhMehlW61Dz1f0ATBcYgI1AAFECAh9X8CThSToAA="
   },
   "email-spam-classifier": {
     "base": null,
@@ -52,5 +64,36 @@
     "status": "never-attempted",
     "phash": null,
     "blurDataURL": null
+  },
+  "android-apk": {
+    "base": null,
+    "widths": [],
+    "aspectRatio": 1.6,
+    "capturedAt": null,
+    "status": "never-attempted",
+    "phash": null,
+    "blurDataURL": null
+  },
+  "final-year-project-dl": {
+    "base": null,
+    "widths": [],
+    "aspectRatio": 1.6,
+    "capturedAt": null,
+    "status": "never-attempted",
+    "phash": null,
+    "blurDataURL": null
+  },
+  "lammy": {
+    "base": "/shots/lammy/home",
+    "widths": [
+      1440,
+      720
+    ],
+    "aspectRatio": 1.6,
+    "capturedAt": "2026-07-30T21:25:00.541Z",
+    "lastCheckedAt": "2026-07-30T21:25:00.541Z",
+    "status": "ok",
+    "phash": "f0fcf06ce060fe027e737e793c717c0020407066300000000000000000000000",
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDG9CHgQwpPrtjGAAD+7MeYtTeFcaSvDJvy1gO/V/Msa8sO4YZSYG5eLkvj1fcyabUFFVDCJnAA"
   }
 }

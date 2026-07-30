@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T15:19:05.428Z",
+  "generatedAt": "2026-07-30T21:24:40.277Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -321,9 +321,216 @@
       "accent": "lime",
       "startedAt": "2026-06-28T08:41:33Z",
       "shippedAt": null
+    },
+    {
+      "slug": "android-apk",
+      "name": "Android-APK",
+      "tagline": "Final Year project App",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Android-APK",
+          "url": "https://github.com/Oyebintan/Android-APK",
+          "defaultBranch": "main",
+          "createdAt": "2026-05-29T22:41:12Z",
+          "pushedAt": "2026-05-29T23:13:24Z",
+          "languages": {
+            "Kotlin": 75304,
+            "JavaScript": 1615,
+            "Python": 204
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Android-APK",
+        "url": "https://github.com/Oyebintan/Android-APK",
+        "defaultBranch": "main",
+        "createdAt": "2026-05-29T22:41:12Z",
+        "pushedAt": "2026-05-29T23:13:24Z",
+        "languages": {
+          "Kotlin": 75304,
+          "JavaScript": 1615,
+          "Python": 204
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "shipped",
+      "featured": false,
+      "order": 99,
+      "accent": "sky",
+      "startedAt": "2026-05-29T22:41:12Z",
+      "shippedAt": null
+    },
+    {
+      "slug": "final-year-project-dl",
+      "name": "Final-Year-Project-DL",
+      "tagline": "Project Duplicate",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Final-Year-Project-DL",
+          "url": "https://github.com/Oyebintan/Final-Year-Project-DL",
+          "defaultBranch": "main",
+          "createdAt": "2026-04-13T12:32:50Z",
+          "pushedAt": "2026-04-13T13:34:08Z",
+          "languages": {
+            "Python": 15471,
+            "JavaScript": 3639,
+            "CSS": 2425,
+            "HTML": 1484,
+            "Procfile": 55
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Final-Year-Project-DL",
+        "url": "https://github.com/Oyebintan/Final-Year-Project-DL",
+        "defaultBranch": "main",
+        "createdAt": "2026-04-13T12:32:50Z",
+        "pushedAt": "2026-04-13T13:34:08Z",
+        "languages": {
+          "Python": 15471,
+          "JavaScript": 3639,
+          "CSS": 2425,
+          "HTML": 1484,
+          "Procfile": 55
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "shipped",
+      "featured": false,
+      "order": 99,
+      "accent": "sky",
+      "startedAt": "2026-04-13T12:32:50Z",
+      "shippedAt": null
+    },
+    {
+      "slug": "lammy",
+      "name": "Lammy",
+      "tagline": "",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Lammy",
+          "url": "https://github.com/Oyebintan/Lammy",
+          "defaultBranch": "claude/lammy-portfolio-platform-fmef90",
+          "createdAt": "2026-07-30T15:44:13Z",
+          "pushedAt": "2026-07-30T16:35:41Z",
+          "languages": {
+            "TypeScript": 124223,
+            "JavaScript": 27415,
+            "CSS": 10182
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Lammy",
+        "url": "https://github.com/Oyebintan/Lammy",
+        "defaultBranch": "claude/lammy-portfolio-platform-fmef90",
+        "createdAt": "2026-07-30T15:44:13Z",
+        "pushedAt": "2026-07-30T16:35:41Z",
+        "languages": {
+          "TypeScript": 124223,
+          "JavaScript": 27415,
+          "CSS": 10182
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": "https://lammy-iota.vercel.app",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "Lammy",
+        "field": "homepage",
+        "value": "https://lammy-iota.vercel.app",
+        "url": "https://github.com/Oyebintan/Lammy"
+      },
+      "status": "live",
+      "featured": false,
+      "order": 99,
+      "accent": "sky",
+      "startedAt": "2026-07-30T15:44:13Z",
+      "shippedAt": "2026-07-30T15:44:13Z"
     }
   ],
   "shipLog": [
+    {
+      "id": "lammy:merge:58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53",
+      "slug": "lammy",
+      "projectName": "Lammy",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat(ui): rebuild the hero, add depth and settle the page down",
+      "body": null,
+      "date": "2026-07-30T16:35:39Z",
+      "commit": {
+        "sha": "58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53",
+        "url": "https://github.com/Oyebintan/Lammy/commit/58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53"
+      },
+      "url": "https://github.com/Oyebintan/Lammy/commit/58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53"
+    },
+    {
+      "id": "lammy:merge:e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8",
+      "slug": "lammy",
+      "projectName": "Lammy",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "perf: drop the animation library, hand-roll the one animation left",
+      "body": null,
+      "date": "2026-07-30T15:48:48Z",
+      "commit": {
+        "sha": "e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8",
+        "url": "https://github.com/Oyebintan/Lammy/commit/e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8"
+      },
+      "url": "https://github.com/Oyebintan/Lammy/commit/e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8"
+    },
+    {
+      "id": "lammy:repo_created:2026-07-30T15:44:13Z",
+      "slug": "lammy",
+      "projectName": "Lammy",
+      "accent": "sky",
+      "kind": "repo_created",
+      "title": "Lammy started",
+      "body": null,
+      "date": "2026-07-30T15:44:13Z",
+      "url": "https://github.com/Oyebintan/Lammy"
+    },
+    {
+      "id": "lammy:merge:fef8c5662eabc43dc3a5a555a59d5e0de145f407",
+      "slug": "lammy",
+      "projectName": "Lammy",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat: Lammy — self-updating product showcase",
+      "body": null,
+      "date": "2026-07-30T15:42:02Z",
+      "commit": {
+        "sha": "fef8c5662eabc43dc3a5a555a59d5e0de145f407",
+        "url": "https://github.com/Oyebintan/Lammy/commit/fef8c5662eabc43dc3a5a555a59d5e0de145f407"
+      },
+      "url": "https://github.com/Oyebintan/Lammy/commit/fef8c5662eabc43dc3a5a555a59d5e0de145f407"
+    },
     {
       "id": "lammydeart:merge:5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
       "slug": "lammydeart",
@@ -929,6 +1136,73 @@
       "url": "https://github.com/Oyebintan/Career-Recommender"
     },
     {
+      "id": "android-apk:merge:55fdb586e89c6dce6f9a78432024079b3bac6f97",
+      "slug": "android-apk",
+      "projectName": "Android-APK",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat(api): expand API integration and refactor UI",
+      "body": null,
+      "date": "2026-05-29T23:13:24Z",
+      "commit": {
+        "sha": "55fdb586e89c6dce6f9a78432024079b3bac6f97",
+        "url": "https://github.com/Oyebintan/Android-APK/commit/55fdb586e89c6dce6f9a78432024079b3bac6f97"
+      },
+      "url": "https://github.com/Oyebintan/Android-APK/commit/55fdb586e89c6dce6f9a78432024079b3bac6f97"
+    },
+    {
+      "id": "android-apk:merge:9343cc641b03ce370386bef7c5fe6ecd10f6b116",
+      "slug": "android-apk",
+      "projectName": "Android-APK",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat: add light mode support and theme toggle",
+      "body": null,
+      "date": "2026-05-29T22:53:47Z",
+      "commit": {
+        "sha": "9343cc641b03ce370386bef7c5fe6ecd10f6b116",
+        "url": "https://github.com/Oyebintan/Android-APK/commit/9343cc641b03ce370386bef7c5fe6ecd10f6b116"
+      },
+      "url": "https://github.com/Oyebintan/Android-APK/commit/9343cc641b03ce370386bef7c5fe6ecd10f6b116"
+    },
+    {
+      "id": "android-apk:merge:1d5e5251b683df4d80f810a98738d26e14505989",
+      "slug": "android-apk",
+      "projectName": "Android-APK",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat: initialize Android application structure",
+      "body": null,
+      "date": "2026-05-29T22:41:43Z",
+      "commit": {
+        "sha": "1d5e5251b683df4d80f810a98738d26e14505989",
+        "url": "https://github.com/Oyebintan/Android-APK/commit/1d5e5251b683df4d80f810a98738d26e14505989"
+      },
+      "url": "https://github.com/Oyebintan/Android-APK/commit/1d5e5251b683df4d80f810a98738d26e14505989"
+    },
+    {
+      "id": "android-apk:repo_created:2026-05-29T22:41:12Z",
+      "slug": "android-apk",
+      "projectName": "Android-APK",
+      "accent": "sky",
+      "kind": "repo_created",
+      "title": "Android-APK started",
+      "body": null,
+      "date": "2026-05-29T22:41:12Z",
+      "url": "https://github.com/Oyebintan/Android-APK"
+    },
+    {
+      "id": "final-year-project-dl:repo_created:2026-04-13T12:32:50Z",
+      "slug": "final-year-project-dl",
+      "projectName": "Final-Year-Project-DL",
+      "accent": "sky",
+      "kind": "repo_created",
+      "title": "Final-Year-Project-DL started",
+      "body": null,
+      "date": "2026-04-13T12:32:50Z",
+      "url": "https://github.com/Oyebintan/Final-Year-Project-DL"
+    },
+    {
       "id": "email-spam-classifier:merge:e2ee36e26ac7c22918f90b51b701b20e3fbdf41c",
       "slug": "email-spam-classifier",
       "projectName": "Hybrid Spam Classifier",
@@ -956,57 +1230,90 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-07-30T15:19:05.429Z",
+    "generatedAt": "2026-07-30T21:24:40.277Z",
     "totals": {
-      "repositories": 6,
-      "projectsShipped": 6,
-      "deployments": 3,
-      "technologies": 8,
-      "commitsTracked": 256
+      "repositories": 13,
+      "projectsShipped": 9,
+      "deployments": 4,
+      "technologies": 9,
+      "commitsTracked": 266
     },
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 1333879,
-        "share": 0.7470284165369235
+        "bytes": 1458102,
+        "share": 0.7121039931197398
       },
       {
         "name": "JavaScript",
-        "bytes": 173728,
-        "share": 0.0972949965837431
+        "bytes": 206397,
+        "share": 0.10079962023777139
       },
       {
         "name": "CSS",
-        "bytes": 122440,
-        "share": 0.06857155658105489
+        "bytes": 135047,
+        "share": 0.06595389620125444
       },
       {
         "name": "Python",
-        "bytes": 82978,
-        "share": 0.04647117463233235
+        "bytes": 98653,
+        "share": 0.04817989086719701
+      },
+      {
+        "name": "Kotlin",
+        "bytes": 75304,
+        "share": 0.03677676808473542
       },
       {
         "name": "HTML",
-        "bytes": 69051,
-        "share": 0.038671468094400696
+        "bytes": 70535,
+        "share": 0.03444769649496458
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0017450912308605607
+        "share": 0.0015217838275793528
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00020105511934497474
+        "share": 0.00017532746922368025
       },
       {
         "name": "Procfile",
-        "bytes": 29,
-        "share": 0.000016241221339844757
+        "bytes": 84,
+        "share": 0.00004102369753423159
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Lammy",
+        "sha": "58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53",
+        "message": "feat(ui): rebuild the hero, add depth and settle the page down",
+        "date": "2026-07-30T16:35:39Z",
+        "url": "https://github.com/Oyebintan/Lammy/commit/58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53"
+      },
+      {
+        "repo": "Lammy",
+        "sha": "e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8",
+        "message": "perf: drop the animation library, hand-roll the one animation left",
+        "date": "2026-07-30T15:48:48Z",
+        "url": "https://github.com/Oyebintan/Lammy/commit/e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8"
+      },
+      {
+        "repo": "Lammy",
+        "sha": "fef8c5662eabc43dc3a5a555a59d5e0de145f407",
+        "message": "feat: Lammy — self-updating product showcase",
+        "date": "2026-07-30T15:42:02Z",
+        "url": "https://github.com/Oyebintan/Lammy/commit/fef8c5662eabc43dc3a5a555a59d5e0de145f407"
+      },
+      {
+        "repo": "Lammy",
+        "sha": "dab0499e98d868d969570ce0ba9ae92041229eae",
+        "message": "Initial commit from Create Next App",
+        "date": "2026-07-30T15:06:55Z",
+        "url": "https://github.com/Oyebintan/Lammy/commit/dab0499e98d868d969570ce0ba9ae92041229eae"
+      },
       {
         "repo": "Lammydeart",
         "sha": "5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
@@ -1062,37 +1369,10 @@
         "message": "fix: hero frame motion loops properly instead of restarting",
         "date": "2026-07-26T09:15:18Z",
         "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "64457ffacbed7b3ff403eb6b2344f31fdbadd541",
-        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
-        "date": "2026-07-26T06:40:04Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "99098939a5e6a9ddfe6ebd6e30268f961c5095a1",
-        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
-        "date": "2026-07-26T05:13:56Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/99098939a5e6a9ddfe6ebd6e30268f961c5095a1"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
-        "message": "fix: restore pull-to-refresh",
-        "date": "2026-07-26T04:58:13Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
-        "message": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
-        "date": "2026-07-26T04:49:32Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
       }
     ],
     "contributions": {
+      "2026-07-30": 4,
       "2026-07-28": 1,
       "2026-07-27": 5,
       "2026-07-26": 11,
@@ -1136,7 +1416,9 @@
       "2026-06-19": 3,
       "2026-06-30": 7,
       "2026-06-29": 9,
-      "2026-06-28": 1
+      "2026-06-28": 1,
+      "2026-05-29": 4,
+      "2026-04-13": 2
     }
   }
 }
