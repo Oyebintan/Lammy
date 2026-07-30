@@ -1,0 +1,1142 @@
+{
+  "generatedAt": "2026-07-30T15:19:05.428Z",
+  "owner": "Oyebintan",
+  "projects": [
+    {
+      "slug": "siwes-finder",
+      "name": "SIWES Finder",
+      "tagline": "Industrial placement platform for Nigerian students — web app, Android app, and dashboards for students, employers and schools.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Siwes-Finder",
+          "url": "https://github.com/Oyebintan/Siwes-Finder",
+          "defaultBranch": "main",
+          "createdAt": "2026-07-06T13:48:14Z",
+          "pushedAt": "2026-07-26T06:40:13Z",
+          "languages": {
+            "TypeScript": 1148388,
+            "JavaScript": 17824,
+            "CSS": 11527
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Siwes-Finder",
+        "url": "https://github.com/Oyebintan/Siwes-Finder",
+        "defaultBranch": "main",
+        "createdAt": "2026-07-06T13:48:14Z",
+        "pushedAt": "2026-07-26T06:40:13Z",
+        "languages": {
+          "TypeScript": 1148388,
+          "JavaScript": 17824,
+          "CSS": 11527
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": "https://siwes-finder-eight.vercel.app",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "Siwes-Finder",
+        "field": "homepage",
+        "value": "https://siwes-finder-eight.vercel.app",
+        "url": "https://github.com/Oyebintan/Siwes-Finder"
+      },
+      "status": "live",
+      "featured": true,
+      "order": 1,
+      "accent": "emerald",
+      "startedAt": "2026-07-06T13:48:14Z",
+      "shippedAt": "2026-07-06T13:48:14Z"
+    },
+    {
+      "slug": "brandforge",
+      "name": "BrandForge",
+      "tagline": "AI brand-identity studio. Five questions in, a complete brand kit out — strategy, voice, visual identity and an exportable PDF.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "BrandForge",
+          "url": "https://github.com/Oyebintan/BrandForge",
+          "defaultBranch": "claude/brandforge-ai-saas-jb4t71",
+          "createdAt": "2026-07-26T09:21:55Z",
+          "pushedAt": "2026-07-27T10:18:25Z",
+          "languages": {
+            "TypeScript": 185491,
+            "CSS": 6290,
+            "PLpgSQL": 3116,
+            "JavaScript": 559
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "BrandForge",
+        "url": "https://github.com/Oyebintan/BrandForge",
+        "defaultBranch": "claude/brandforge-ai-saas-jb4t71",
+        "createdAt": "2026-07-26T09:21:55Z",
+        "pushedAt": "2026-07-27T10:18:25Z",
+        "languages": {
+          "TypeScript": 185491,
+          "CSS": 6290,
+          "PLpgSQL": 3116,
+          "JavaScript": 559
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": "https://brandforge-blue.vercel.app",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "BrandForge",
+        "field": "homepage",
+        "value": "https://brandforge-blue.vercel.app",
+        "url": "https://github.com/Oyebintan/BrandForge"
+      },
+      "status": "live",
+      "featured": true,
+      "order": 2,
+      "accent": "amber",
+      "startedAt": "2026-07-26T09:21:55Z",
+      "shippedAt": "2026-07-26T09:21:55Z"
+    },
+    {
+      "slug": "lammydeart",
+      "name": "Lammy de Art",
+      "tagline": "Design portfolio and catalogue for brand identity, packaging and campaign work.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Lammydeart",
+          "url": "https://github.com/Oyebintan/Lammydeart",
+          "defaultBranch": "main",
+          "createdAt": "2026-07-18T20:53:28Z",
+          "pushedAt": "2026-07-28T21:33:00Z",
+          "languages": {
+            "JavaScript": 114230,
+            "CSS": 5445,
+            "HTML": 3034
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Lammydeart",
+        "url": "https://github.com/Oyebintan/Lammydeart",
+        "defaultBranch": "main",
+        "createdAt": "2026-07-18T20:53:28Z",
+        "pushedAt": "2026-07-28T21:33:00Z",
+        "languages": {
+          "JavaScript": 114230,
+          "CSS": 5445,
+          "HTML": 3034
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": "https://thelammydeart.vercel.app",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "Lammydeart",
+        "field": "liveUrlOverride",
+        "value": "https://thelammydeart.vercel.app",
+        "url": "https://github.com/Oyebintan/Lammydeart"
+      },
+      "status": "live",
+      "featured": true,
+      "order": 3,
+      "accent": "rose",
+      "startedAt": "2026-07-18T20:53:28Z",
+      "shippedAt": "2026-07-18T20:53:28Z"
+    },
+    {
+      "slug": "email-spam-classifier",
+      "name": "Hybrid Spam Classifier",
+      "tagline": "Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "email-spam-classifier",
+          "url": "https://github.com/Oyebintan/email-spam-classifier",
+          "defaultBranch": "main",
+          "createdAt": "2026-02-22T16:43:43Z",
+          "pushedAt": "2026-07-26T13:53:34Z",
+          "languages": {
+            "Python": 16348,
+            "Procfile": 29
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        },
+        {
+          "owner": "Oyebintan",
+          "name": "Final-Year-Project",
+          "url": "https://github.com/Oyebintan/Final-Year-Project",
+          "defaultBranch": "main",
+          "createdAt": "2026-04-12T07:14:23Z",
+          "pushedAt": "2026-05-11T18:57:12Z",
+          "languages": {
+            "CSS": 10719,
+            "JavaScript": 6097,
+            "HTML": 3767
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "email-spam-classifier",
+        "url": "https://github.com/Oyebintan/email-spam-classifier",
+        "defaultBranch": "main",
+        "createdAt": "2026-02-22T16:43:43Z",
+        "pushedAt": "2026-07-26T13:53:34Z",
+        "languages": {
+          "Python": 16348,
+          "Procfile": 29
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "research",
+      "featured": true,
+      "order": 4,
+      "accent": "violet",
+      "startedAt": "2026-02-22T16:43:43Z",
+      "shippedAt": null
+    },
+    {
+      "slug": "career-recommender",
+      "name": "Career Recommender",
+      "tagline": "Transparent, rule-based career matching across 42 careers with a personalised skill-gap analysis.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "Career-Recommender",
+          "url": "https://github.com/Oyebintan/Career-Recommender",
+          "defaultBranch": "main",
+          "createdAt": "2026-06-19T21:25:15Z",
+          "pushedAt": "2026-07-08T19:10:28Z",
+          "languages": {
+            "Python": 66630,
+            "HTML": 43904,
+            "CSS": 34162,
+            "JavaScript": 8530,
+            "Dockerfile": 359
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "Career-Recommender",
+        "url": "https://github.com/Oyebintan/Career-Recommender",
+        "defaultBranch": "main",
+        "createdAt": "2026-06-19T21:25:15Z",
+        "pushedAt": "2026-07-08T19:10:28Z",
+        "languages": {
+          "Python": 66630,
+          "HTML": 43904,
+          "CSS": 34162,
+          "JavaScript": 8530,
+          "Dockerfile": 359
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "shipped",
+      "featured": false,
+      "order": 5,
+      "accent": "sky",
+      "startedAt": "2026-06-19T21:25:15Z",
+      "shippedAt": null
+    },
+    {
+      "slug": "teniola-graduation-tribute",
+      "name": "OOU Times",
+      "tagline": "A newspaper-themed graduation tribute — broadsheet typography, a live ticker, and a compile-to-confetti colophon.",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "teniola-graduation-tribute",
+          "url": "https://github.com/Oyebintan/teniola-graduation-tribute",
+          "defaultBranch": "main",
+          "createdAt": "2026-06-28T08:41:33Z",
+          "pushedAt": "2026-06-30T06:05:47Z",
+          "languages": {
+            "CSS": 54297,
+            "JavaScript": 26488,
+            "HTML": 18346
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "teniola-graduation-tribute",
+        "url": "https://github.com/Oyebintan/teniola-graduation-tribute",
+        "defaultBranch": "main",
+        "createdAt": "2026-06-28T08:41:33Z",
+        "pushedAt": "2026-06-30T06:05:47Z",
+        "languages": {
+          "CSS": 54297,
+          "JavaScript": 26488,
+          "HTML": 18346
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "shipped",
+      "featured": false,
+      "order": 6,
+      "accent": "lime",
+      "startedAt": "2026-06-28T08:41:33Z",
+      "shippedAt": null
+    }
+  ],
+  "shipLog": [
+    {
+      "id": "lammydeart:merge:5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "perf: halve the image payload and stop lazy-loading the hero",
+      "body": null,
+      "date": "2026-07-28T21:32:46Z",
+      "commit": {
+        "sha": "5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/5efe1ee01ee8e474b6474b2b172afc93f7d88b5c"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/5efe1ee01ee8e474b6474b2b172afc93f7d88b5c"
+    },
+    {
+      "id": "lammydeart:merge:da86b439644e792e184a3bf66d59e459e1bcc4d1",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: swap the Service Social Ads preview to Relish Locals",
+      "body": null,
+      "date": "2026-07-27T12:20:02Z",
+      "commit": {
+        "sha": "da86b439644e792e184a3bf66d59e459e1bcc4d1",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/da86b439644e792e184a3bf66d59e459e1bcc4d1"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/da86b439644e792e184a3bf66d59e459e1bcc4d1"
+    },
+    {
+      "id": "lammydeart:merge:8df77d6e2a9a042a5424800711f8a864e6d92956",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: replace project catalog with recent work, fix stale hero labels",
+      "body": null,
+      "date": "2026-07-27T12:13:20Z",
+      "commit": {
+        "sha": "8df77d6e2a9a042a5424800711f8a864e6d92956",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/8df77d6e2a9a042a5424800711f8a864e6d92956"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/8df77d6e2a9a042a5424800711f8a864e6d92956"
+    },
+    {
+      "id": "brandforge:repo_created:2026-07-26T09:21:55Z",
+      "slug": "brandforge",
+      "projectName": "BrandForge",
+      "accent": "amber",
+      "kind": "repo_created",
+      "title": "BrandForge started",
+      "body": null,
+      "date": "2026-07-26T09:21:55Z",
+      "url": "https://github.com/Oyebintan/BrandForge"
+    },
+    {
+      "id": "lammydeart:merge:bd0dbda436962eda09ef43c25d2c3712e64cd6fc",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: hero frame motion loops properly instead of restarting",
+      "body": null,
+      "date": "2026-07-26T09:15:18Z",
+      "commit": {
+        "sha": "bd0dbda436962eda09ef43c25d2c3712e64cd6fc",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
+    },
+    {
+      "id": "siwes-finder:merge:64457ffacbed7b3ff403eb6b2344f31fdbadd541",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "chore: audit and clean up dead code, fix Google sign-in case bug",
+      "body": null,
+      "date": "2026-07-26T06:40:04Z",
+      "commit": {
+        "sha": "64457ffacbed7b3ff403eb6b2344f31fdbadd541",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
+      },
+      "prNumber": 54,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
+    },
+    {
+      "id": "lammydeart:merge:5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: restore pull-to-refresh",
+      "body": null,
+      "date": "2026-07-26T04:58:13Z",
+      "commit": {
+        "sha": "5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
+    },
+    {
+      "id": "lammydeart:merge:92eb62253b72df3e3a5ba2bcc201463df28025fb",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
+      "body": null,
+      "date": "2026-07-26T04:49:32Z",
+      "commit": {
+        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
+    },
+    {
+      "id": "lammydeart:merge:ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: audit pass — font inheritance, SPA links, dead project links, cleanup",
+      "body": null,
+      "date": "2026-07-26T04:44:58Z",
+      "commit": {
+        "sha": "ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f"
+    },
+    {
+      "id": "lammydeart:merge:e449296fc6e81056857f6c74cdc0c3e4bad3fda3",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: slimmer nav with a subtle frosted-glass background",
+      "body": null,
+      "date": "2026-07-26T04:08:07Z",
+      "commit": {
+        "sha": "e449296fc6e81056857f6c74cdc0c3e4bad3fda3",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/e449296fc6e81056857f6c74cdc0c3e4bad3fda3"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/e449296fc6e81056857f6c74cdc0c3e4bad3fda3"
+    },
+    {
+      "id": "lammydeart:merge:12b25139298def0db195741b21064687ca7920e0",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: freelance pill matches the badge, one-line meta, smaller toggle with an X",
+      "body": null,
+      "date": "2026-07-26T04:00:27Z",
+      "commit": {
+        "sha": "12b25139298def0db195741b21064687ca7920e0",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/12b25139298def0db195741b21064687ca7920e0"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/12b25139298def0db195741b21064687ca7920e0"
+    },
+    {
+      "id": "lammydeart:merge:18ffc2f7e8e996395e2fdac8c019fcb456c07491",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: justify hero column edge-to-edge; drop the blended overlay above the nav",
+      "body": null,
+      "date": "2026-07-26T03:43:18Z",
+      "commit": {
+        "sha": "18ffc2f7e8e996395e2fdac8c019fcb456c07491",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
+    },
+    {
+      "id": "lammydeart:merge:a7646f571b61e08a4ddef1eaae48f745167d0175",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: opaque shim above the nav so content can never show in the top strip",
+      "body": null,
+      "date": "2026-07-25T22:21:35Z",
+      "commit": {
+        "sha": "a7646f571b61e08a4ddef1eaae48f745167d0175",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/a7646f571b61e08a4ddef1eaae48f745167d0175"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/a7646f571b61e08a4ddef1eaae48f745167d0175"
+    },
+    {
+      "id": "lammydeart:merge:9cead0abdb32d853f58b844cb2709cf9539bc3ae",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: nav now covers the iOS status-bar strip (viewport-fit=cover restored)",
+      "body": null,
+      "date": "2026-07-25T22:15:50Z",
+      "commit": {
+        "sha": "9cead0abdb32d853f58b844cb2709cf9539bc3ae",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/9cead0abdb32d853f58b844cb2709cf9539bc3ae"
+      },
+      "prNumber": 3,
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/9cead0abdb32d853f58b844cb2709cf9539bc3ae"
+    },
+    {
+      "id": "lammydeart:repo_created:2026-07-18T20:53:28Z",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "repo_created",
+      "title": "Lammy de Art started",
+      "body": null,
+      "date": "2026-07-18T20:53:28Z",
+      "url": "https://github.com/Oyebintan/Lammydeart"
+    },
+    {
+      "id": "siwes-finder:release:v1.5.0-android-ci9",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.5.0-android-ci9",
+      "body": null,
+      "date": "2026-07-18T17:23:41Z",
+      "release": {
+        "tag": "v1.5.0-android-ci9",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.5.0-android-ci9"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.5.0-android-ci9"
+    },
+    {
+      "id": "siwes-finder:merge:019e90764e2561d52fc3b9d7b7ddd2913304a0e6",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "Mobile fintech redesign (v1.5.0): gradient UI, PIN unlock, employer dashboard, job posting, school gauges, PDF export",
+      "body": null,
+      "date": "2026-07-18T17:07:12Z",
+      "commit": {
+        "sha": "019e90764e2561d52fc3b9d7b7ddd2913304a0e6",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/019e90764e2561d52fc3b9d7b7ddd2913304a0e6"
+      },
+      "prNumber": 53,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/019e90764e2561d52fc3b9d7b7ddd2913304a0e6"
+    },
+    {
+      "id": "siwes-finder:merge:d1319ac74c8d73fb084896c354c454137987dbc5",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): logbook PDF export + streak nudge banner, v1.5.0 (redesign Batch F)",
+      "body": null,
+      "date": "2026-07-18T16:08:37Z",
+      "commit": {
+        "sha": "d1319ac74c8d73fb084896c354c454137987dbc5",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/d1319ac74c8d73fb084896c354c454137987dbc5"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/d1319ac74c8d73fb084896c354c454137987dbc5"
+    },
+    {
+      "id": "siwes-finder:merge:a9c36768fc62f720fbe0d702b4e3723b1487a547",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): school screens redesign -- placement gauge, animated KPIs, status dots (Batch E)",
+      "body": null,
+      "date": "2026-07-18T16:01:02Z",
+      "commit": {
+        "sha": "a9c36768fc62f720fbe0d702b4e3723b1487a547",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/a9c36768fc62f720fbe0d702b4e3723b1487a547"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/a9c36768fc62f720fbe0d702b4e3723b1487a547"
+    },
+    {
+      "id": "siwes-finder:merge:aaf66141a73849507360b349725fbcbe3c097f99",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat: employer Home dashboard + mobile job posting (redesign Batch D)",
+      "body": null,
+      "date": "2026-07-18T15:55:39Z",
+      "commit": {
+        "sha": "aaf66141a73849507360b349725fbcbe3c097f99",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/aaf66141a73849507360b349725fbcbe3c097f99"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/aaf66141a73849507360b349725fbcbe3c097f99"
+    },
+    {
+      "id": "siwes-finder:merge:b1b8c8fe17b15beca4b2bcadda38610a01dc4df8",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): redesign Batch C -- dashboard/profile heroes, onboarding blobs, logbook composer",
+      "body": null,
+      "date": "2026-07-18T15:39:15Z",
+      "commit": {
+        "sha": "b1b8c8fe17b15beca4b2bcadda38610a01dc4df8",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/b1b8c8fe17b15beca4b2bcadda38610a01dc4df8"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/b1b8c8fe17b15beca4b2bcadda38610a01dc4df8"
+    },
+    {
+      "id": "siwes-finder:merge:2a6283ba18adb7f1ecfbce15008ef7a5a83dd8cd",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): PIN-keypad unlock alongside biometric (redesign Batch B)",
+      "body": null,
+      "date": "2026-07-18T15:29:59Z",
+      "commit": {
+        "sha": "2a6283ba18adb7f1ecfbce15008ef7a5a83dd8cd",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/2a6283ba18adb7f1ecfbce15008ef7a5a83dd8cd"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/2a6283ba18adb7f1ecfbce15008ef7a5a83dd8cd"
+    },
+    {
+      "id": "siwes-finder:merge:ab4aca596dfd4918a3bc15d3c54e88ac6c33799d",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): redesign foundation — gradient hero card, bottom sheet, animated counter",
+      "body": null,
+      "date": "2026-07-18T15:19:14Z",
+      "commit": {
+        "sha": "ab4aca596dfd4918a3bc15d3c54e88ac6c33799d",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/ab4aca596dfd4918a3bc15d3c54e88ac6c33799d"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/ab4aca596dfd4918a3bc15d3c54e88ac6c33799d"
+    },
+    {
+      "id": "siwes-finder:release:v1.4.0-android-ci8",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.4.0-android-ci8",
+      "body": null,
+      "date": "2026-07-18T01:42:26Z",
+      "release": {
+        "tag": "v1.4.0-android-ci8",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.4.0-android-ci8"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.4.0-android-ci8"
+    },
+    {
+      "id": "siwes-finder:merge:38df3fdad1efcb265212226b7bc355a110ca6350",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "Mobile: Google sign-in (v1.4.0)",
+      "body": null,
+      "date": "2026-07-18T01:28:42Z",
+      "commit": {
+        "sha": "38df3fdad1efcb265212226b7bc355a110ca6350",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/38df3fdad1efcb265212226b7bc355a110ca6350"
+      },
+      "prNumber": 52,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/38df3fdad1efcb265212226b7bc355a110ca6350"
+    },
+    {
+      "id": "siwes-finder:merge:58d2cf60656d61639da43fcefc3642cf263237ca",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "feat(mobile): Google sign-in (v1.4.0)",
+      "body": null,
+      "date": "2026-07-18T00:36:38Z",
+      "commit": {
+        "sha": "58d2cf60656d61639da43fcefc3642cf263237ca",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/58d2cf60656d61639da43fcefc3642cf263237ca"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/58d2cf60656d61639da43fcefc3642cf263237ca"
+    },
+    {
+      "id": "siwes-finder:release:v1.3.0-android-ci7",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.3.0-android-ci7",
+      "body": null,
+      "date": "2026-07-17T20:34:50Z",
+      "release": {
+        "tag": "v1.3.0-android-ci7",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.3.0-android-ci7"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.3.0-android-ci7"
+    },
+    {
+      "id": "siwes-finder:merge:cf63bf8fa1d75274aa40332d7deacab52f0fcaa0",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "Mobile: biometric/PIN unlock (v1.3.0)",
+      "body": null,
+      "date": "2026-07-17T20:01:07Z",
+      "commit": {
+        "sha": "cf63bf8fa1d75274aa40332d7deacab52f0fcaa0",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/cf63bf8fa1d75274aa40332d7deacab52f0fcaa0"
+      },
+      "prNumber": 51,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/cf63bf8fa1d75274aa40332d7deacab52f0fcaa0"
+    },
+    {
+      "id": "siwes-finder:merge:94b601c2214abbb783d5d4c0861b3c37ec24e879",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "Mobile: version/OTA sync indicator + livelier onboarding",
+      "body": null,
+      "date": "2026-07-17T20:01:01Z",
+      "commit": {
+        "sha": "94b601c2214abbb783d5d4c0861b3c37ec24e879",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/94b601c2214abbb783d5d4c0861b3c37ec24e879"
+      },
+      "prNumber": 50,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/94b601c2214abbb783d5d4c0861b3c37ec24e879"
+    },
+    {
+      "id": "siwes-finder:release:v1.2.0-android-ci6",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.2.0-android-ci6",
+      "body": null,
+      "date": "2026-07-17T15:31:08Z",
+      "release": {
+        "tag": "v1.2.0-android-ci6",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.2.0-android-ci6"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.2.0-android-ci6"
+    },
+    {
+      "id": "siwes-finder:release:v1.0.0-android-ci5",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.0.0-android-ci5",
+      "body": null,
+      "date": "2026-07-16T17:21:59Z",
+      "release": {
+        "tag": "v1.0.0-android-ci5",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android-ci5"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android-ci5"
+    },
+    {
+      "id": "siwes-finder:release:v1.0.0-android-ci3",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.0.0-android-ci3",
+      "body": null,
+      "date": "2026-07-14T05:38:21Z",
+      "release": {
+        "tag": "v1.0.0-android-ci3",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android-ci3"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android-ci3"
+    },
+    {
+      "id": "siwes-finder:release:v1.1.0-android",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "v1.1.0-android",
+      "body": null,
+      "date": "2026-07-12T23:33:28Z",
+      "release": {
+        "tag": "v1.1.0-android",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.1.0-android"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.1.0-android"
+    },
+    {
+      "id": "siwes-finder:release:v1.0.0-android",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "release",
+      "title": "SIWES Finder Android v1.0.0",
+      "body": null,
+      "date": "2026-07-12T01:02:02Z",
+      "release": {
+        "tag": "v1.0.0-android",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.0.0-android"
+    },
+    {
+      "id": "email-spam-classifier:merge:cbf893a2c74c252c021eade4bb71b48cfa0441f1",
+      "slug": "email-spam-classifier",
+      "projectName": "Hybrid Spam Classifier",
+      "accent": "violet",
+      "kind": "merge",
+      "title": "Fix broken /sample endpoint and inference/training feature mismatch",
+      "body": null,
+      "date": "2026-07-10T20:45:22Z",
+      "commit": {
+        "sha": "cbf893a2c74c252c021eade4bb71b48cfa0441f1",
+        "url": "https://github.com/Oyebintan/email-spam-classifier/commit/cbf893a2c74c252c021eade4bb71b48cfa0441f1"
+      },
+      "prNumber": 1,
+      "url": "https://github.com/Oyebintan/email-spam-classifier/commit/cbf893a2c74c252c021eade4bb71b48cfa0441f1"
+    },
+    {
+      "id": "career-recommender:merge:9db9c6cd42f8dbabd383b2506d37adfcfb1c68e1",
+      "slug": "career-recommender",
+      "projectName": "Career Recommender",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "Add pytest test suite; fix Docker deploy path, case-sensitive skill matching, and encoding bugs",
+      "body": null,
+      "date": "2026-07-08T19:10:28Z",
+      "commit": {
+        "sha": "9db9c6cd42f8dbabd383b2506d37adfcfb1c68e1",
+        "url": "https://github.com/Oyebintan/Career-Recommender/commit/9db9c6cd42f8dbabd383b2506d37adfcfb1c68e1"
+      },
+      "prNumber": 2,
+      "url": "https://github.com/Oyebintan/Career-Recommender/commit/9db9c6cd42f8dbabd383b2506d37adfcfb1c68e1"
+    },
+    {
+      "id": "career-recommender:merge:0749ec1f5ef648f7318d4f9e57ebb582d9c0b3b9",
+      "slug": "career-recommender",
+      "projectName": "Career Recommender",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "Fix assessment flow, regenerate Chapter 3 diagrams, add docs",
+      "body": null,
+      "date": "2026-07-07T11:52:06Z",
+      "commit": {
+        "sha": "0749ec1f5ef648f7318d4f9e57ebb582d9c0b3b9",
+        "url": "https://github.com/Oyebintan/Career-Recommender/commit/0749ec1f5ef648f7318d4f9e57ebb582d9c0b3b9"
+      },
+      "prNumber": 1,
+      "url": "https://github.com/Oyebintan/Career-Recommender/commit/0749ec1f5ef648f7318d4f9e57ebb582d9c0b3b9"
+    },
+    {
+      "id": "siwes-finder:repo_created:2026-07-06T13:48:14Z",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "repo_created",
+      "title": "SIWES Finder started",
+      "body": null,
+      "date": "2026-07-06T13:48:14Z",
+      "url": "https://github.com/Oyebintan/Siwes-Finder"
+    },
+    {
+      "id": "teniola-graduation-tribute:merge:105b9fdc4a106869d836fb5c4e6b920fbfdd93f0",
+      "slug": "teniola-graduation-tribute",
+      "projectName": "OOU Times",
+      "accent": "lime",
+      "kind": "merge",
+      "title": "Final Commit",
+      "body": null,
+      "date": "2026-06-29T21:58:05Z",
+      "commit": {
+        "sha": "105b9fdc4a106869d836fb5c4e6b920fbfdd93f0",
+        "url": "https://github.com/Oyebintan/teniola-graduation-tribute/commit/105b9fdc4a106869d836fb5c4e6b920fbfdd93f0"
+      },
+      "url": "https://github.com/Oyebintan/teniola-graduation-tribute/commit/105b9fdc4a106869d836fb5c4e6b920fbfdd93f0"
+    },
+    {
+      "id": "teniola-graduation-tribute:repo_created:2026-06-28T08:41:33Z",
+      "slug": "teniola-graduation-tribute",
+      "projectName": "OOU Times",
+      "accent": "lime",
+      "kind": "repo_created",
+      "title": "OOU Times started",
+      "body": null,
+      "date": "2026-06-28T08:41:33Z",
+      "url": "https://github.com/Oyebintan/teniola-graduation-tribute"
+    },
+    {
+      "id": "career-recommender:repo_created:2026-06-19T21:25:15Z",
+      "slug": "career-recommender",
+      "projectName": "Career Recommender",
+      "accent": "sky",
+      "kind": "repo_created",
+      "title": "Career Recommender started",
+      "body": null,
+      "date": "2026-06-19T21:25:15Z",
+      "url": "https://github.com/Oyebintan/Career-Recommender"
+    },
+    {
+      "id": "email-spam-classifier:merge:e2ee36e26ac7c22918f90b51b701b20e3fbdf41c",
+      "slug": "email-spam-classifier",
+      "projectName": "Hybrid Spam Classifier",
+      "accent": "violet",
+      "kind": "merge",
+      "title": "Resolve requirements.txt merge and use stabletensorflow 2.15.0",
+      "body": null,
+      "date": "2026-02-22T21:40:15Z",
+      "commit": {
+        "sha": "e2ee36e26ac7c22918f90b51b701b20e3fbdf41c",
+        "url": "https://github.com/Oyebintan/email-spam-classifier/commit/e2ee36e26ac7c22918f90b51b701b20e3fbdf41c"
+      },
+      "url": "https://github.com/Oyebintan/email-spam-classifier/commit/e2ee36e26ac7c22918f90b51b701b20e3fbdf41c"
+    },
+    {
+      "id": "email-spam-classifier:repo_created:2026-02-22T16:43:43Z",
+      "slug": "email-spam-classifier",
+      "projectName": "Hybrid Spam Classifier",
+      "accent": "violet",
+      "kind": "repo_created",
+      "title": "Hybrid Spam Classifier started",
+      "body": null,
+      "date": "2026-02-22T16:43:43Z",
+      "url": "https://github.com/Oyebintan/email-spam-classifier"
+    }
+  ],
+  "activity": {
+    "generatedAt": "2026-07-30T15:19:05.429Z",
+    "totals": {
+      "repositories": 6,
+      "projectsShipped": 6,
+      "deployments": 3,
+      "technologies": 8,
+      "commitsTracked": 256
+    },
+    "languages": [
+      {
+        "name": "TypeScript",
+        "bytes": 1333879,
+        "share": 0.7470284165369235
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 173728,
+        "share": 0.0972949965837431
+      },
+      {
+        "name": "CSS",
+        "bytes": 122440,
+        "share": 0.06857155658105489
+      },
+      {
+        "name": "Python",
+        "bytes": 82978,
+        "share": 0.04647117463233235
+      },
+      {
+        "name": "HTML",
+        "bytes": 69051,
+        "share": 0.038671468094400696
+      },
+      {
+        "name": "PLpgSQL",
+        "bytes": 3116,
+        "share": 0.0017450912308605607
+      },
+      {
+        "name": "Dockerfile",
+        "bytes": 359,
+        "share": 0.00020105511934497474
+      },
+      {
+        "name": "Procfile",
+        "bytes": 29,
+        "share": 0.000016241221339844757
+      }
+    ],
+    "recentCommits": [
+      {
+        "repo": "Lammydeart",
+        "sha": "5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
+        "message": "perf: halve the image payload and stop lazy-loading the hero",
+        "date": "2026-07-28T21:32:46Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/5efe1ee01ee8e474b6474b2b172afc93f7d88b5c"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "da86b439644e792e184a3bf66d59e459e1bcc4d1",
+        "message": "feat: swap the Service Social Ads preview to Relish Locals",
+        "date": "2026-07-27T12:20:02Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/da86b439644e792e184a3bf66d59e459e1bcc4d1"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "8df77d6e2a9a042a5424800711f8a864e6d92956",
+        "message": "feat: replace project catalog with recent work, fix stale hero labels",
+        "date": "2026-07-27T12:13:20Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/8df77d6e2a9a042a5424800711f8a864e6d92956"
+      },
+      {
+        "repo": "BrandForge",
+        "sha": "89ad175b71c07485f28ed6da036e801bb22395a5",
+        "message": "Revert ambient background experiment, add floating brand elements",
+        "date": "2026-07-27T10:18:24Z",
+        "url": "https://github.com/Oyebintan/BrandForge/commit/89ad175b71c07485f28ed6da036e801bb22395a5"
+      },
+      {
+        "repo": "BrandForge",
+        "sha": "4042778fdb45deec0b413323943add59ca10a4cb",
+        "message": "Add Google sign-in and fill out the wide-viewport background",
+        "date": "2026-07-27T07:55:43Z",
+        "url": "https://github.com/Oyebintan/BrandForge/commit/4042778fdb45deec0b413323943add59ca10a4cb"
+      },
+      {
+        "repo": "BrandForge",
+        "sha": "5b53ebf6af7131ab2f68baf7e3e8617974fb2318",
+        "message": "Trim generated brand copy and palette duplicates for conciseness",
+        "date": "2026-07-27T07:26:19Z",
+        "url": "https://github.com/Oyebintan/BrandForge/commit/5b53ebf6af7131ab2f68baf7e3e8617974fb2318"
+      },
+      {
+        "repo": "BrandForge",
+        "sha": "9dda7033e99796023e56b2b2496911c2ceca65a3",
+        "message": "Build BrandForge AI: full-stack AI brand identity SaaS",
+        "date": "2026-07-26T10:02:16Z",
+        "url": "https://github.com/Oyebintan/BrandForge/commit/9dda7033e99796023e56b2b2496911c2ceca65a3"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "bd0dbda436962eda09ef43c25d2c3712e64cd6fc",
+        "message": "fix: hero frame motion loops properly instead of restarting",
+        "date": "2026-07-26T09:15:18Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "64457ffacbed7b3ff403eb6b2344f31fdbadd541",
+        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
+        "date": "2026-07-26T06:40:04Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "99098939a5e6a9ddfe6ebd6e30268f961c5095a1",
+        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
+        "date": "2026-07-26T05:13:56Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/99098939a5e6a9ddfe6ebd6e30268f961c5095a1"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
+        "message": "fix: restore pull-to-refresh",
+        "date": "2026-07-26T04:58:13Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
+        "message": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
+        "date": "2026-07-26T04:49:32Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
+      }
+    ],
+    "contributions": {
+      "2026-07-28": 1,
+      "2026-07-27": 5,
+      "2026-07-26": 11,
+      "2026-07-25": 22,
+      "2026-07-23": 14,
+      "2026-07-20": 10,
+      "2026-07-19": 8,
+      "2026-04-14": 1,
+      "2026-01-31": 2,
+      "2026-01-13": 2,
+      "2026-01-10": 2,
+      "2026-01-07": 2,
+      "2026-01-06": 1,
+      "2025-12-21": 5,
+      "2025-12-19": 1,
+      "2025-11-14": 5,
+      "2025-11-13": 1,
+      "2025-08-18": 3,
+      "2025-07-05": 1,
+      "2025-07-01": 2,
+      "2025-06-27": 1,
+      "2025-06-26": 2,
+      "2025-06-25": 2,
+      "2025-06-24": 3,
+      "2026-07-10": 2,
+      "2026-04-11": 7,
+      "2026-04-09": 1,
+      "2026-03-23": 3,
+      "2026-03-22": 3,
+      "2026-02-22": 10,
+      "2026-07-18": 14,
+      "2026-07-17": 28,
+      "2026-07-16": 5,
+      "2026-07-14": 11,
+      "2026-07-13": 20,
+      "2026-07-12": 19,
+      "2026-07-08": 2,
+      "2026-07-07": 2,
+      "2026-07-06": 1,
+      "2026-07-05": 1,
+      "2026-06-19": 3,
+      "2026-06-30": 7,
+      "2026-06-29": 9,
+      "2026-06-28": 1
+    }
+  }
+}

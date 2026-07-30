@@ -1,26 +1,248 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* ---------------------------------------------------------------------------
+   Design tokens
+
+   The foundation is true black. That choice costs two things and both are paid
+   for deliberately below: 8-bit gradients band badly from #000 (fixed with a
+   grain overlay that dithers the ramp), and backdrop-blur over black returns
+   near-black (fixed by letting a top highlight border carry the glass edge
+   rather than the fill).
+--------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface ladder — every step is a real elevation, not decoration. */
+  --bg-0: oklch(0 0 0); /* page */
+  --bg-1: oklch(0.045 0 0); /* section */
+  --bg-2: oklch(0.075 0.003 265); /* card */
+  --bg-3: oklch(0.11 0.004 265); /* raised / hover */
+
+  /* Every step clears WCAG AA (4.5:1) against the pure-black page, measured
+     rather than eyeballed — the faintest label still reads at 4.9:1. Going
+     dimmer looks better in isolation and fails real users, so it isn't done. */
+  --fg: oklch(0.97 0 0); /* 19.3:1 */
+  --fg-muted: oklch(0.76 0.008 265); /* 9.8:1  — body copy */
+  --fg-subtle: oklch(0.66 0.01 265); /* 6.8:1  — secondary */
+  --fg-faint: oklch(0.58 0.012 265); /* 4.9:1  — smallest labels */
+
+  --border: oklch(1 0 0 / 0.08);
+  --border-strong: oklch(1 0 0 / 0.14);
+  --highlight: oklch(1 0 0 / 0.1);
+
+  --accent: oklch(0.72 0.15 250);
+
+  --noise-opacity: 0.035;
+
+  --radius-sm: 0.5rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg-0: var(--bg-0);
+  --color-bg-1: var(--bg-1);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
+
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-fg-faint: var(--fg-faint);
+
+  --color-border-hair: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --radius-card: var(--radius);
+  --radius-panel: var(--radius-lg);
+
+  /* Typography scale — display sizes lean on tight tracking and a low
+     line-height so large headings read as one object, not stacked lines. */
+  --text-display: clamp(2.75rem, 8vw, 6.5rem);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.045em;
+
+  --text-h1: clamp(2.25rem, 5vw, 3.75rem);
+  --text-h1--line-height: 1.03;
+  --text-h1--letter-spacing: -0.035em;
+
+  --text-h2: clamp(1.75rem, 3.4vw, 2.75rem);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.028em;
+
+  --text-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.02em;
+
+  --text-lead: clamp(1.05rem, 1.6vw, 1.3rem);
+  --text-lead--line-height: 1.55;
+  --text-lead--letter-spacing: -0.012em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    background: var(--bg-0);
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--bg-0);
+    color: var(--fg);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: oklch(1 0 0 / 0.16);
+    color: var(--fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(0.8 0.02 265);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Honour the OS setting rather than animating regardless. Everything in the
+     site degrades to its final state; nothing depends on motion to be usable. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Grain. Load-bearing, not texture-for-texture's-sake: it dithers gradient
+     ramps that would otherwise band visibly against true black. */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .glass {
+    background: oklch(0.08 0.003 265 / 0.72);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--border);
+    box-shadow: inset 0 1px 0 0 var(--highlight);
+  }
+
+  .hairline {
+    border: 1px solid var(--border);
+  }
+
+  /* A single soft light source. Used sparingly — one per section at most. */
+  .spotlight {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* Scroll reveal.
+     The hidden state is scoped to `html.js`, which an inline script sets before
+     first paint. With scripting unavailable the rule never applies and content
+     renders normally — the animation is an enhancement, never a prerequisite
+     for seeing the page. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s var(--ease-out),
+      transform 0.6s var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(1 0 0 / 0.06) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.6s var(--ease-in-out) infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Accent ramps, referenced by data-accent on cards and timeline nodes. */
+[data-accent='emerald'] {
+  --accent: oklch(0.76 0.16 162);
+}
+[data-accent='violet'] {
+  --accent: oklch(0.68 0.19 296);
+}
+[data-accent='amber'] {
+  --accent: oklch(0.8 0.16 76);
+}
+[data-accent='sky'] {
+  --accent: oklch(0.75 0.14 232);
+}
+[data-accent='rose'] {
+  --accent: oklch(0.72 0.18 12);
+}
+[data-accent='lime'] {
+  --accent: oklch(0.83 0.19 128);
 }

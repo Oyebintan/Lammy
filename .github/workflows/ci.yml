@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      - run: npm run lint
+
+      # No secrets are exposed to this step on purpose. The site reads committed
+      # data, so a build that needs a token here is a regression.
+      - name: Build without secrets
+        run: npm run build
+
+      - name: Accessibility audit
+        run: |
+          npx playwright install --with-deps chromium
+          npx next start -p 3000 &
+          npx wait-on http://127.0.0.1:3000 -t 60000
+          node scripts/a11y.mjs
