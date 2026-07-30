@@ -33,14 +33,16 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
 
-    // Fires synchronously for anything already on screen.
+    // The bottom margin is expanded, not inset, so a section finishes settling
+    // roughly as it reaches the viewport instead of animating in front of the
+    // reader. Anything already on screen fires synchronously.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
         el.classList.add('is-visible');
         observer.disconnect();
       },
-      { rootMargin: '0px 0px -80px 0px', threshold: 0.01 },
+      { rootMargin: '0px 0px 220px 0px', threshold: 0 },
     );
 
     observer.observe(el);

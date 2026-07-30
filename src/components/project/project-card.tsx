@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { GithubMark } from '@/components/ui/icons';
-import { Badge, StatusDot, Surface } from '@/components/ui/primitives';
+import { Badge, StatusDot } from '@/components/ui/primitives';
 import { ProjectShot } from './project-shot';
+import { SpotlightCard } from '@/components/motion/spotlight';
 import { formatMonthYear, } from '@/lib/projects';
 import { cn, prettyUrl } from '@/lib/utils';
 import type { Project } from '@/lib/types';
@@ -26,20 +27,19 @@ export function ProjectCard({
   const tech = project.caseStudy.technologies.value.slice(0, 4);
 
   return (
-    <Surface
-      data-accent={project.accent}
-      tone="card"
-      radius="lg"
+    <SpotlightCard
       className={cn(
-        'group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-border-strong',
+        'group relative flex flex-col overflow-hidden rounded-[var(--radius-panel)] border border-border-hair bg-bg-2',
+        'transition-all duration-300 hover:-translate-y-1 hover:border-border-strong',
         'hover:shadow-[0_24px_60px_-32px_color-mix(in_oklch,var(--accent)_55%,transparent)]',
         featured && 'md:flex-row',
       )}
     >
+    <div data-accent={project.accent} className="contents">
       {/* Shot */}
       <div
         className={cn(
-          'relative overflow-hidden bg-bg-1',
+          'relative z-[2] overflow-hidden bg-bg-1',
           featured ? 'md:w-[58%] aspect-[16/10] md:aspect-auto' : 'aspect-[16/10]',
         )}
       >
@@ -53,7 +53,7 @@ export function ProjectCard({
       </div>
 
       {/* Body */}
-      <div className={cn('flex flex-1 flex-col gap-4 p-6', featured && 'md:justify-center md:p-9')}>
+      <div className={cn('relative z-[2] flex flex-1 flex-col gap-4 p-6', featured && 'md:justify-center md:p-9')}>
         <div className="flex items-center gap-2.5">
           <StatusDot live={project.status === 'live'} />
           <span className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-fg-faint">
@@ -113,6 +113,7 @@ export function ProjectCard({
           )}
         </div>
       </div>
-    </Surface>
+    </div>
+    </SpotlightCard>
   );
 }

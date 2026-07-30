@@ -64,9 +64,12 @@
 
   /* Typography scale — display sizes lean on tight tracking and a low
      line-height so large headings read as one object, not stacked lines. */
-  --text-display: clamp(2.75rem, 8vw, 6.5rem);
-  --text-display--line-height: 0.94;
-  --text-display--letter-spacing: -0.045em;
+  /* Sized for the hero's two-column layout — the copy column is roughly half
+     the page, so the old 8vw ramp overflowed to three lines and pushed the
+     stats past the fold. */
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.04em;
 
   --text-h1: clamp(2.25rem, 5vw, 3.75rem);
   --text-h1--line-height: 1.03;
@@ -142,12 +145,96 @@
     mix-blend-mode: overlay;
   }
 
+  /* Glass.
+     Blurring over pure black returns near-black — the fill cannot carry the
+     effect, so the edge does: a bright 1px top highlight, a soft outer shadow
+     for lift, and a saturation boost so colour behind the panel bleeds
+     through instead of turning grey. */
   .glass {
-    background: oklch(0.08 0.003 265 / 0.72);
-    backdrop-filter: blur(20px) saturate(1.4);
-    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    background: oklch(0.09 0.004 265 / 0.6);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
     border: 1px solid var(--border);
-    box-shadow: inset 0 1px 0 0 var(--highlight);
+    box-shadow:
+      inset 0 1px 0 0 oklch(1 0 0 / 0.12),
+      inset 0 -1px 0 0 oklch(0 0 0 / 0.3),
+      0 16px 40px -20px oklch(0 0 0 / 0.8);
+  }
+
+  .glass-strong {
+    background: oklch(0.11 0.005 265 / 0.72);
+    backdrop-filter: blur(32px) saturate(2);
+    -webkit-backdrop-filter: blur(32px) saturate(2);
+    border: 1px solid var(--border-strong);
+    box-shadow:
+      inset 0 1px 0 0 oklch(1 0 0 / 0.16),
+      0 24px 60px -24px oklch(0 0 0 / 0.9);
+  }
+
+  /* Aurora — slow drifting colour fields behind the grain. Transform and
+     opacity only, so it stays on the compositor and never triggers layout. */
+  .aurora {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    will-change: transform;
+    pointer-events: none;
+  }
+
+  .aurora-a {
+    animation: drift-a 26s var(--ease-in-out) infinite;
+  }
+  .aurora-b {
+    animation: drift-b 34s var(--ease-in-out) infinite;
+  }
+  .aurora-c {
+    animation: drift-c 30s var(--ease-in-out) infinite;
+  }
+
+  /* Pointer-tracked highlight. The coordinates arrive as custom properties
+     from a rAF-throttled listener, so following the cursor costs no React
+     render — only a repaint of this one gradient. */
+  .spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.35s var(--ease-out);
+    background: radial-gradient(
+      340px circle at var(--mx, 50%) var(--my, 0%),
+      color-mix(in oklch, var(--accent) 16%, transparent),
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Above-the-fold entrance. Plays once on load rather than waiting for a
+     scroll, because content a visitor can already see should never be hidden
+     behind an interaction they have not performed yet. */
+  .js .hero-in {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: hero-in 0.7s var(--ease-out) forwards;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .hero-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .aurora-a,
+    .aurora-b,
+    .aurora-c {
+      animation: none;
+    }
   }
 
   .hairline {
@@ -170,15 +257,15 @@
      for seeing the page. */
   .js .reveal {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(10px);
   }
 
   .js .reveal.is-visible {
     opacity: 1;
     transform: none;
     transition:
-      opacity 0.6s var(--ease-out),
-      transform 0.6s var(--ease-out);
+      opacity 0.45s var(--ease-out),
+      transform 0.45s var(--ease-out);
     transition-delay: var(--reveal-delay, 0ms);
   }
 
@@ -195,6 +282,20 @@
 
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  .marquee-track {
+    animation: marquee 46s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
   }
 
   .shimmer {
@@ -224,6 +325,43 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes hero-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -8%, 0) scale(1.14);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(-9%, 6%, 0) scale(0.92);
+  }
+}
+
+@keyframes drift-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  50% {
+    transform: translate3d(5%, 9%, 0) scale(1.1);
   }
 }
 
