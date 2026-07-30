@@ -64,9 +64,22 @@ something that could be mistaken for a screenshot of a site that isn't there.
 
 ### Assistant — `src/app/api/chat/route.ts`
 
-A streaming chat endpoint on Claude Opus 5. It is the site's only dynamic
-route; every page stays static, and a missing key returns a 503 the widget
-renders as "offline" rather than an error.
+A streaming chat endpoint with a swappable provider. It is the site's only
+dynamic route; every page stays static.
+
+It degrades in three tiers rather than failing:
+
+1. **`GEMINI_API_KEY`** — Google's free tier. No card, and its limits are far
+   above what a portfolio sees. The default.
+2. **`ANTHROPIC_API_KEY`** — used only when no Gemini key is set. Better
+   answers, paid. The system prompt is cached, so the dominant input cost
+   becomes a cache read.
+3. **No key** — `src/lib/chat/local.ts` answers from the committed manifest.
+   Not a model and it does not pretend to be one: it handles the questions
+   visitors actually ask a portfolio and says plainly when something is beyond
+   it. Free forever, no signup.
+
+Adding a key upgrades the assistant; it does not switch it on.
 
 The system prompt is generated from the same committed manifest and case
 studies the pages render, so the assistant and the site can never disagree.
@@ -141,9 +154,11 @@ node scripts/capture.mjs --slug=brandforge --dry-run
 | --- | --- | --- |
 | `GITHUB_TOKEN` | For discovery | Public repo reads. In Actions the built-in token is enough. |
 | `VERCEL_TOKEN` | Optional | Improves production-alias fidelity. Discovery falls back to the repo homepage and the GitHub Deployments API without it. |
-| `ANTHROPIC_API_KEY` | For the assistant | Powers `/api/chat`. Without it the widget reports itself offline and every page still builds and renders. |
+| `GEMINI_API_KEY` | For the assistant | Google AI Studio key — free tier, no card. First choice if set. |
+| `ANTHROPIC_API_KEY` | Optional | Used only if no Gemini key is set. Higher quality, paid. |
 
-None of them are needed to build or run the site.
+None of them are needed to build or run the site. With no provider key at all
+the assistant answers from a local lookup over the same manifest (see below).
 
 ---
 

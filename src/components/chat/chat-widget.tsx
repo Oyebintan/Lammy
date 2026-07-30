@@ -17,6 +17,38 @@ const STARTERS = [
 
 const MAX_CHARS = 800;
 
+/**
+ * Minimal inline renderer. Model providers emit markdown, and showing a visitor
+ * literal `**asterisks**` looks broken — but a full markdown parser is a lot of
+ * bundle for two constructs, so this handles bold and bare URLs only.
+ */
+function renderInline(text: string) {
+  const pattern = /(\*\*[^*]+\*\*|https?:\/\/[^\s)]+)/g;
+  return text.split(pattern).map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-semibold text-fg">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="text-emerald-400 underline decoration-emerald-400/30 underline-offset-2 hover:decoration-emerald-400"
+        >
+          {part.replace(/^https?:\/\//, '')}
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [turns, setTurns] = useState<Turn[]>([]);
@@ -240,7 +272,7 @@ export function ChatWidget() {
                       turn.role === 'user' ? 'text-fg' : 'text-fg-muted',
                     )}
                   >
-                    {turn.content}
+                    {renderInline(turn.content)}
                     {streaming && i === turns.length - 1 && turn.role === 'assistant' ? (
                       <span className="ml-0.5 inline-block h-3.5 w-1.5 translate-y-0.5 animate-pulse bg-emerald-400" />
                     ) : null}
