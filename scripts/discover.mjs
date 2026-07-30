@@ -61,7 +61,9 @@ const OVERRIDES = {
     featured: true,
     order: 4,
     accent: 'violet',
-    status: 'research',
+    // The demo front end is served from GitHub Pages on the Final-Year-Project
+    // repo, which is merged into this project below.
+    liveUrlOverride: 'https://oyebintan.github.io/Final-Year-Project/',
     mergeRepos: ['Final-Year-Project'],
   },
   'career-recommender': {
@@ -85,7 +87,7 @@ const TAGLINES = {
     'AI brand-identity studio. Five questions in, a complete brand kit out — strategy, voice, visual identity and an exportable PDF.',
   lammydeart: 'Design portfolio and catalogue for brand identity, packaging and campaign work.',
   'email-spam-classifier':
-    'Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.',
+    'Final year project. Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.',
   'career-recommender':
     'Transparent, rule-based career matching across 42 careers with a personalised skill-gap analysis.',
   'teniola-graduation-tribute':
@@ -139,6 +141,16 @@ function parseCommitTitle(message) {
   return { title: lines[0].trim(), prNumber: undefined };
 }
 
+/** HEAD probe used to confirm a conventional URL actually serves something. */
+async function reachable(url) {
+  try {
+    const res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(10_000) });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 async function resolveLiveUrl(repo, override) {
   if (override?.liveUrlOverride) {
     return {
@@ -152,6 +164,24 @@ async function resolveLiveUrl(repo, override) {
       evidence: { type: 'repo-metadata', repo: repo.name, field: 'homepage', value: repo.homepage, url: repo.html_url },
     };
   }
+  // GitHub Pages. The API is authoritative but needs the `pages` scope, so fall
+  // back to probing the conventional URL — that works with no extra permission
+  // and is how a future Pages site gets discovered without touching this file.
+  const pages = await gh(`/repos/${OWNER}/${repo.name}/pages`);
+  if (pages?.html_url) {
+    return {
+      url: pages.html_url.replace(/\/$/, ''),
+      evidence: { type: 'repo-metadata', repo: repo.name, field: 'github-pages', value: pages.html_url, url: repo.html_url },
+    };
+  }
+  const probe = `https://${OWNER.toLowerCase()}.github.io/${repo.name}/`;
+  if (await reachable(probe)) {
+    return {
+      url: probe.replace(/\/$/, ''),
+      evidence: { type: 'repo-metadata', repo: repo.name, field: 'github-pages', value: probe, url: repo.html_url },
+    };
+  }
+
   const deployments = await gh(`/repos/${OWNER}/${repo.name}/deployments?per_page=1&environment=Production`);
   if (Array.isArray(deployments) && deployments.length) {
     const statuses = await gh(`/repos/${OWNER}/${repo.name}/deployments/${deployments[0].id}/statuses?per_page=5`);

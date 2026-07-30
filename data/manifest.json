@@ -182,7 +182,7 @@
     {
       "slug": "email-spam-classifier",
       "name": "Hybrid Spam Classifier",
-      "tagline": "Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.",
+      "tagline": "Final year project. Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.",
       "repos": [
         {
           "owner": "Oyebintan",
@@ -231,14 +231,20 @@
         "topics": [],
         "license": null
       },
-      "liveUrl": null,
-      "liveUrlEvidence": null,
-      "status": "research",
+      "liveUrl": "https://oyebintan.github.io/Final-Year-Project",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "Final-Year-Project",
+        "field": "github-pages",
+        "value": "https://oyebintan.github.io/Final-Year-Project/",
+        "url": "https://github.com/Oyebintan/Final-Year-Project"
+      },
+      "status": "live",
       "featured": true,
       "order": 4,
       "accent": "violet",
       "startedAt": "2026-02-22T16:43:43Z",
-      "shippedAt": null
+      "shippedAt": "2026-02-22T16:43:43Z"
     },
     {
       "slug": "career-recommender",
@@ -1044,7 +1050,7 @@
     "totals": {
       "repositories": 13,
       "projectsShipped": 6,
-      "deployments": 5,
+      "deployments": 6,
       "technologies": 9,
       "commitsTracked": 266
     },

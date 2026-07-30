@@ -25,6 +25,7 @@ concurrency:
 
 permissions:
   contents: write
+  pages: read # lets discovery resolve GitHub Pages URLs authoritatively
 
 jobs:
   refresh:
