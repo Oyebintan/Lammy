@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T21:24:40.277Z",
+  "generatedAt": "2026-07-30T21:55:06.740Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -68,8 +68,8 @@
       "featured": true,
       "order": 1,
       "accent": "emerald",
-      "startedAt": "2026-07-06T13:48:14Z",
-      "shippedAt": "2026-07-06T13:48:14Z"
+      "startedAt": "2026-05-29T22:41:12Z",
+      "shippedAt": "2026-05-29T22:41:12Z"
     },
     {
       "slug": "brandforge",
@@ -231,13 +231,13 @@
         "topics": [],
         "license": null
       },
-      "liveUrl": "https://oyebintan.github.io/Final-Year-Project",
+      "liveUrl": "https://oyebintan.github.io/Final-Year-Project/",
       "liveUrlEvidence": {
         "type": "repo-metadata",
-        "repo": "Final-Year-Project",
-        "field": "github-pages",
+        "repo": "email-spam-classifier",
+        "field": "liveUrlOverride",
         "value": "https://oyebintan.github.io/Final-Year-Project/",
-        "url": "https://github.com/Oyebintan/Final-Year-Project"
+        "url": "https://github.com/Oyebintan/email-spam-classifier"
       },
       "status": "live",
       "featured": true,
@@ -341,7 +341,7 @@
         "topics": [],
         "license": null
       },
-      "liveUrl": "https://oyebintan.github.io/teniola-graduation-tribute",
+      "liveUrl": "https://oyebintan.github.io/teniola-graduation-tribute/",
       "liveUrlEvidence": {
         "type": "repo-metadata",
         "repo": "teniola-graduation-tribute",
@@ -963,62 +963,6 @@
       "url": "https://github.com/Oyebintan/Career-Recommender"
     },
     {
-      "id": "siwes-finder:merge:55fdb586e89c6dce6f9a78432024079b3bac6f97",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "merge",
-      "title": "feat(api): expand API integration and refactor UI",
-      "body": null,
-      "date": "2026-05-29T23:13:24Z",
-      "commit": {
-        "sha": "55fdb586e89c6dce6f9a78432024079b3bac6f97",
-        "url": "https://github.com/Oyebintan/Android-APK/commit/55fdb586e89c6dce6f9a78432024079b3bac6f97"
-      },
-      "url": "https://github.com/Oyebintan/Android-APK/commit/55fdb586e89c6dce6f9a78432024079b3bac6f97"
-    },
-    {
-      "id": "siwes-finder:merge:9343cc641b03ce370386bef7c5fe6ecd10f6b116",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "merge",
-      "title": "feat: add light mode support and theme toggle",
-      "body": null,
-      "date": "2026-05-29T22:53:47Z",
-      "commit": {
-        "sha": "9343cc641b03ce370386bef7c5fe6ecd10f6b116",
-        "url": "https://github.com/Oyebintan/Android-APK/commit/9343cc641b03ce370386bef7c5fe6ecd10f6b116"
-      },
-      "url": "https://github.com/Oyebintan/Android-APK/commit/9343cc641b03ce370386bef7c5fe6ecd10f6b116"
-    },
-    {
-      "id": "siwes-finder:merge:1d5e5251b683df4d80f810a98738d26e14505989",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "merge",
-      "title": "feat: initialize Android application structure",
-      "body": null,
-      "date": "2026-05-29T22:41:43Z",
-      "commit": {
-        "sha": "1d5e5251b683df4d80f810a98738d26e14505989",
-        "url": "https://github.com/Oyebintan/Android-APK/commit/1d5e5251b683df4d80f810a98738d26e14505989"
-      },
-      "url": "https://github.com/Oyebintan/Android-APK/commit/1d5e5251b683df4d80f810a98738d26e14505989"
-    },
-    {
-      "id": "siwes-finder:repo_created:2026-05-29T22:41:12Z",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "repo_created",
-      "title": "Android-APK started",
-      "body": null,
-      "date": "2026-05-29T22:41:12Z",
-      "url": "https://github.com/Oyebintan/Android-APK"
-    },
-    {
       "id": "email-spam-classifier:merge:e2ee36e26ac7c22918f90b51b701b20e3fbdf41c",
       "slug": "email-spam-classifier",
       "projectName": "Hybrid Spam Classifier",
@@ -1046,90 +990,62 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-07-30T21:24:40.277Z",
+    "generatedAt": "2026-07-30T21:55:06.741Z",
     "totals": {
       "repositories": 13,
       "projectsShipped": 6,
       "deployments": 6,
       "technologies": 9,
-      "commitsTracked": 266
+      "commitsTracked": 256
     },
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 1458102,
-        "share": 0.7121039931197398
+        "bytes": 1333879,
+        "share": 0.7160985943545483
       },
       {
         "name": "JavaScript",
-        "bytes": 206397,
-        "share": 0.10079962023777139
+        "bytes": 175343,
+        "share": 0.09413363268325653
       },
       {
         "name": "CSS",
-        "bytes": 135047,
-        "share": 0.06595389620125444
+        "bytes": 122440,
+        "share": 0.06573243292140507
       },
       {
         "name": "Python",
-        "bytes": 98653,
-        "share": 0.04817989086719701
+        "bytes": 83182,
+        "share": 0.04465660923936881
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.03677676808473542
+        "share": 0.040427271551073896
       },
       {
         "name": "HTML",
-        "bytes": 70535,
-        "share": 0.03444769649496458
+        "bytes": 69051,
+        "share": 0.037070321999803514
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0015217838275793528
+        "share": 0.0016728378061344187
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00017532746922368025
+        "share": 0.00019273067150264963
       },
       {
         "name": "Procfile",
-        "bytes": 84,
-        "share": 0.00004102369753423159
+        "bytes": 29,
+        "share": 0.000015568772906899273
       }
     ],
     "recentCommits": [
-      {
-        "repo": "Lammy",
-        "sha": "58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53",
-        "message": "feat(ui): rebuild the hero, add depth and settle the page down",
-        "date": "2026-07-30T16:35:39Z",
-        "url": "https://github.com/Oyebintan/Lammy/commit/58f89acf6a0b102a5ce7faec96bf4d5edfaa5f53"
-      },
-      {
-        "repo": "Lammy",
-        "sha": "e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8",
-        "message": "perf: drop the animation library, hand-roll the one animation left",
-        "date": "2026-07-30T15:48:48Z",
-        "url": "https://github.com/Oyebintan/Lammy/commit/e2d07bbd03ffa7ab1ac46503a206d1f379d06fb8"
-      },
-      {
-        "repo": "Lammy",
-        "sha": "fef8c5662eabc43dc3a5a555a59d5e0de145f407",
-        "message": "feat: Lammy — self-updating product showcase",
-        "date": "2026-07-30T15:42:02Z",
-        "url": "https://github.com/Oyebintan/Lammy/commit/fef8c5662eabc43dc3a5a555a59d5e0de145f407"
-      },
-      {
-        "repo": "Lammy",
-        "sha": "dab0499e98d868d969570ce0ba9ae92041229eae",
-        "message": "Initial commit from Create Next App",
-        "date": "2026-07-30T15:06:55Z",
-        "url": "https://github.com/Oyebintan/Lammy/commit/dab0499e98d868d969570ce0ba9ae92041229eae"
-      },
       {
         "repo": "Lammydeart",
         "sha": "5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
@@ -1185,10 +1101,37 @@
         "message": "fix: hero frame motion loops properly instead of restarting",
         "date": "2026-07-26T09:15:18Z",
         "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "64457ffacbed7b3ff403eb6b2344f31fdbadd541",
+        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
+        "date": "2026-07-26T06:40:04Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "99098939a5e6a9ddfe6ebd6e30268f961c5095a1",
+        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
+        "date": "2026-07-26T05:13:56Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/99098939a5e6a9ddfe6ebd6e30268f961c5095a1"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
+        "message": "fix: restore pull-to-refresh",
+        "date": "2026-07-26T04:58:13Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
+        "message": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
+        "date": "2026-07-26T04:49:32Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
       }
     ],
     "contributions": {
-      "2026-07-30": 4,
       "2026-07-28": 1,
       "2026-07-27": 5,
       "2026-07-26": 11,
@@ -1232,9 +1175,7 @@
       "2026-06-19": 3,
       "2026-06-30": 7,
       "2026-06-29": 9,
-      "2026-06-28": 1,
-      "2026-05-29": 4,
-      "2026-04-13": 2
+      "2026-06-28": 1
     }
   }
 }

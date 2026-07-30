@@ -39,30 +39,42 @@
     "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAA0APu1kqU4ppaOiMAgBMB2JQBdgMXSbjZ6yNBRE5Z9uAAD+7Nl8Wdtqm5WEcsX89PbY7wMQhf6PzXykcyagn+xjHSq2cNCdi0MglaE62wu6AaK/0DEzttfJhMehlW61Dz1f0ATBcYgI1AAFECAh9X8CThSToAA="
   },
   "email-spam-classifier": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/email-spam-classifier/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:55:09.893Z",
+    "lastCheckedAt": "2026-07-30T21:55:09.893Z",
+    "status": "ok",
+    "phash": "07e11ff81ff0306c3e6c007c3f707f4036002000000000000000000000000000",
+    "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JZ2kfTsyVBAAA/vBXTQxSsxA3F5jhav9qYuYW9NR2qje71+AAAA=="
   },
   "career-recommender": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/career-recommender/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:55:13.466Z",
+    "lastCheckedAt": "2026-07-30T21:55:13.466Z",
+    "status": "ok",
+    "phash": "000000000001000720077e3f7f7f7f7f007f607f7c7f087f687f007f00ff00ff",
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZACw7CIflKhdhVN7jAAA/vEPZ7k9PfE9NfpaSN6KyWkcXxySscJvNdcYMcIBzF+pzLm889eVxrcDSDQkJQqqLhnpAAAA"
   },
   "teniola-graduation-tribute": {
-    "base": null,
-    "widths": [],
+    "base": "/shots/teniola-graduation-tribute/home",
+    "widths": [
+      1440,
+      720
+    ],
     "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
+    "capturedAt": "2026-07-30T21:55:16.521Z",
+    "lastCheckedAt": "2026-07-30T21:55:16.521Z",
+    "status": "ok",
+    "phash": "00000000000000000000000007e007e001800180018000000000000000000000",
+    "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoUAA0APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vEPSatWpMY6vNzR6daAAAA="
   }
 }
