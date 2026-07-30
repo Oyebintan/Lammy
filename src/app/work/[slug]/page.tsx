@@ -11,7 +11,7 @@ import {
   Surface,
 } from '@/components/ui/primitives';
 import { ProjectShot } from '@/components/project/project-shot';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { formatMonthYear, getProject, projectSlugs } from '@/lib/projects';
 import { prettyUrl } from '@/lib/utils';
 import { site } from '../../../../config/site.config';

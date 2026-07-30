@@ -1,6 +1,6 @@
 import { Compass, GitCommitHorizontal, Layers, Rocket } from 'lucide-react';
 import { Section, SectionHeading, Surface } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 
 /**
  * Written in first person and tied to things that actually happened in these

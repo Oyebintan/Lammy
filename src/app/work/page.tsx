@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { ProjectCard } from '@/components/project/project-card';
 import { EmptyState, Section, SectionHeading } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { projects } from '@/lib/projects';
 import { site } from '../../../config/site.config';
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { Section, SectionHeading } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { formatMonthYear, projects } from '@/lib/projects';
 
 /** One entry per project, ordered oldest first — the arc, not the noise. */

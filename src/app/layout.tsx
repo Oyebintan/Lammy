@@ -64,12 +64,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
-        {/* Runs synchronously during parsing, before first paint, so scroll
-            reveals can start hidden without ever hiding content from a visitor
-            whose JavaScript has not run. */}
+        {/* Reveal machinery, deliberately inline and framework-free.
+
+            It runs while the HTML is still parsing, so sections reveal as the
+            browser reaches them rather than waiting on the React bundle. When
+            this lived in a `useEffect`, the hidden state applied before first
+            paint but only lifted after hydration — on a slow connection the
+            page sat blank and scrolling did nothing for seconds.
+
+            `revealAll` on a timer is the safety net: whatever happens to the
+            observer, content is never left hidden. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add('js')`,
+            __html: `(function(){var d=document,r=d.documentElement;r.classList.add('js');
+function all(){d.querySelectorAll('.reveal').forEach(function(e){e.classList.add('is-visible')})}
+if(!('IntersectionObserver'in window)){d.addEventListener('DOMContentLoaded',all);return}
+var seen=new WeakSet(),io=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}})},
+{rootMargin:'0px 0px 300px 0px'});
+function scan(){d.querySelectorAll('.reveal').forEach(function(e){
+if(!seen.has(e)){seen.add(e);io.observe(e)}})}
+var mo=new MutationObserver(scan);mo.observe(r,{childList:true,subtree:true});
+d.addEventListener('DOMContentLoaded',function(){scan();mo.disconnect()});
+setTimeout(all,3000)})()`,
           }}
         />
       </head>

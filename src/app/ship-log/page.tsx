@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { GitMerge, GitCommitHorizontal, Rocket, Tag } from 'lucide-react';
 import { Badge, EmptyState, Section, SectionHeading } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { formatDate, projects, shipLog, shipLogByMonth } from '@/lib/projects';
 import type { ShipKind } from '@/lib/types';
 

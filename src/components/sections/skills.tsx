@@ -1,5 +1,5 @@
 import { Badge, Section, SectionHeading } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { projects } from '@/lib/projects';
 
 /**

@@ -1,7 +1,7 @@
 import { ArrowUpRight, Mail } from 'lucide-react';
 import { GithubMark } from '@/components/ui/icons';
 import { Section, Surface } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { site } from '../../../config/site.config';
 
 const CHANNELS = [

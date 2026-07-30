@@ -8,7 +8,7 @@ import { Skills } from '@/components/sections/skills';
 import { Contact } from '@/components/sections/contact';
 import { ProjectCard } from '@/components/project/project-card';
 import { Section, SectionHeading } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { featuredProjects, projects } from '@/lib/projects';
 import { site } from '../../config/site.config';
 

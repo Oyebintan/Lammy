@@ -1,64 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
-import { cn } from '@/lib/utils';
+import { useEffect, useRef, useState } from 'react';
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/**
- * Scroll reveal, done as progressive enhancement.
- *
- * The hidden state lives in CSS behind an `html.js` class that an inline script
- * sets before first paint. Without JavaScript the class is never added, so the
- * content renders plainly visible rather than being stranded at opacity 0 —
- * which is what happens if a motion library server-renders its initial state.
- * Reduced motion is handled in the same stylesheet.
- */
-export function Reveal({
-  children,
-  delay = 0,
-  className,
-  as: Tag = 'div',
-}: {
-  children: ReactNode;
-  delay?: number;
-  className?: string;
-  as?: 'div' | 'li' | 'section';
-}) {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    // The bottom margin is expanded, not inset, so a section finishes settling
-    // roughly as it reaches the viewport instead of animating in front of the
-    // reader. Anything already on screen fires synchronously.
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        el.classList.add('is-visible');
-        observer.disconnect();
-      },
-      { rootMargin: '0px 0px 220px 0px', threshold: 0 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <Tag
-      ref={ref as never}
-      className={cn('reveal', className)}
-      style={{ '--reveal-delay': `${Math.round(delay * 1000)}ms` } as CSSProperties}
-    >
-      {children}
-    </Tag>
-  );
-}
 
 /* Same easing curve as the CSS reveals, so counters and fades feel related. */
 const easeOutExpo = (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));

@@ -1,6 +1,6 @@
 import { GitCommitHorizontal } from 'lucide-react';
 import { Badge, Section, SectionHeading, Surface } from '@/components/ui/primitives';
-import { Reveal } from '@/components/motion/motion';
+import { Reveal } from '@/components/motion/reveal';
 import { activity, formatDate } from '@/lib/projects';
 import { site } from '../../../config/site.config';
 
