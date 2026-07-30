@@ -22,6 +22,22 @@
           "stars": 0,
           "topics": [],
           "license": null
+        },
+        {
+          "owner": "Oyebintan",
+          "name": "Android-APK",
+          "url": "https://github.com/Oyebintan/Android-APK",
+          "defaultBranch": "main",
+          "createdAt": "2026-05-29T22:41:12Z",
+          "pushedAt": "2026-05-29T23:13:24Z",
+          "languages": {
+            "Kotlin": 75304,
+            "JavaScript": 1615,
+            "Python": 204
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
         }
       ],
       "primaryRepo": {
@@ -198,22 +214,6 @@
           "stars": 0,
           "topics": [],
           "license": null
-        },
-        {
-          "owner": "Oyebintan",
-          "name": "Android-APK",
-          "url": "https://github.com/Oyebintan/Android-APK",
-          "defaultBranch": "main",
-          "createdAt": "2026-05-29T22:41:12Z",
-          "pushedAt": "2026-05-29T23:13:24Z",
-          "languages": {
-            "Kotlin": 75304,
-            "JavaScript": 1615,
-            "Python": 204
-          },
-          "stars": 0,
-          "topics": [],
-          "license": null
         }
       ],
       "primaryRepo": {
@@ -282,14 +282,20 @@
         "topics": [],
         "license": null
       },
-      "liveUrl": null,
-      "liveUrlEvidence": null,
-      "status": "shipped",
+      "liveUrl": "https://lammyde-career-recommender.hf.space",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "Career-Recommender",
+        "field": "liveUrlOverride",
+        "value": "https://lammyde-career-recommender.hf.space",
+        "url": "https://github.com/Oyebintan/Career-Recommender"
+      },
+      "status": "live",
       "featured": false,
       "order": 5,
       "accent": "sky",
       "startedAt": "2026-06-19T21:25:15Z",
-      "shippedAt": null
+      "shippedAt": "2026-06-19T21:25:15Z"
     },
     {
       "slug": "teniola-graduation-tribute",
@@ -329,14 +335,20 @@
         "topics": [],
         "license": null
       },
-      "liveUrl": null,
-      "liveUrlEvidence": null,
-      "status": "shipped",
+      "liveUrl": "https://oyebintan.github.io/teniola-graduation-tribute",
+      "liveUrlEvidence": {
+        "type": "repo-metadata",
+        "repo": "teniola-graduation-tribute",
+        "field": "liveUrlOverride",
+        "value": "https://oyebintan.github.io/teniola-graduation-tribute/",
+        "url": "https://github.com/Oyebintan/teniola-graduation-tribute"
+      },
+      "status": "live",
       "featured": false,
       "order": 6,
       "accent": "lime",
       "startedAt": "2026-06-28T08:41:33Z",
-      "shippedAt": null
+      "shippedAt": "2026-06-28T08:41:33Z"
     }
   ],
   "shipLog": [
@@ -945,10 +957,10 @@
       "url": "https://github.com/Oyebintan/Career-Recommender"
     },
     {
-      "id": "email-spam-classifier:merge:55fdb586e89c6dce6f9a78432024079b3bac6f97",
-      "slug": "email-spam-classifier",
-      "projectName": "Hybrid Spam Classifier",
-      "accent": "violet",
+      "id": "siwes-finder:merge:55fdb586e89c6dce6f9a78432024079b3bac6f97",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
       "kind": "merge",
       "title": "feat(api): expand API integration and refactor UI",
       "body": null,
@@ -960,10 +972,10 @@
       "url": "https://github.com/Oyebintan/Android-APK/commit/55fdb586e89c6dce6f9a78432024079b3bac6f97"
     },
     {
-      "id": "email-spam-classifier:merge:9343cc641b03ce370386bef7c5fe6ecd10f6b116",
-      "slug": "email-spam-classifier",
-      "projectName": "Hybrid Spam Classifier",
-      "accent": "violet",
+      "id": "siwes-finder:merge:9343cc641b03ce370386bef7c5fe6ecd10f6b116",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
       "kind": "merge",
       "title": "feat: add light mode support and theme toggle",
       "body": null,
@@ -975,10 +987,10 @@
       "url": "https://github.com/Oyebintan/Android-APK/commit/9343cc641b03ce370386bef7c5fe6ecd10f6b116"
     },
     {
-      "id": "email-spam-classifier:merge:1d5e5251b683df4d80f810a98738d26e14505989",
-      "slug": "email-spam-classifier",
-      "projectName": "Hybrid Spam Classifier",
-      "accent": "violet",
+      "id": "siwes-finder:merge:1d5e5251b683df4d80f810a98738d26e14505989",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
       "kind": "merge",
       "title": "feat: initialize Android application structure",
       "body": null,
@@ -990,10 +1002,10 @@
       "url": "https://github.com/Oyebintan/Android-APK/commit/1d5e5251b683df4d80f810a98738d26e14505989"
     },
     {
-      "id": "email-spam-classifier:repo_created:2026-05-29T22:41:12Z",
-      "slug": "email-spam-classifier",
-      "projectName": "Hybrid Spam Classifier",
-      "accent": "violet",
+      "id": "siwes-finder:repo_created:2026-05-29T22:41:12Z",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
       "kind": "repo_created",
       "title": "Android-APK started",
       "body": null,
@@ -1032,7 +1044,7 @@
     "totals": {
       "repositories": 13,
       "projectsShipped": 6,
-      "deployments": 3,
+      "deployments": 5,
       "technologies": 9,
       "commitsTracked": 266
     },

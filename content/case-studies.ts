@@ -215,20 +215,12 @@ export const caseStudies: Record<string, CaseStudy> = {
         'Deep neural network classifier over the reduced feature space',
         'TensorFlow Lite conversion for low-memory inference',
         'Flask inference API with a browser front end',
-        'Kotlin Android client alongside the web demo',
       ],
       via: {
         kind: 'derived',
         from: [
           readme('email-spam-classifier'),
           file('email-spam-classifier', 'convert_model.py'),
-          {
-            type: 'repo-metadata',
-            repo: 'Android-APK',
-            field: 'description',
-            value: 'Final Year project App',
-            url: `https://github.com/${OWNER}/Android-APK`,
-          },
         ],
       },
     },

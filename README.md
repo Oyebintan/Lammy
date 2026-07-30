@@ -62,6 +62,37 @@ Unreachable or access-protected deployments are recorded as such and render a
 deterministic fallback card. The UI never shows a broken image, and never shows
 something that could be mistaken for a screenshot of a site that isn't there.
 
+### Assistant — `src/app/api/chat/route.ts`
+
+A streaming chat endpoint on Claude Opus 5. It is the site's only dynamic
+route; every page stays static, and a missing key returns a 503 the widget
+renders as "offline" rather than an error.
+
+The system prompt is generated from the same committed manifest and case
+studies the pages render, so the assistant and the site can never disagree.
+It draws a hard line: facts about Lammy come only from that context — anything
+not covered is answered with "I don't know" and the contact address — while
+general technical questions are answered from the model's own knowledge. The
+prompt names this explicitly, because inventing a detail about a real person is
+the failure mode that matters here.
+
+Spend controls, since the endpoint is public and unauthenticated:
+
+- **Prompt caching** on the system prompt. It is large and byte-identical every
+  request, so the dominant input cost becomes a cache read at roughly a tenth
+  of the input rate.
+- **`effort: 'low'`** — right for a chat widget, and the main latency/cost
+  lever. Thinking stays *on*: disabling it on this model can put a tool call
+  into visible text or leak internal tags, and low effort already captures most
+  of the saving.
+- **Hard caps** — 700 output tokens, 800 input characters, 12 turns of history,
+  12 requests per IP per minute.
+
+The rate limiter is per-instance memory, so the real ceiling is
+(limit x warm instances) rather than a global cap. That is enough to stop
+casual hammering and runaway retries; a hard global limit needs shared state
+(Vercel KV, Upstash, Redis) keyed the same way.
+
 ### Case studies — `content/case-studies.ts`
 
 Every narrative field carries provenance. `Sourced<T>` marks content as
@@ -110,8 +141,9 @@ node scripts/capture.mjs --slug=brandforge --dry-run
 | --- | --- | --- |
 | `GITHUB_TOKEN` | For discovery | Public repo reads. In Actions the built-in token is enough. |
 | `VERCEL_TOKEN` | Optional | Improves production-alias fidelity. Discovery falls back to the repo homepage and the GitHub Deployments API without it. |
+| `ANTHROPIC_API_KEY` | For the assistant | Powers `/api/chat`. Without it the widget reports itself offline and every page still builds and renders. |
 
-Neither is needed to build or run the site.
+None of them are needed to build or run the site.
 
 ---
 
@@ -129,7 +161,7 @@ Neither is needed to build or run the site.
 ## Stack
 
 Next.js 16 (App Router, Turbopack) · React 19 · TypeScript · Tailwind CSS v4 ·
-Playwright · sharp
+Claude Opus 5 (`@anthropic-ai/sdk`) · Playwright · sharp
 
 ### Notes on the implementation
 

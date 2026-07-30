@@ -35,7 +35,15 @@ const MIN_PUSHED_AT = '2024-01-01';
 
 /** Only renames, groups and annotates. Cannot introduce a project. */
 const OVERRIDES = {
-  'siwes-finder': { name: 'SIWES Finder', featured: true, order: 1, accent: 'emerald' },
+  'siwes-finder': {
+    name: 'SIWES Finder',
+    featured: true,
+    order: 1,
+    accent: 'emerald',
+    // Distribution repo for the SIWES Finder Android build. Its GitHub
+    // description ("Final Year project App") is stale and misattributes it.
+    mergeRepos: ['Android-APK'],
+  },
   brandforge: { name: 'BrandForge', featured: true, order: 2, accent: 'amber' },
   lammydeart: {
     name: 'Lammy de Art',
@@ -54,12 +62,20 @@ const OVERRIDES = {
     order: 4,
     accent: 'violet',
     status: 'research',
-    // The final-year project spans three repos: the training pipeline and API,
-    // the web demo front end, and the Kotlin Android client.
-    mergeRepos: ['Final-Year-Project', 'Android-APK'],
+    mergeRepos: ['Final-Year-Project'],
   },
-  'career-recommender': { name: 'Career Recommender', order: 5, accent: 'sky' },
-  'teniola-graduation-tribute': { name: 'OOU Times', order: 6, accent: 'lime' },
+  'career-recommender': {
+    name: 'Career Recommender',
+    order: 5,
+    accent: 'sky',
+    liveUrlOverride: 'https://lammyde-career-recommender.hf.space',
+  },
+  'teniola-graduation-tribute': {
+    name: 'OOU Times',
+    order: 6,
+    accent: 'lime',
+    liveUrlOverride: 'https://oyebintan.github.io/teniola-graduation-tribute/',
+  },
 };
 
 const TAGLINES = {
