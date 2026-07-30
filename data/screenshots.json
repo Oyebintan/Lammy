@@ -64,36 +64,5 @@
     "status": "never-attempted",
     "phash": null,
     "blurDataURL": null
-  },
-  "android-apk": {
-    "base": null,
-    "widths": [],
-    "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
-  },
-  "final-year-project-dl": {
-    "base": null,
-    "widths": [],
-    "aspectRatio": 1.6,
-    "capturedAt": null,
-    "status": "never-attempted",
-    "phash": null,
-    "blurDataURL": null
-  },
-  "lammy": {
-    "base": "/shots/lammy/home",
-    "widths": [
-      1440,
-      720
-    ],
-    "aspectRatio": 1.6,
-    "capturedAt": "2026-07-30T21:25:00.541Z",
-    "lastCheckedAt": "2026-07-30T21:25:00.541Z",
-    "status": "ok",
-    "phash": "f0fcf06ce060fe027e737e793c717c0020407066300000000000000000000000",
-    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDG9CHgQwpPrtjGAAD+7MeYtTeFcaSvDJvy1gO/V/Msa8sO4YZSYG5eLkvj1fcyabUFFVDCJnAA"
   }
 }

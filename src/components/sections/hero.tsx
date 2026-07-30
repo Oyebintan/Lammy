@@ -127,7 +127,16 @@ export function Hero() {
                     sizes="(min-width: 1024px) 46vw, 100vw"
                     className="size-full transition-transform duration-700 group-hover:scale-[1.04]"
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg-0/85 via-bg-0/10 to-transparent" />
+                  {/* The label sits on top of a real screenshot, so the scrim
+                      has to reach near-solid at the base — a soft fade let the
+                      captured page's own UI show through behind the text. */}
+                  <div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                      background:
+                        'linear-gradient(to top, oklch(0 0 0) 0%, oklch(0 0 0 / 0.95) 30%, oklch(0 0 0 / 0.55) 52%, transparent 78%)',
+                    }}
+                  />
 
                   <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
                     <div className="flex min-w-0 flex-col gap-1.5">

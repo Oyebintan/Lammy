@@ -24,7 +24,12 @@ const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
 const VERCEL_TEAM = 'team_NbtaApRmcBWbfVVg7Eggo6sY';
 
-const DENY = new Set(['skills-getting-started-with-github-copilot', 'Oyebintan']);
+const DENY = new Set([
+  'skills-getting-started-with-github-copilot',
+  'Oyebintan', // profile README
+  'Lammy', // this site — a portfolio listing itself reads as a bug, not a feature
+  'Final-Year-Project-DL', // the repo's own description is "Project Duplicate"
+]);
 const DENY_PATTERNS = [/^skills-/i, /-test$/i, /^test-/i];
 const MIN_PUSHED_AT = '2024-01-01';
 
@@ -49,7 +54,9 @@ const OVERRIDES = {
     order: 4,
     accent: 'violet',
     status: 'research',
-    mergeRepos: ['Final-Year-Project'],
+    // The final-year project spans three repos: the training pipeline and API,
+    // the web demo front end, and the Kotlin Android client.
+    mergeRepos: ['Final-Year-Project', 'Android-APK'],
   },
   'career-recommender': { name: 'Career Recommender', order: 5, accent: 'sky' },
   'teniola-graduation-tribute': { name: 'OOU Times', order: 6, accent: 'lime' },
