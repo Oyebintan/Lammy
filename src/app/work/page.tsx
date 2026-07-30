@@ -34,7 +34,7 @@ export default function WorkPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
 
-      <Section className="pt-36">
+      <Section className="pt-28 sm:pt-32">
         <Reveal immediate>
           <SectionHeading
             eyebrow={`${projects.length} projects`}

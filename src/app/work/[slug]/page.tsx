@@ -114,7 +114,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       />
 
       {/* Header */}
-      <header className="grain relative overflow-hidden px-5 pt-32 pb-14 sm:px-8">
+      <header className="grain relative overflow-hidden px-5 pt-24 pb-14 sm:px-8 sm:pt-28">
         <div
           className="spotlight left-1/2 top-0 h-[30rem] w-[46rem] -translate-x-1/2 -translate-y-1/2"
           style={{

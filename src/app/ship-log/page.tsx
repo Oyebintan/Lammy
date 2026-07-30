@@ -39,7 +39,7 @@ export default function ShipLogPage() {
     .sort((a, b) => (a.startedAt < b.startedAt ? 1 : -1));
 
   return (
-    <Section className="pt-36">
+    <Section className="pt-28 sm:pt-32">
       <Reveal immediate>
         <SectionHeading
           eyebrow="Ship log"

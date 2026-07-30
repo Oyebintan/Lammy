@@ -32,9 +32,10 @@ jobs:
       - name: Build without secrets
         run: npm run build
 
-      - name: Accessibility audit
+      - name: Accessibility and scroll audit
         run: |
           npx playwright install --with-deps chromium
           npx next start -p 3000 &
           npx wait-on http://127.0.0.1:3000 -t 60000
           node scripts/a11y.mjs
+          node scripts/scroll.mjs

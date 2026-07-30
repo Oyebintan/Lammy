@@ -25,7 +25,11 @@ const ribbon = [
 
 export function Hero() {
   return (
-    <section className="grain relative overflow-hidden px-5 pt-28 pb-16 sm:px-8 sm:pt-32 lg:pb-24">
+    // The nav is fixed and 72px tall, so the top padding only has to clear it
+    // plus a little breathing room. It used to clear it by another 56px, which
+    // on a laptop window left a fifth of the screen empty before anything
+    // started — and pushed the stats row below the fold.
+    <section className="grain relative overflow-hidden px-5 pt-24 pb-16 sm:px-8 sm:pt-26 lg:pb-24">
       {/* Aurora field. Three slow-drifting blooms give the black background
           depth without competing with the type. */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
