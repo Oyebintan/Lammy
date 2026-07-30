@@ -55,9 +55,13 @@ export function GithubActivity() {
       </Reveal>
 
       <div className="mt-14 grid gap-4 lg:grid-cols-[1.35fr_1fr]">
-        {/* Contribution strip */}
-        <Reveal>
-          <Surface tone="card" className="flex h-full flex-col gap-5 p-6 sm:p-7">
+        {/* Contribution strip.
+            `min-w-0` is load-bearing: a grid item defaults to min-width:auto, so
+            without it the strip's min-content width grows the column instead of
+            letting `overflow-x-auto` scroll — which pushed the whole document
+            wider than the viewport and made iOS zoom the page out. */}
+        <Reveal className="min-w-0">
+          <Surface tone="card" className="flex h-full min-w-0 flex-col gap-5 p-6 sm:p-7">
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="text-sm font-medium text-fg">Last 26 weeks</h3>
               <a
@@ -127,8 +131,8 @@ export function GithubActivity() {
         </Reveal>
 
         {/* Recent commits */}
-        <Reveal delay={0.08}>
-          <Surface tone="card" className="flex h-full flex-col gap-4 p-6 sm:p-7">
+        <Reveal delay={0.08} className="min-w-0">
+          <Surface tone="card" className="flex h-full min-w-0 flex-col gap-4 p-6 sm:p-7">
             <h3 className="text-sm font-medium text-fg">Recent commits</h3>
             <ul className="flex flex-col divide-y divide-[var(--border)]">
               {activity.recentCommits.slice(0, 7).map((c) => (

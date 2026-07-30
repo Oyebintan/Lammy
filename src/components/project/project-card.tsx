@@ -53,7 +53,11 @@ export function ProjectCard({
       </div>
 
       {/* Body */}
-      <div className={cn('relative z-[2] flex flex-1 flex-col gap-4 p-6', featured && 'md:justify-center md:p-9')}>
+      {/* Not `relative`: the title's stretched link positions against the nearest
+          positioned ancestor, so this being relative confined the click target to
+          the text and left the screenshot unclickable. z-index still applies —
+          this is a flex item. */}
+      <div className={cn('z-[2] flex flex-1 flex-col gap-4 p-6', featured && 'md:justify-center md:p-9')}>
         <div className="flex items-center gap-2.5">
           <StatusDot live={project.status === 'live'} />
           <span className="font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-fg-faint">
@@ -72,7 +76,10 @@ export function ProjectCard({
               featured ? 'text-h2' : 'text-h3',
             )}
           >
-            <Link href={`/work/${project.slug}`} className="after:absolute after:inset-0">
+            <Link
+              href={`/work/${project.slug}`}
+              className="after:absolute after:inset-0 after:z-[3] after:content-['']"
+            >
               {project.name}
             </Link>
           </h3>

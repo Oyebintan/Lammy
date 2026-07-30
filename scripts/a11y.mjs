@@ -42,6 +42,34 @@ try {
       await page.goto(`${BASE_URL}${route}`, { waitUntil: 'networkidle', timeout: 30_000 });
       await page.waitForTimeout(500);
 
+      // Horizontal overflow check. Not something axe reports, but on a phone
+      // it makes the browser zoom the whole page out to fit, which is how this
+      // shipped unnoticed: every element looks correct, just smaller.
+      const overflow = await page.evaluate(() => {
+        const vw = document.documentElement.clientWidth;
+        const sw = document.documentElement.scrollWidth;
+        if (sw <= vw + 1) return null;
+        const worst = [...document.querySelectorAll('*')]
+          .map((el) => ({ el, r: el.getBoundingClientRect() }))
+          .filter(({ r }) => r.width > vw + 1)
+          .sort((a, b) => b.r.width - a.r.width)[0];
+        return {
+          vw,
+          sw,
+          culprit: worst
+            ? `<${worst.el.tagName.toLowerCase()}> ${String(worst.el.className).slice(0, 70)}`
+            : 'unknown',
+        };
+      });
+
+      if (overflow) {
+        failures += 1;
+        console.error(
+          `\n✗ ${viewport.label} ${route} — horizontal overflow: scrollWidth ${overflow.sw} > viewport ${overflow.vw}`,
+        );
+        console.error(`    widest: ${overflow.culprit}`);
+      }
+
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
         .analyze();
@@ -57,7 +85,7 @@ try {
           console.error(`  [${v.impact}] ${v.id}: ${v.help} (${v.nodes.length} node/s)`);
           console.error(`    ${v.nodes[0].html.slice(0, 140)}`);
         }
-      } else {
+      } else if (!overflow) {
         console.log(`✓ ${viewport.label.padEnd(8)} ${route}`);
       }
 
@@ -71,7 +99,7 @@ try {
 }
 
 if (failures > 0) {
-  console.error(`\n${failures} serious/critical violation group(s).`);
+  console.error(`\n${failures} accessibility/layout failure(s).`);
   process.exit(1);
 }
-console.log('\n✓ No serious or critical accessibility violations.');
+console.log('\n✓ No accessibility violations and no horizontal overflow.');
