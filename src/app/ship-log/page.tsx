@@ -54,9 +54,12 @@ export default function ShipLogPage() {
           <ul className="mt-12 flex flex-col divide-y divide-[var(--border)] border-y border-border-hair">
             {launches.map((p) => (
               <li key={p.slug} data-accent={p.accent}>
+                {/* Wraps below `sm`. Side by side on a 320px screen the fixed
+                    date stole enough width to truncate names to "Career
+                    Reco…", which is worse than a second line. */}
                 <IntentLink
                   href={`/work/${p.slug}`}
-                  className="group flex items-center justify-between gap-4 py-4 transition-colors"
+                  className="group flex flex-col gap-1 py-4 transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
                   <span className="flex min-w-0 items-center gap-3">
                     <span
@@ -67,7 +70,7 @@ export default function ShipLogPage() {
                       {p.name}
                     </span>
                   </span>
-                  <span className="shrink-0 font-mono text-xs text-fg-faint">
+                  <span className="shrink-0 pl-[18px] font-mono text-xs text-fg-faint sm:pl-0">
                     Shipped{' '}
                     {new Date(p.startedAt).toLocaleDateString('en-US', {
                       month: 'long',

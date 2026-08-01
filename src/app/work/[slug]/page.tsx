@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/primitives';
 import { ProjectShot } from '@/components/project/project-shot';
 import { Reveal } from '@/components/motion/reveal';
-import { formatMonthYear, getProject, projectSlugs } from '@/lib/projects';
+import { formatMonthYear, getProject, projectSlugs, projects } from '@/lib/projects';
 import { prettyUrl } from '@/lib/utils';
 import { site } from '../../../../config/site.config';
 import type { Evidence, Sourced } from '@/lib/types';
@@ -68,7 +68,11 @@ function Chapter({
   return (
     <Reveal>
       <section className="flex flex-col gap-5 border-t border-border-hair pt-10 sm:flex-row sm:gap-12">
-        <div className="flex shrink-0 items-baseline gap-3 sm:w-44 sm:flex-col sm:gap-1.5">
+        {/* Sticky from `sm` up: the label column is otherwise a wide strip of
+            empty space for the whole length of a section, and letting the
+            heading track the prose is what makes a long case study navigable
+            without a table of contents. */}
+        <div className="flex shrink-0 items-baseline gap-3 sm:sticky sm:top-24 sm:h-fit sm:w-44 sm:flex-col sm:gap-1.5">
           <span className="font-mono text-xs text-fg-faint">{index}</span>
           <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-fg-muted">{title}</h2>
         </div>
@@ -344,7 +348,57 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </dl>
           </section>
         </Reveal>
+
+        <Reveal>
+          <ProjectPager slug={project.slug} />
+        </Reveal>
       </div>
     </article>
+  );
+}
+
+/**
+ * Previous and next project.
+ *
+ * A case study used to dead-end — the only way onward was the back button or
+ * the nav. The order matches the work index, and it wraps, so the last project
+ * leads to the first rather than showing a dead half of the row.
+ */
+function ProjectPager({ slug }: { slug: string }) {
+  if (projects.length < 2) return null;
+
+  const at = projects.findIndex((p) => p.slug === slug);
+  const previous = projects[(at - 1 + projects.length) % projects.length];
+  const next = projects[(at + 1) % projects.length];
+
+  const links: Array<{ project: (typeof projects)[number]; label: string; align: string }> = [
+    { project: previous, label: 'Previous', align: 'items-start text-left' },
+    { project: next, label: 'Next', align: 'items-end text-right' },
+  ];
+
+  return (
+    <nav
+      aria-label="More projects"
+      className="grid gap-3 border-t border-border-hair pt-10 sm:grid-cols-2"
+    >
+      {links.map(({ project: p, label, align }) => (
+        <Link
+          key={label}
+          href={`/work/${p.slug}`}
+          data-accent={p.accent}
+          className={`group flex flex-col gap-2 rounded-[var(--radius-panel)] border border-border-hair bg-bg-2 p-6 transition-colors hover:border-border-strong hover:bg-bg-3 ${align}`}
+        >
+          <span className="flex items-center gap-2 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fg-faint">
+            {label === 'Previous' ? <ArrowLeft className="size-3.5" /> : null}
+            {label}
+            {label === 'Next' ? <ArrowUpRight className="size-3.5" /> : null}
+          </span>
+          <span className="text-h3 font-medium tracking-tight text-fg transition-colors group-hover:text-[var(--accent)]">
+            {p.name}
+          </span>
+          <span className="line-clamp-2 text-sm leading-relaxed text-fg-muted">{p.tagline}</span>
+        </Link>
+      ))}
+    </nav>
   );
 }

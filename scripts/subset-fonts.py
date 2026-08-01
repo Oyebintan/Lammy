@@ -51,39 +51,51 @@ UNICODES = ",".join(
     ]
 )
 
+# woff2 for the browser.
 FAMILIES = {
     "geist-sans/Geist-Variable.woff2": "Geist-Variable-subset.woff2",
     "geist-mono/GeistMono-Variable.woff2": "GeistMono-Variable-subset.woff2",
 }
 
+# TTF for Satori, which renders the Open Graph cards at build time and reads
+# neither woff2 nor variable axes. These never reach a browser — they are read
+# from disk by `opengraph-image.tsx` while the site is being built.
+OG_FAMILIES = {
+    "geist-sans/Geist-Regular.ttf": "og/Geist-Regular-subset.ttf",
+    "geist-sans/Geist-SemiBold.ttf": "og/Geist-SemiBold-subset.ttf",
+    "geist-mono/GeistMono-Regular.ttf": "og/GeistMono-Regular-subset.ttf",
+}
+
+
+def subset(source: pathlib.Path, target: pathlib.Path, flavor: str | None) -> None:
+    target.parent.mkdir(parents=True, exist_ok=True)
+    args = [
+        sys.executable,
+        "-m",
+        "fontTools.subset",
+        str(source),
+        f"--unicodes={UNICODES}",
+        "--layout-features=kern,liga,calt,ccmp,cv11,ss01,tnum",
+        f"--output-file={target}",
+    ]
+    if flavor:
+        args.append(f"--flavor={flavor}")
+    subprocess.run(args, check=True)
+
+    before = source.stat().st_size
+    after = target.stat().st_size
+    print(f"{target.name}: {before / 1024:.1f}KB -> {after / 1024:.1f}KB ({after / before:.0%})")
+
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
 
-    for rel, name in FAMILIES.items():
+    for rel, name in {**FAMILIES, **OG_FAMILIES}.items():
         source = SRC / rel
         if not source.exists():
             print(f"missing {source} — run npm install first", file=sys.stderr)
             return 1
-
-        target = OUT / name
-        subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "fontTools.subset",
-                str(source),
-                f"--unicodes={UNICODES}",
-                "--layout-features=kern,liga,calt,ccmp,cv11,ss01,tnum",
-                "--flavor=woff2",
-                f"--output-file={target}",
-            ],
-            check=True,
-        )
-
-        before = source.stat().st_size
-        after = target.stat().st_size
-        print(f"{name}: {before / 1024:.1f}KB -> {after / 1024:.1f}KB ({after / before:.0%})")
+        subset(source, OUT / name, "woff2" if name.endswith(".woff2") else None)
 
     return 0
 

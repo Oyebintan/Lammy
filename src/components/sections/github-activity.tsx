@@ -54,14 +54,17 @@ export function GithubActivity() {
         />
       </Reveal>
 
-      <div className="mt-14 grid gap-4 lg:grid-cols-[1.35fr_1fr]">
+      {/* `items-start` so the left card sizes to its content. Stretching it to
+          match the commit list left roughly 230px of empty card below the
+          language bar. */}
+      <div className="mt-14 grid items-start gap-4 lg:grid-cols-[1.35fr_1fr]">
         {/* Contribution strip.
             `min-w-0` is load-bearing: a grid item defaults to min-width:auto, so
             without it the strip's min-content width grows the column instead of
             letting `overflow-x-auto` scroll — which pushed the whole document
             wider than the viewport and made iOS zoom the page out. */}
         <Reveal className="min-w-0">
-          <Surface tone="card" className="flex h-full min-w-0 flex-col gap-5 p-6 sm:p-7">
+          <Surface tone="card" className="flex min-w-0 flex-col gap-5 p-6 sm:p-7">
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="text-sm font-medium text-fg">Last 26 weeks</h3>
               <a
@@ -74,20 +77,29 @@ export function GithubActivity() {
               </a>
             </div>
 
-            <div className="overflow-x-auto pb-1">
-              <div className="flex min-w-fit gap-[3px]">
-                {weeks.map((week) => (
-                  <div key={week[0].date} className="flex flex-col gap-[3px]">
-                    {week.map((day) => (
-                      <span
-                        key={day.date}
-                        title={`${day.count} ${day.count === 1 ? 'commit' : 'commits'} on ${day.date}`}
-                        className="size-[11px] rounded-[2px] transition-transform hover:scale-125"
-                        style={{ background: LEVEL_BG[level(day.count)] }}
-                      />
-                    ))}
-                  </div>
-                ))}
+            {/* The strip scrolls sideways on a narrow screen with nothing to
+                say so. The right-hand fade is the affordance — it only shows
+                when there is more strip to reach. */}
+            <div className="relative">
+              <div
+                className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-bg-2 to-transparent sm:hidden"
+                aria-hidden
+              />
+              <div className="overflow-x-auto pb-1">
+                <div className="flex min-w-fit gap-[3px]">
+                  {weeks.map((week) => (
+                    <div key={week[0].date} className="flex flex-col gap-[3px]">
+                      {week.map((day) => (
+                        <span
+                          key={day.date}
+                          title={`${day.count} ${day.count === 1 ? 'commit' : 'commits'} on ${day.date}`}
+                          className="size-[11px] rounded-[2px] transition-transform hover:scale-125"
+                          style={{ background: LEVEL_BG[level(day.count)] }}
+                        />
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
