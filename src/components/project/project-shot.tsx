@@ -53,6 +53,35 @@ const STATUS_NOTE: Record<string, string> = {
   'never-attempted': 'No capture yet',
 };
 
+/**
+ * True when a capture came back as a near-blank frame.
+ *
+ * The stored phash is a 16×16 average hash, so its set-bit count is a measure
+ * of how much of the image differs from its own mean — a flat frame barely
+ * moves off zero. One site's landing page is a mostly-empty splash, and the
+ * card for it rendered as a large black rectangle that read as a broken image
+ * rather than a screenshot.
+ *
+ * Measured across the current captures: five healthy ones sit between 27% and
+ * 46%, the blank one at 7%. A 12% cut-off clears the nearest real capture by
+ * more than double. The upper bound catches the same failure inverted — a
+ * blown-out white frame.
+ */
+function isFlat(phash: string | null): boolean {
+  if (!phash) return false;
+  let bits = 0;
+  let set = 0;
+  for (const ch of phash) {
+    const nibble = Number.parseInt(ch, 16);
+    if (Number.isNaN(nibble)) return false;
+    bits += 4;
+    for (let i = 0; i < 4; i += 1) set += (nibble >> i) & 1;
+  }
+  if (bits === 0) return false;
+  const ratio = set / bits;
+  return ratio < 0.12 || ratio > 0.88;
+}
+
 export function ProjectShot({
   project,
   className,
@@ -65,14 +94,18 @@ export function ProjectShot({
   priority?: boolean;
 }) {
   const shot = project.screenshot;
-  const hasShot = shot.status === 'ok' && shot.base && shot.widths.length > 0;
+  const blank = isFlat(shot.phash);
+  const hasShot = shot.status === 'ok' && shot.base && shot.widths.length > 0 && !blank;
 
   if (!hasShot) {
     return (
       <div className={cn('relative', className)}>
         <FallbackArt project={project} className="size-full" />
         <span className="sr-only">
-          {STATUS_NOTE[shot.status] ?? 'No screenshot available'} for {project.name}.
+          {blank
+            ? 'The live site captured as a near-blank frame, so generated artwork is shown'
+            : (STATUS_NOTE[shot.status] ?? 'No screenshot available')}{' '}
+          for {project.name}.
         </span>
       </div>
     );

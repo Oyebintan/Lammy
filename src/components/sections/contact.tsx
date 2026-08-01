@@ -1,5 +1,5 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
-import { GithubMark } from '@/components/ui/icons';
+import { Mail } from 'lucide-react';
+import { GithubMark, XMark } from '@/components/ui/icons';
 import { Section, Surface } from '@/components/ui/primitives';
 import { Reveal } from '@/components/motion/reveal';
 import { site } from '../../../config/site.config';
@@ -7,7 +7,7 @@ import { site } from '../../../config/site.config';
 const CHANNELS = [
   { label: 'Email', value: site.email, href: `mailto:${site.email}`, icon: Mail },
   { label: 'GitHub', value: '@Oyebintan', href: site.socials.github, icon: GithubMark },
-  { label: 'X', value: site.twitterHandle, href: site.socials.twitter, icon: ArrowUpRight },
+  { label: 'X', value: site.twitterHandle, href: site.socials.twitter, icon: XMark },
 ];
 
 export function Contact() {
@@ -44,6 +44,12 @@ export function Contact() {
                   className="group inline-flex items-center gap-2.5 rounded-full border border-border-hair bg-bg-2/70 px-5 py-3 text-sm transition-all duration-200 hover:-translate-y-px hover:border-border-strong hover:bg-bg-3"
                 >
                   <c.icon className="size-4 text-fg-faint transition-colors group-hover:text-fg" />
+                  {/* The handle alone left two pills reading `@Oyebintan` and
+                      `@oyebintan` side by side, and told a screen reader
+                      nothing about which service either one goes to. */}
+                  <span className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fg-faint">
+                    {c.label}
+                  </span>
                   <span className="text-fg-muted transition-colors group-hover:text-fg">
                     {c.value}
                   </span>

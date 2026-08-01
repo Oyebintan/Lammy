@@ -31,6 +31,32 @@ const browser = await chromium.launch(EXECUTABLE ? { executablePath: EXECUTABLE 
 let failures = 0;
 
 try {
+  // Glass surfaces must ship the unprefixed `backdrop-filter`. Writing a
+  // hand-rolled `-webkit-` line after the standard property makes the CSS
+  // bundler collapse the pair and keep only the prefixed form, which current
+  // Chromium does not support — the blur silently disappears and translucent
+  // panels turn into windows. That shipped once; this is two lines to stop it
+  // shipping again.
+  {
+    const page = await browser.newPage();
+    await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle', timeout: 30_000 });
+    const applied = await page.evaluate(() => {
+      const probe = document.createElement('div');
+      probe.className = 'glass';
+      document.body.append(probe);
+      const value = getComputedStyle(probe).backdropFilter;
+      probe.remove();
+      return value;
+    });
+    if (!applied || applied === 'none') {
+      failures += 1;
+      console.error(`\n✗ .glass resolves backdrop-filter to "${applied}" — the blur is not being applied`);
+    } else {
+      console.log(`✓ glass       backdrop-filter: ${applied}`);
+    }
+    await page.close();
+  }
+
   for (const viewport of VIEWPORTS) {
     const context = await browser.newContext({
       viewport: { width: viewport.width, height: viewport.height },
@@ -70,6 +96,38 @@ try {
         console.error(`    widest: ${overflow.culprit}`);
       }
 
+      // Target size (WCAG 2.2 AA, 2.5.8). axe does not check this, so a set of
+      // 20px-tall footer links shipped under a passing gate. Anything inline
+      // inside a sentence is exempt by the spec, and so is the offscreen skip
+      // link, which only takes up space once focused.
+      const smallTargets = await page.evaluate(() => {
+        const inSentence = (el) => {
+          const parent = el.parentElement;
+          if (!parent) return false;
+          const own = (el.textContent ?? '').trim();
+          const around = (parent.textContent ?? '').trim();
+          return around.length > own.length + 1;
+        };
+        return [...document.querySelectorAll('a, button, [role="button"]')]
+          .filter((el) => {
+            const r = el.getBoundingClientRect();
+            if (r.width === 0 || r.height === 0) return false;
+            if (el.closest('.sr-only')) return false;
+            if (el.classList.contains('sr-only')) return false;
+            return (r.height < 24 || r.width < 24) && !inSentence(el);
+          })
+          .map((el) => {
+            const r = el.getBoundingClientRect();
+            return `${el.tagName.toLowerCase()} ${Math.round(r.width)}x${Math.round(r.height)} "${(el.textContent ?? '').trim().slice(0, 32)}"`;
+          });
+      });
+
+      if (smallTargets.length) {
+        failures += smallTargets.length;
+        console.error(`\n✗ ${viewport.label} ${route} — ${smallTargets.length} target(s) under 24px`);
+        for (const t of [...new Set(smallTargets)].slice(0, 6)) console.error(`    ${t}`);
+      }
+
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
         .analyze();
@@ -85,7 +143,7 @@ try {
           console.error(`  [${v.impact}] ${v.id}: ${v.help} (${v.nodes.length} node/s)`);
           console.error(`    ${v.nodes[0].html.slice(0, 140)}`);
         }
-      } else if (!overflow) {
+      } else if (!overflow && !smallTargets.length) {
         console.log(`✓ ${viewport.label.padEnd(8)} ${route}`);
       }
 
@@ -102,4 +160,4 @@ if (failures > 0) {
   console.error(`\n${failures} accessibility/layout failure(s).`);
   process.exit(1);
 }
-console.log('\n✓ No accessibility violations and no horizontal overflow.');
+console.log('\n✓ No accessibility violations, no horizontal overflow, no undersized targets.');

@@ -101,7 +101,7 @@ export default function HomePage() {
           <Reveal>
             <Link
               href="/work"
-              className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-fg-muted transition-colors hover:text-fg"
+              className="mt-10 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-fg-muted transition-colors hover:text-fg"
             >
               Browse all {projects.length} projects
               <ArrowUpRight className="size-4" />

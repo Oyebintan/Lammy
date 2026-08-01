@@ -28,6 +28,20 @@ export function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+      {/* Scrim. The menu opens over the hero, which is the largest and
+          brightest type on the site — blur alone leaves it ghosting through
+          the links. Dimming the page behind the panel fixes the contrast and
+          gives the expected tap-outside-to-close as well. Rendered before the
+          nav so both the bar and the panel paint above it. */}
+      {open ? (
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 bg-bg-0/70 md:hidden"
+        />
+      ) : null}
+
       <nav
         aria-label="Primary"
         className={cn(
@@ -85,7 +99,9 @@ export function Nav() {
       {open ? (
         <div
           id="mobile-nav"
-          className="glass mx-auto mt-2 flex max-w-5xl flex-col gap-1 rounded-3xl p-3 md:hidden"
+          /* Nearly opaque rather than the shared glass tint: this is a panel
+             you read, sitting directly on top of the display heading. */
+          className="glass mx-auto mt-2 flex max-w-5xl flex-col gap-1 rounded-3xl bg-[oklch(0.08_0.004_265/0.95)] p-3 md:hidden"
         >
           {site.nav.map((item) => (
             <Link

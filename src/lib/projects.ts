@@ -77,6 +77,44 @@ export const shipLog: ShipEvent[] = manifest.shipLog;
 
 export const generatedAt: string = manifest.generatedAt;
 
+/**
+ * Case studies cite versions at whatever granularity the project warranted —
+ * one says "React", the next says "React 19" — which is correct per project
+ * and wrong the moment those lists are merged: the skills grid and the hero
+ * ribbon both showed the same technology twice.
+ *
+ * Aggregates collapse onto the most specific label that is true of at least
+ * one project. Per-project badges deliberately do not use this: a card should
+ * say what that case study says, not inherit a version from a sibling.
+ */
+const CANONICAL_TECH: Record<string, string> = {
+  'Next.js': 'Next.js 16',
+  React: 'React 19',
+  'Tailwind CSS': 'Tailwind CSS v4',
+};
+
+/* Real entries in a repository's language stats, but not skills: two are file
+   names, and PLpgSQL is what GitHub calls Supabase's generated SQL. */
+const NOT_A_SKILL = new Set(['Procfile', 'Dockerfile', 'PLpgSQL']);
+
+export function canonicalTech(name: string): string {
+  return CANONICAL_TECH[name] ?? name;
+}
+
+/** Every technology cited across the site, deduped and canonicalised. */
+export function allTechnologies(includeRepoLanguages = false): string[] {
+  const seen = new Set<string>();
+  for (const p of projects) {
+    for (const t of p.caseStudy.technologies.value) seen.add(canonicalTech(t));
+    if (!includeRepoLanguages) continue;
+    for (const repo of p.repos) {
+      for (const lang of Object.keys(repo.languages)) seen.add(canonicalTech(lang));
+    }
+  }
+  for (const skip of NOT_A_SKILL) seen.delete(skip);
+  return [...seen];
+}
+
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }

@@ -30,6 +30,10 @@ export function ProjectCard({
     <SpotlightCard
       className={cn(
         'group relative flex flex-col overflow-hidden rounded-[var(--radius-panel)] border border-border-hair bg-bg-2',
+        /* The whole card is one click target, so the focus ring belongs on the
+           card. Left on the title alone it outlined a few words of text while
+           the mouse got the entire tile. */
+        'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[oklch(0.8_0.02_265)]',
         'transition-all duration-300 hover:-translate-y-1 hover:border-border-strong',
         'hover:shadow-[0_24px_60px_-32px_color-mix(in_oklch,var(--accent)_55%,transparent)]',
         featured && 'md:flex-row',
@@ -78,7 +82,7 @@ export function ProjectCard({
           >
             <IntentLink
               href={`/work/${project.slug}`}
-              className="after:absolute after:inset-0 after:z-[3] after:content-['']"
+              className="outline-none after:absolute after:inset-0 after:z-[3] after:content-['']"
             >
               {project.name}
             </IntentLink>

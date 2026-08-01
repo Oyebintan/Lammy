@@ -45,9 +45,13 @@ export function Timeline() {
                 data-accent={entry.accent}
                 className="group relative flex flex-col gap-1.5 pl-8 sm:flex-row sm:gap-8 sm:pl-0"
               >
+                {/* `sm:pr-3` is load-bearing. The column is exactly as wide as
+                    the dot's offset, and the dot carries a solid 4px black ring
+                    to punch itself out of the spine — that ring painted over the
+                    last character, so every date read "February 202". */}
                 <time
                   dateTime={entry.date}
-                  className="order-2 shrink-0 font-mono text-xs text-fg-faint sm:order-1 sm:w-32 sm:pt-1 sm:text-right"
+                  className="order-2 shrink-0 font-mono text-xs text-fg-faint sm:order-1 sm:w-32 sm:pr-3 sm:pt-1 sm:text-right"
                 >
                   {formatMonthYear(entry.date)}
                 </time>
@@ -79,7 +83,7 @@ export function Timeline() {
       <Reveal>
         <Link
           href="/ship-log"
-          className="mt-12 inline-flex items-center gap-1.5 text-sm font-medium text-fg-muted transition-colors hover:text-fg"
+          className="mt-12 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-fg-muted transition-colors hover:text-fg"
         >
           See every shipped change
           <ArrowUpRight className="size-4" />

@@ -1,6 +1,6 @@
 import { Badge, Section, SectionHeading } from '@/components/ui/primitives';
 import { Reveal } from '@/components/motion/reveal';
-import { projects } from '@/lib/projects';
+import { allTechnologies } from '@/lib/projects';
 
 /**
  * Skills are not a wish list — every entry below is collected from the
@@ -10,13 +10,13 @@ import { projects } from '@/lib/projects';
 const BUCKETS: Array<{ title: string; match: string[] }> = [
   {
     title: 'Languages',
-    match: ['TypeScript', 'JavaScript', 'Python', 'HTML', 'CSS', 'PLpgSQL'],
+    match: ['TypeScript', 'JavaScript', 'Python', 'HTML', 'CSS'],
   },
   {
     title: 'Frameworks & UI',
     match: [
-      'Next.js', 'Next.js 16', 'React', 'React 19', 'React Native', 'Expo',
-      'Tailwind CSS', 'Tailwind CSS v4', 'Radix UI', 'Framer Motion', 'Bootstrap 5',
+      'Next.js 16', 'React 19', 'React Native', 'Expo',
+      'Tailwind CSS v4', 'Radix UI', 'Framer Motion', 'Bootstrap 5',
       'Vite', 'Jinja2', 'Flask',
     ],
   },
@@ -30,17 +30,15 @@ const BUCKETS: Array<{ title: string; match: string[] }> = [
   {
     title: 'Platform & tooling',
     match: [
-      'Docker', 'Gunicorn', 'NextAuth', 'Google OAuth', 'Anthropic API', 'jsPDF',
-      'pytest', 'Procfile', 'Dockerfile',
+      'Docker', 'Gunicorn', 'NextAuth', 'Google OAuth', 'Anthropic API', 'jsPDF', 'pytest',
     ],
   },
 ];
 
-const used = new Set<string>();
-for (const p of projects) {
-  for (const t of p.caseStudy.technologies.value) used.add(t);
-  for (const repo of p.repos) for (const lang of Object.keys(repo.languages)) used.add(lang);
-}
+/* Canonicalisation and the not-a-skill filter live in `lib/projects` so the
+   hero's marquee ribbon draws on exactly the same list — it had drifted and
+   was showing the duplicates this section used to. */
+const used = new Set(allTechnologies(true));
 
 const groups = BUCKETS.map((bucket) => ({
   title: bucket.title,

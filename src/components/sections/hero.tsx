@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { site } from '../../../config/site.config';
-import { activity, featuredProjects, projects } from '@/lib/projects';
+import { activity, allTechnologies, featuredProjects, projects } from '@/lib/projects';
 import { ButtonLink, StatusDot } from '@/components/ui/primitives';
 import { ProjectShot } from '@/components/project/project-shot';
 import { Counter } from '@/components/motion/motion';
@@ -19,9 +19,7 @@ const STATS = [
 ];
 
 /** Deduped stack labels for the marquee ribbon. */
-const ribbon = [
-  ...new Set(projects.flatMap((p) => p.caseStudy.technologies.value)),
-].slice(0, 18);
+const ribbon = allTechnologies().slice(0, 18);
 
 export function Hero() {
   return (

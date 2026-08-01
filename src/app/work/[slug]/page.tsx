@@ -126,7 +126,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="relative mx-auto w-full max-w-5xl">
           <Link
             href="/work"
-            className="inline-flex items-center gap-1.5 text-sm text-fg-subtle transition-colors hover:text-fg"
+            className="inline-flex items-center gap-1.5 py-1 text-sm text-fg-subtle transition-colors hover:text-fg"
           >
             <ArrowLeft className="size-4" />
             All work
@@ -303,7 +303,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-sm text-fg-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-fg"
+                      className="inline-block py-1 text-sm text-fg-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-fg"
                     >
                       {prettyUrl(project.liveUrl)}
                     </a>
@@ -320,7 +320,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       href={repo.url}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-sm text-fg-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-fg"
+                      className="inline-block py-1 text-sm text-fg-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-fg"
                     >
                       {repo.owner}/{repo.name}
                     </a>

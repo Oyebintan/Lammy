@@ -149,11 +149,25 @@
      Blurring over pure black returns near-black — the fill cannot carry the
      effect, so the edge does: a bright 1px top highlight, a soft outer shadow
      for lift, and a saturation boost so colour behind the panel bleeds
-     through instead of turning grey. */
+     through instead of turning grey.
+
+     Do not add a hand-written `-webkit-backdrop-filter` here. Writing the
+     standard property and then the prefixed one makes Lightning CSS collapse
+     the pair and keep only the prefixed form, which current Chromium does not
+     support — `CSS.supports('-webkit-backdrop-filter', 'blur(1px)')` is false.
+     That shipped, and the result was no blur anywhere in Chrome or Edge: a
+     transparent nav bar with the page legible through it, a mobile menu drawn
+     over the hero headline, and a see-through chat panel. Left alone, the
+     build emits both forms correctly. */
+  /* The fill was 0.6 and the blur was doing all the work, which is not enough
+     work: 24px of blur cuts the contrast of white text behind the bar by about
+     a third, and the remaining 40% of it still came through as legible words
+     colliding with the nav labels. More blur makes it worse, not better — it
+     spreads the bright pixels wider. Opacity is the lever. At 0.86 the page
+     behind reads as movement and colour rather than as text. */
   .glass {
-    background: oklch(0.09 0.004 265 / 0.6);
+    background: oklch(0.09 0.004 265 / 0.86);
     backdrop-filter: blur(24px) saturate(1.8);
-    -webkit-backdrop-filter: blur(24px) saturate(1.8);
     border: 1px solid var(--border);
     box-shadow:
       inset 0 1px 0 0 oklch(1 0 0 / 0.12),
@@ -164,11 +178,23 @@
   .glass-strong {
     background: oklch(0.11 0.005 265 / 0.72);
     backdrop-filter: blur(32px) saturate(2);
-    -webkit-backdrop-filter: blur(32px) saturate(2);
     border: 1px solid var(--border-strong);
     box-shadow:
       inset 0 1px 0 0 oklch(1 0 0 / 0.16),
       0 24px 60px -24px oklch(0 0 0 / 0.9);
+  }
+
+  /* Without blur the translucent fills above are just tinted windows, so the
+     text behind them competes with the text on them. Anywhere that happens,
+     go opaque instead — a solid panel is a worse effect but a readable one. */
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass {
+      background: oklch(0.1 0.004 265 / 0.97);
+    }
+
+    .glass-strong {
+      background: oklch(0.115 0.005 265 / 0.98);
+    }
   }
 
   /* Aurora — slow drifting colour fields behind the grain.

@@ -169,14 +169,19 @@ export function ChatWidget() {
         aria-expanded={open}
         aria-controls="chat-panel"
         aria-label={open ? 'Close assistant' : 'Ask about this work'}
+        /* Icon-only below `sm`. The labelled pill is 150px wide and sits on top
+           of body copy for the whole length of the page — timeline taglines,
+           commit rows, ship-log dates. A phone has no room to spend on a label
+           that never goes away. */
         className={cn(
-          'glass-strong group fixed bottom-5 right-5 z-50 flex h-12 items-center gap-2.5 rounded-full pl-4 pr-5',
+          'glass-strong group fixed bottom-5 right-5 z-50 flex h-12 items-center justify-center rounded-full',
+          'w-12 sm:w-auto sm:gap-2.5 sm:pl-4 sm:pr-5',
           'transition-all duration-300 hover:-translate-y-0.5 hover:border-border-strong',
           open && 'pointer-events-none opacity-0',
         )}
       >
         <span className="font-mono text-sm text-emerald-400">›</span>
-        <span className="text-sm font-medium text-fg">Ask anything</span>
+        <span className="hidden text-sm font-medium text-fg sm:inline">Ask anything</span>
       </button>
 
       {/* Panel */}
@@ -202,7 +207,7 @@ export function ChatWidget() {
            through the conversation text. */
         style={{
           height: 'min(32rem, calc(100dvh - 1.5rem))',
-          background: 'oklch(0.07 0.004 265 / 0.93)',
+          background: 'oklch(0.07 0.004 265 / 0.96)',
         }}
       >
         {/* Title bar */}
