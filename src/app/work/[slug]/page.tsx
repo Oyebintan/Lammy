@@ -117,6 +117,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
 
+      {/* Case studies are the long pages on this site, so they get a progress
+          bar. It is CSS-only — see `.read-progress` in globals.css. */}
+      <div className="read-progress" aria-hidden />
+
       {/* Header */}
       <header className="grain relative overflow-hidden px-5 pt-24 pb-14 sm:px-8 sm:pt-28">
         <div

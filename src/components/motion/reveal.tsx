@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties, HTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 /**
@@ -26,15 +26,17 @@ export function Reveal({
   className,
   immediate = false,
   as: Tag = 'div',
+  ...rest
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
   immediate?: boolean;
   as?: 'div' | 'li' | 'section';
-}) {
+} & Pick<HTMLAttributes<HTMLElement>, 'id'> & { 'data-project'?: string }) {
   return (
     <Tag
+      {...rest}
       className={cn(immediate ? 'hero-in' : 'reveal', className)}
       style={
         {

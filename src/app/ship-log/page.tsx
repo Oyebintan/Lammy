@@ -4,7 +4,7 @@ import { IntentLink } from '@/components/ui/intent-link';
 import { Badge, EmptyState, Section, SectionHeading } from '@/components/ui/primitives';
 import { Reveal } from '@/components/motion/reveal';
 import { formatDate, projects, shipLog, shipLogByMonth } from '@/lib/projects';
-import type { ShipKind } from '@/lib/types';
+import type { Accent, ShipKind } from '@/lib/types';
 
 export const dynamic = 'error';
 
@@ -31,8 +31,57 @@ const KIND_LABEL: Record<ShipKind, string> = {
   milestone: 'Milestone',
 };
 
+/**
+ * The rules that make the filter work, emitted once per build.
+ *
+ * They cannot be static utility classes because the selector has to name each
+ * project slug, and the slugs come from discovery. Every rule is derived from
+ * the same list that renders the buttons, so the two cannot drift.
+ */
+function FilterRules({ slugs }: { slugs: string[] }) {
+  const css = slugs
+    .filter((slug) => slug !== 'all')
+    .flatMap((slug) => [
+      /* Hide events belonging to any other project. */
+      `.log:has(#ship-${slug}:checked) [data-project]:not([data-project="${slug}"]){display:none}`,
+      /* And hide a month that is left with nothing in it. */
+      `.log:has(#ship-${slug}:checked) [data-month]:not(:has([data-project="${slug}"])){display:none}`,
+    ])
+    .concat(
+      slugs.map(
+        (slug) =>
+          `.log:has(#ship-${slug}:checked) label[for="ship-${slug}"]{background:var(--accent);border-color:transparent;color:var(--bg-0)}` +
+          `.log:has(#ship-${slug}:checked) label[for="ship-${slug}"] span{color:var(--bg-0);opacity:.7}`,
+      ),
+      /* Keyboard users must be able to see where they are. */
+      slugs.map(
+        (slug) =>
+          `.log #ship-${slug}:focus-visible+label[for="ship-${slug}"]{outline:2px solid oklch(0.8 0.02 265);outline-offset:3px}`,
+      ),
+    )
+    .join('');
+
+  return <style dangerouslySetInnerHTML={{ __html: css }} />;
+}
+
 export default function ShipLogPage() {
   const months = shipLogByMonth();
+
+  /* One button per project that actually has events, newest activity first,
+     so the row matches what the log contains rather than what exists. */
+  const counts = new Map<string, { name: string; accent: Accent; count: number }>();
+  for (const event of shipLog) {
+    const seen = counts.get(event.slug);
+    if (seen) seen.count += 1;
+    else counts.set(event.slug, { name: event.projectName, accent: event.accent, count: 1 });
+  }
+
+  const filters = [
+    { slug: 'all', label: 'All', accent: 'sky' as Accent, count: shipLog.length },
+    ...[...counts.entries()]
+      .sort((a, b) => b[1].count - a[1].count)
+      .map(([slug, v]) => ({ slug, label: v.name, accent: v.accent, count: v.count })),
+  ];
 
   const launches = projects
     .filter((p) => p.status === 'live')
@@ -94,9 +143,45 @@ export default function ShipLogPage() {
           />
         </div>
       ) : (
-        <div className="mt-16 flex flex-col gap-14">
+        <div className="log mt-16 flex flex-col gap-10">
+          <FilterRules slugs={filters.map((f) => f.slug)} />
+
+          {/* A filter with no client JavaScript.
+              The radios are the state, `:has()` reads it, and CSS does the
+              hiding — so this needs no hydration on a page that otherwise
+              ships almost none. Real radios also mean arrow-key navigation
+              and screen-reader semantics come for free. */}
+          <fieldset className="flex flex-col gap-3">
+            <legend className="sr-only">Filter the log by project</legend>
+            <div className="flex flex-wrap gap-2">
+              {filters.map((f) => (
+                <span key={f.slug} className="contents">
+                  <input
+                    type="radio"
+                    name="ship-filter"
+                    id={`ship-${f.slug}`}
+                    defaultChecked={f.slug === 'all'}
+                    className="sr-only"
+                  />
+                  <label
+                    htmlFor={`ship-${f.slug}`}
+                    data-accent={f.accent}
+                    className="cursor-pointer rounded-full border border-border-hair px-3.5 py-1.5 font-mono text-xs text-fg-subtle transition-colors hover:border-border-strong hover:text-fg"
+                  >
+                    {f.label}
+                    <span className="ml-1.5 text-fg-faint">{f.count}</span>
+                  </label>
+                </span>
+              ))}
+            </div>
+          </fieldset>
+
           {months.map((month) => (
-            <div key={month.key} className="flex flex-col gap-6 sm:flex-row sm:gap-10">
+            <div
+              key={month.key}
+              data-month
+              className="flex flex-col gap-6 sm:flex-row sm:gap-10"
+            >
               <h2 className="shrink-0 font-mono text-xs uppercase tracking-[0.16em] text-fg-faint sm:w-36 sm:pt-1">
                 {month.label}
               </h2>
@@ -106,7 +191,12 @@ export default function ShipLogPage() {
                   const Icon = KIND_ICON[event.kind];
                   const Wrapper = event.url ? 'a' : 'div';
                   return (
-                    <Reveal as="li" key={event.id} delay={Math.min(i, 6) * 0.03}>
+                    <Reveal
+                      as="li"
+                      key={event.id}
+                      delay={Math.min(i, 6) * 0.03}
+                      data-project={event.slug}
+                    >
                       <Wrapper
                         data-accent={event.accent}
                         {...(event.url
