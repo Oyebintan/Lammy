@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T06:20:30.067Z",
+  "generatedAt": "2026-08-02T06:26:04.700Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -137,10 +137,10 @@
           "url": "https://github.com/Oyebintan/Lammydeart",
           "defaultBranch": "main",
           "createdAt": "2026-07-18T20:53:28Z",
-          "pushedAt": "2026-07-28T21:33:00Z",
+          "pushedAt": "2026-08-01T15:56:13Z",
           "languages": {
-            "JavaScript": 114230,
-            "CSS": 5445,
+            "JavaScript": 116646,
+            "CSS": 5839,
             "HTML": 3034
           },
           "stars": 0,
@@ -154,10 +154,10 @@
         "url": "https://github.com/Oyebintan/Lammydeart",
         "defaultBranch": "main",
         "createdAt": "2026-07-18T20:53:28Z",
-        "pushedAt": "2026-07-28T21:33:00Z",
+        "pushedAt": "2026-08-01T15:56:13Z",
         "languages": {
-          "JavaScript": 114230,
-          "CSS": 5445,
+          "JavaScript": 116646,
+          "CSS": 5839,
           "HTML": 3034
         },
         "stars": 0,
@@ -359,6 +359,36 @@
   ],
   "shipLog": [
     {
+      "id": "lammydeart:merge:3c161c228ec2a29e68ba77c049a52e22e17a9b64",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: floating pill nav and menu, matching the reference portfolio",
+      "body": null,
+      "date": "2026-08-01T15:56:00Z",
+      "commit": {
+        "sha": "3c161c228ec2a29e68ba77c049a52e22e17a9b64",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/3c161c228ec2a29e68ba77c049a52e22e17a9b64"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/3c161c228ec2a29e68ba77c049a52e22e17a9b64"
+    },
+    {
+      "id": "lammydeart:merge:56d954a70c27bd70c69199d567425b0a48c225d1",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: pure-black palette, plus the fixes from a full UI audit",
+      "body": null,
+      "date": "2026-08-01T07:19:34Z",
+      "commit": {
+        "sha": "56d954a70c27bd70c69199d567425b0a48c225d1",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/56d954a70c27bd70c69199d567425b0a48c225d1"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/56d954a70c27bd70c69199d567425b0a48c225d1"
+    },
+    {
       "id": "lammydeart:merge:5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
       "slug": "lammydeart",
       "projectName": "Lammy de Art",
@@ -534,37 +564,6 @@
         "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
       },
       "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
-    },
-    {
-      "id": "lammydeart:merge:a7646f571b61e08a4ddef1eaae48f745167d0175",
-      "slug": "lammydeart",
-      "projectName": "Lammy de Art",
-      "accent": "rose",
-      "kind": "merge",
-      "title": "fix: opaque shim above the nav so content can never show in the top strip",
-      "body": null,
-      "date": "2026-07-25T22:21:35Z",
-      "commit": {
-        "sha": "a7646f571b61e08a4ddef1eaae48f745167d0175",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/a7646f571b61e08a4ddef1eaae48f745167d0175"
-      },
-      "url": "https://github.com/Oyebintan/Lammydeart/commit/a7646f571b61e08a4ddef1eaae48f745167d0175"
-    },
-    {
-      "id": "lammydeart:merge:9cead0abdb32d853f58b844cb2709cf9539bc3ae",
-      "slug": "lammydeart",
-      "projectName": "Lammy de Art",
-      "accent": "rose",
-      "kind": "merge",
-      "title": "fix: nav now covers the iOS status-bar strip (viewport-fit=cover restored)",
-      "body": null,
-      "date": "2026-07-25T22:15:50Z",
-      "commit": {
-        "sha": "9cead0abdb32d853f58b844cb2709cf9539bc3ae",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/9cead0abdb32d853f58b844cb2709cf9539bc3ae"
-      },
-      "prNumber": 3,
-      "url": "https://github.com/Oyebintan/Lammydeart/commit/9cead0abdb32d853f58b844cb2709cf9539bc3ae"
     },
     {
       "id": "lammydeart:repo_created:2026-07-18T20:53:28Z",
@@ -990,7 +989,7 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-08-01T06:20:30.067Z",
+    "generatedAt": "2026-08-02T06:26:04.700Z",
     "totals": {
       "repositories": 13,
       "projectsShipped": 6,
@@ -1002,50 +1001,64 @@
       {
         "name": "TypeScript",
         "bytes": 1333879,
-        "share": 0.7160985943545483
+        "share": 0.7150199435758421
       },
       {
         "name": "JavaScript",
-        "bytes": 175343,
-        "share": 0.09413363268325653
+        "bytes": 177759,
+        "share": 0.09528692643792887
       },
       {
         "name": "CSS",
-        "bytes": 122440,
-        "share": 0.06573243292140507
+        "bytes": 122834,
+        "share": 0.06584462289997443
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.04465660923936881
+        "share": 0.04458934352105828
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.040427271551073896
+        "share": 0.04036637643372091
       },
       {
         "name": "HTML",
         "bytes": 69051,
-        "share": 0.037070321999803514
+        "share": 0.037014483415553794
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0016728378061344187
+        "share": 0.001670318030482768
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00019273067150264963
+        "share": 0.00019244036358899669
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.000015568772906899273
+        "share": 0.00001554532184980753
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Lammydeart",
+        "sha": "3c161c228ec2a29e68ba77c049a52e22e17a9b64",
+        "message": "feat: floating pill nav and menu, matching the reference portfolio",
+        "date": "2026-08-01T15:56:00Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/3c161c228ec2a29e68ba77c049a52e22e17a9b64"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "56d954a70c27bd70c69199d567425b0a48c225d1",
+        "message": "feat: pure-black palette, plus the fixes from a full UI audit",
+        "date": "2026-08-01T07:19:34Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/56d954a70c27bd70c69199d567425b0a48c225d1"
+      },
       {
         "repo": "Lammydeart",
         "sha": "5efe1ee01ee8e474b6474b2b172afc93f7d88b5c",
@@ -1115,23 +1128,10 @@
         "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
         "date": "2026-07-26T05:13:56Z",
         "url": "https://github.com/Oyebintan/Siwes-Finder/commit/99098939a5e6a9ddfe6ebd6e30268f961c5095a1"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "5e78fe09b424a8584df2e67ef0ec993f6b1d27e6",
-        "message": "fix: restore pull-to-refresh",
-        "date": "2026-07-26T04:58:13Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
-        "message": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
-        "date": "2026-07-26T04:49:32Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
       }
     ],
     "contributions": {
+      "2026-08-01": 2,
       "2026-07-28": 1,
       "2026-07-27": 5,
       "2026-07-26": 11,
@@ -1155,7 +1155,7 @@
       "2025-06-27": 1,
       "2025-06-26": 2,
       "2025-06-25": 2,
-      "2025-06-24": 3,
+      "2025-06-24": 1,
       "2026-07-10": 2,
       "2026-04-11": 7,
       "2026-04-09": 1,

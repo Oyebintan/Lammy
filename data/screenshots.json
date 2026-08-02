@@ -32,11 +32,11 @@
       720
     ],
     "aspectRatio": 1.6,
-    "capturedAt": "2026-07-30T21:24:55.612Z",
-    "lastCheckedAt": "2026-07-30T21:24:55.612Z",
+    "capturedAt": "2026-08-02T06:26:11.159Z",
+    "lastCheckedAt": "2026-08-02T06:26:11.159Z",
     "status": "ok",
-    "phash": "0006000061fe78fe30fe00fe00fe701c00ff00ff00bf001b0000000000000000",
-    "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAA0APu1kqU4ppaOiMAgBMB2JQBdgMXSbjZ6yNBRE5Z9uAAD+7Nl8Wdtqm5WEcsX89PbY7wMQhf6PzXykcyagn+xjHSq2cNCdi0MglaE62wu6AaK/0DEzttfJhMehlW61Dz1f0ATBcYgI1AAFECAh9X8CThSToAA="
+    "phash": "000c000041fe78fe38fe00fe00fe703c00ff00ff00bf001b0000000000000000",
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoUAA0APu1kqk4ppaQiMAgBMB2JQBdkBshggBJzGdjXtmAA/u9n+NQ2Yga30hcBwQEFiduM3C+wuNmnGEGQS6jBZ2RrfiiJx625EbBLW4P0yX/vmNes5AQmK8UqLkfrbFxVwfQ1rIYXFTvWGnG14hoEqDdEbwgIi0wWZtHQAAA="
   },
   "email-spam-classifier": {
     "base": "/shots/email-spam-classifier/home",
