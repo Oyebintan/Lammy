@@ -266,16 +266,17 @@
      scroll, because content a visitor can already see should never be hidden
      behind an interaction they have not performed yet.
 
-     It moves but never fades. A browser does not count an element with zero
-     opacity as painted, so fading in the headline meant the largest paint was
-     recorded when the animation finished rather than when the text appeared —
-     roughly 400ms of self-inflicted delay on the metric, and a real one for
-     anyone on a slow phone, who watched the words materialise instead of
-     reading them. Sliding a fully-opaque element costs nothing on either
-     count. */
+     It fades, but never from zero. A browser does not count an element at zero
+     opacity as painted, so a 0 → 1 fade meant the largest paint was recorded
+     when the animation ended rather than when the text appeared. Starting at
+     0.45 keeps the softness and keeps the headline legible from the first
+     frame, which is the part that actually matters to someone on a slow
+     phone — they read it while it settles instead of watching it materialise.
+     Measured either way; this costs nothing against transform alone. */
   .js .hero-in {
-    transform: translateY(10px);
-    animation: hero-in 0.5s var(--ease-out) forwards;
+    opacity: 0.45;
+    transform: translateY(16px) scale(0.995);
+    animation: hero-in 0.85s var(--ease-out) forwards;
     animation-delay: var(--hero-delay, 0ms);
   }
 
@@ -309,17 +310,21 @@
      first paint. With scripting unavailable the rule never applies and content
      renders normally — the animation is an enhancement, never a prerequisite
      for seeing the page. */
+  /* Below the fold there is no largest-paint to protect, so this is the full
+     move: a real rise with a fade behind it. It had been sanded down to 6px
+     over 0.35s while chasing an unrelated bug, which is close enough to
+     nothing that the page read as static. */
   .js .reveal {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(22px) scale(0.99);
   }
 
   .js .reveal.is-visible {
     opacity: 1;
     transform: none;
     transition:
-      opacity 0.35s var(--ease-out),
-      transform 0.35s var(--ease-out);
+      opacity 0.5s var(--ease-out),
+      transform 0.7s var(--ease-out);
     transition-delay: var(--reveal-delay, 0ms);
   }
 
@@ -422,6 +427,7 @@
 
 @keyframes hero-in {
   to {
+    opacity: 1;
     transform: none;
   }
 }

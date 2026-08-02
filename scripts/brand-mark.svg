@@ -1,0 +1,17 @@
+<!-- Source for favicon.ico and apple-icon.png.
+
+     Regenerate after editing:
+       node -e "require('sharp')('scripts/brand-mark.svg',{density:900}).resize(180,180).png().toFile('src/app/apple-icon.png')"
+     then rebuild the .ico from 16/32/48px renders of the same file.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7cc0ff"/><stop offset="1" stop-color="#3d84e6"/></linearGradient></defs>
+  <rect width="64" height="64" rx="14" fill="#000"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="url(#g)" stroke-opacity="0.35" stroke-width="3"/>
+  <g fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 21 L9 32 L20 43"/>
+    <path d="M44 21 L55 32 L44 43"/>
+    <path d="M36 17 L28 47"/>
+  </g>
+</svg>

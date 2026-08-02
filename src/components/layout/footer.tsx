@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Wordmark } from '@/components/ui/wordmark';
 import { site } from '../../../config/site.config';
 import { generatedAt } from '@/lib/projects';
 import { formatDate } from '@/lib/projects';
@@ -10,8 +11,8 @@ export function Footer() {
     <footer className="relative mt-auto border-t border-border-hair px-5 pb-28 pt-14 sm:px-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <div className="flex flex-col justify-between gap-8 sm:flex-row">
-          <div className="flex flex-col gap-2">
-            <span className="text-sm font-semibold text-fg">{site.name}</span>
+          <div className="group flex flex-col gap-2">
+            <Wordmark className="text-sm" />
             <span className="text-sm text-fg-subtle">{site.role}</span>
           </div>
 

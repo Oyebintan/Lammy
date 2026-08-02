@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Wordmark } from '@/components/ui/wordmark';
 import { site } from '../../../config/site.config';
 import { cn } from '@/lib/utils';
 
@@ -49,14 +50,8 @@ export function Nav() {
           scrolled ? 'glass' : 'border border-transparent',
         )}
       >
-        <Link
-          href="/"
-          className="group flex items-center gap-2.5 text-sm font-semibold tracking-tight"
-        >
-          <span className="grid size-6 place-items-center rounded-md bg-fg text-[0.7rem] font-bold text-bg-0">
-            L
-          </span>
-          <span className="text-fg">{site.name}</span>
+        <Link href="/" aria-label={`${site.name} — home`} className="group text-[0.9375rem]">
+          <Wordmark />
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">

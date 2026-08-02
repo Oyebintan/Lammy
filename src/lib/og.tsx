@@ -115,25 +115,15 @@ export function OgFrame({
         }}
       />
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: 40,
-            height: 40,
-            borderRadius: 10,
-            background: FG,
-            color: '#000000',
-            fontSize: 24,
-            fontWeight: 600,
-          }}
-        >
-          L
+      {/* `<Lammy/>` — the same wordmark the site uses, rebuilt in the subset
+          of flexbox Satori understands. */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 30 }}>
+          <div style={{ display: 'flex', fontFamily: 'GeistMono', color: accent }}>&lt;</div>
+          <div style={{ display: 'flex', fontWeight: 600, color: FG, padding: '0 3px' }}>Lammy</div>
+          <div style={{ display: 'flex', fontFamily: 'GeistMono', color: accent }}>/&gt;</div>
         </div>
-        <div style={{ display: 'flex', fontSize: 26, fontWeight: 600, color: FG }}>Lammy</div>
-        <div style={{ display: 'flex', width: 5, height: 5, borderRadius: 9999, background: FG_FAINT, marginLeft: 6 }} />
+        <div style={{ display: 'flex', width: 5, height: 5, borderRadius: 9999, background: FG_FAINT }} />
         <div
           style={{
             display: 'flex',
@@ -141,7 +131,6 @@ export function OgFrame({
             fontSize: 19,
             letterSpacing: 2,
             color: FG_FAINT,
-            marginLeft: 6,
           }}
         >
           {eyebrow.toUpperCase()}
