@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T06:26:04.700Z",
+  "generatedAt": "2026-08-03T06:51:14.481Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -13,9 +13,9 @@
           "url": "https://github.com/Oyebintan/Siwes-Finder",
           "defaultBranch": "main",
           "createdAt": "2026-07-06T13:48:14Z",
-          "pushedAt": "2026-07-26T06:40:13Z",
+          "pushedAt": "2026-08-02T23:30:46Z",
           "languages": {
-            "TypeScript": 1148388,
+            "TypeScript": 1145278,
             "JavaScript": 17824,
             "CSS": 11527
           },
@@ -46,9 +46,9 @@
         "url": "https://github.com/Oyebintan/Siwes-Finder",
         "defaultBranch": "main",
         "createdAt": "2026-07-06T13:48:14Z",
-        "pushedAt": "2026-07-26T06:40:13Z",
+        "pushedAt": "2026-08-02T23:30:46Z",
         "languages": {
-          "TypeScript": 1148388,
+          "TypeScript": 1145278,
           "JavaScript": 17824,
           "CSS": 11527
         },
@@ -137,9 +137,9 @@
           "url": "https://github.com/Oyebintan/Lammydeart",
           "defaultBranch": "main",
           "createdAt": "2026-07-18T20:53:28Z",
-          "pushedAt": "2026-08-01T15:56:13Z",
+          "pushedAt": "2026-08-02T23:43:31Z",
           "languages": {
-            "JavaScript": 116646,
+            "JavaScript": 117320,
             "CSS": 5839,
             "HTML": 3034
           },
@@ -154,9 +154,9 @@
         "url": "https://github.com/Oyebintan/Lammydeart",
         "defaultBranch": "main",
         "createdAt": "2026-07-18T20:53:28Z",
-        "pushedAt": "2026-08-01T15:56:13Z",
+        "pushedAt": "2026-08-02T23:43:31Z",
         "languages": {
-          "JavaScript": 116646,
+          "JavaScript": 117320,
           "CSS": 5839,
           "HTML": 3034
         },
@@ -359,6 +359,52 @@
   ],
   "shipLog": [
     {
+      "id": "lammydeart:merge:d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: wide project cards span the full width on mobile, closing the grid gap",
+      "body": null,
+      "date": "2026-08-02T23:43:29Z",
+      "commit": {
+        "sha": "d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4"
+    },
+    {
+      "id": "siwes-finder:merge:6a5bb64487fed9c8d442e72c6796363534bee134",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "refactor: restructure repo and write handover documentation",
+      "body": null,
+      "date": "2026-08-02T23:30:46Z",
+      "commit": {
+        "sha": "6a5bb64487fed9c8d442e72c6796363534bee134",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/6a5bb64487fed9c8d442e72c6796363534bee134"
+      },
+      "prNumber": 55,
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/6a5bb64487fed9c8d442e72c6796363534bee134"
+    },
+    {
+      "id": "siwes-finder:merge:c842abafadee7bb1a9eec74deddfe6dcd27e7c70",
+      "slug": "siwes-finder",
+      "projectName": "SIWES Finder",
+      "accent": "emerald",
+      "kind": "merge",
+      "title": "Merge remote-tracking branch 'origin/main' into claude/super-admin-email-promotion-uajc07",
+      "body": null,
+      "date": "2026-08-02T23:27:26Z",
+      "commit": {
+        "sha": "c842abafadee7bb1a9eec74deddfe6dcd27e7c70",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/c842abafadee7bb1a9eec74deddfe6dcd27e7c70"
+      },
+      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/c842abafadee7bb1a9eec74deddfe6dcd27e7c70"
+    },
+    {
       "id": "lammydeart:merge:3c161c228ec2a29e68ba77c049a52e22e17a9b64",
       "slug": "lammydeart",
       "projectName": "Lammy de Art",
@@ -549,21 +595,6 @@
         "url": "https://github.com/Oyebintan/Lammydeart/commit/12b25139298def0db195741b21064687ca7920e0"
       },
       "url": "https://github.com/Oyebintan/Lammydeart/commit/12b25139298def0db195741b21064687ca7920e0"
-    },
-    {
-      "id": "lammydeart:merge:18ffc2f7e8e996395e2fdac8c019fcb456c07491",
-      "slug": "lammydeart",
-      "projectName": "Lammy de Art",
-      "accent": "rose",
-      "kind": "merge",
-      "title": "fix: justify hero column edge-to-edge; drop the blended overlay above the nav",
-      "body": null,
-      "date": "2026-07-26T03:43:18Z",
-      "commit": {
-        "sha": "18ffc2f7e8e996395e2fdac8c019fcb456c07491",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
-      },
-      "url": "https://github.com/Oyebintan/Lammydeart/commit/18ffc2f7e8e996395e2fdac8c019fcb456c07491"
     },
     {
       "id": "lammydeart:repo_created:2026-07-18T20:53:28Z",
@@ -757,38 +788,6 @@
         "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.3.0-android-ci7"
       },
       "url": "https://github.com/Oyebintan/Siwes-Finder/releases/tag/v1.3.0-android-ci7"
-    },
-    {
-      "id": "siwes-finder:merge:cf63bf8fa1d75274aa40332d7deacab52f0fcaa0",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "merge",
-      "title": "Mobile: biometric/PIN unlock (v1.3.0)",
-      "body": null,
-      "date": "2026-07-17T20:01:07Z",
-      "commit": {
-        "sha": "cf63bf8fa1d75274aa40332d7deacab52f0fcaa0",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/cf63bf8fa1d75274aa40332d7deacab52f0fcaa0"
-      },
-      "prNumber": 51,
-      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/cf63bf8fa1d75274aa40332d7deacab52f0fcaa0"
-    },
-    {
-      "id": "siwes-finder:merge:94b601c2214abbb783d5d4c0861b3c37ec24e879",
-      "slug": "siwes-finder",
-      "projectName": "SIWES Finder",
-      "accent": "emerald",
-      "kind": "merge",
-      "title": "Mobile: version/OTA sync indicator + livelier onboarding",
-      "body": null,
-      "date": "2026-07-17T20:01:01Z",
-      "commit": {
-        "sha": "94b601c2214abbb783d5d4c0861b3c37ec24e879",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/94b601c2214abbb783d5d4c0861b3c37ec24e879"
-      },
-      "prNumber": 50,
-      "url": "https://github.com/Oyebintan/Siwes-Finder/commit/94b601c2214abbb783d5d4c0861b3c37ec24e879"
     },
     {
       "id": "siwes-finder:release:v1.2.0-android-ci6",
@@ -989,7 +988,7 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-08-02T06:26:04.700Z",
+    "generatedAt": "2026-08-03T06:51:14.481Z",
     "totals": {
       "repositories": 13,
       "projectsShipped": 6,
@@ -1000,51 +999,114 @@
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 1333879,
-        "share": 0.7150199435758421
+        "bytes": 1330769,
+        "share": 0.7142855609295805
       },
       {
         "name": "JavaScript",
-        "bytes": 177759,
-        "share": 0.09528692643792887
+        "bytes": 178433,
+        "share": 0.09577328258574391
       },
       {
         "name": "CSS",
         "bytes": 122834,
-        "share": 0.06584462289997443
+        "share": 0.06593071569237342
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.04458934352105828
+        "share": 0.04464764472965959
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.04036637643372091
+        "share": 0.04041915605205797
       },
       {
         "name": "HTML",
         "bytes": 69051,
-        "share": 0.037014483415553794
+        "share": 0.03706288038551278
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.001670318030482768
+        "share": 0.001672501995354996
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00019244036358899669
+        "share": 0.00019269198213493055
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.00001554532184980753
+        "share": 0.000015565647581930324
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Lammydeart",
+        "sha": "d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4",
+        "message": "fix: wide project cards span the full width on mobile, closing the grid gap",
+        "date": "2026-08-02T23:43:29Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "72170850bb17f76a15f13e57edae669916a9926c",
+        "message": "content: raise hero project and client counts",
+        "date": "2026-08-02T23:31:42Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/72170850bb17f76a15f13e57edae669916a9926c"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "6a5bb64487fed9c8d442e72c6796363534bee134",
+        "message": "refactor: restructure repo and write handover documentation",
+        "date": "2026-08-02T23:30:46Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/6a5bb64487fed9c8d442e72c6796363534bee134"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "c842abafadee7bb1a9eec74deddfe6dcd27e7c70",
+        "message": "Merge remote-tracking branch 'origin/main' into claude/super-admin-email-promotion-uajc07",
+        "date": "2026-08-02T23:27:26Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/c842abafadee7bb1a9eec74deddfe6dcd27e7c70"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "b97afbb81d0513b7877bed8b6541f6c0578af804",
+        "message": "docs: document hosting and park the mobile release workflows",
+        "date": "2026-08-02T23:21:57Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/b97afbb81d0513b7877bed8b6541f6c0578af804"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "46d13823c3e150be7741b52ffa7befa0fd94da65",
+        "message": "docs: flag the placeholder iOS app icon",
+        "date": "2026-08-02T23:18:11Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/46d13823c3e150be7741b52ffa7befa0fd94da65"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "d821e2debc4708c93228158b74fff72c901a4f7d",
+        "message": "docs: replace session logs with handover documentation",
+        "date": "2026-08-02T23:16:22Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/d821e2debc4708c93228158b74fff72c901a4f7d"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "0f64a3729ffc1062bbe5f70a43ab46098792d918",
+        "message": "docs: rewrite code comments in a conventional style",
+        "date": "2026-08-02T23:11:40Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/0f64a3729ffc1062bbe5f70a43ab46098792d918"
+      },
+      {
+        "repo": "Siwes-Finder",
+        "sha": "fb58828616c99e1f0507fabc49f665ac53f66d0c",
+        "message": "refactor: group source files by concern",
+        "date": "2026-08-02T23:05:25Z",
+        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/fb58828616c99e1f0507fabc49f665ac53f66d0c"
+      },
       {
         "repo": "Lammydeart",
         "sha": "3c161c228ec2a29e68ba77c049a52e22e17a9b64",
@@ -1065,72 +1127,10 @@
         "message": "perf: halve the image payload and stop lazy-loading the hero",
         "date": "2026-07-28T21:32:46Z",
         "url": "https://github.com/Oyebintan/Lammydeart/commit/5efe1ee01ee8e474b6474b2b172afc93f7d88b5c"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "da86b439644e792e184a3bf66d59e459e1bcc4d1",
-        "message": "feat: swap the Service Social Ads preview to Relish Locals",
-        "date": "2026-07-27T12:20:02Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/da86b439644e792e184a3bf66d59e459e1bcc4d1"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "8df77d6e2a9a042a5424800711f8a864e6d92956",
-        "message": "feat: replace project catalog with recent work, fix stale hero labels",
-        "date": "2026-07-27T12:13:20Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/8df77d6e2a9a042a5424800711f8a864e6d92956"
-      },
-      {
-        "repo": "BrandForge",
-        "sha": "89ad175b71c07485f28ed6da036e801bb22395a5",
-        "message": "Revert ambient background experiment, add floating brand elements",
-        "date": "2026-07-27T10:18:24Z",
-        "url": "https://github.com/Oyebintan/BrandForge/commit/89ad175b71c07485f28ed6da036e801bb22395a5"
-      },
-      {
-        "repo": "BrandForge",
-        "sha": "4042778fdb45deec0b413323943add59ca10a4cb",
-        "message": "Add Google sign-in and fill out the wide-viewport background",
-        "date": "2026-07-27T07:55:43Z",
-        "url": "https://github.com/Oyebintan/BrandForge/commit/4042778fdb45deec0b413323943add59ca10a4cb"
-      },
-      {
-        "repo": "BrandForge",
-        "sha": "5b53ebf6af7131ab2f68baf7e3e8617974fb2318",
-        "message": "Trim generated brand copy and palette duplicates for conciseness",
-        "date": "2026-07-27T07:26:19Z",
-        "url": "https://github.com/Oyebintan/BrandForge/commit/5b53ebf6af7131ab2f68baf7e3e8617974fb2318"
-      },
-      {
-        "repo": "BrandForge",
-        "sha": "9dda7033e99796023e56b2b2496911c2ceca65a3",
-        "message": "Build BrandForge AI: full-stack AI brand identity SaaS",
-        "date": "2026-07-26T10:02:16Z",
-        "url": "https://github.com/Oyebintan/BrandForge/commit/9dda7033e99796023e56b2b2496911c2ceca65a3"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "bd0dbda436962eda09ef43c25d2c3712e64cd6fc",
-        "message": "fix: hero frame motion loops properly instead of restarting",
-        "date": "2026-07-26T09:15:18Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/bd0dbda436962eda09ef43c25d2c3712e64cd6fc"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "64457ffacbed7b3ff403eb6b2344f31fdbadd541",
-        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
-        "date": "2026-07-26T06:40:04Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/64457ffacbed7b3ff403eb6b2344f31fdbadd541"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "99098939a5e6a9ddfe6ebd6e30268f961c5095a1",
-        "message": "chore: audit and clean up dead code, fix Google sign-in case bug",
-        "date": "2026-07-26T05:13:56Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/99098939a5e6a9ddfe6ebd6e30268f961c5095a1"
       }
     ],
     "contributions": {
+      "2026-08-02": 9,
       "2026-08-01": 2,
       "2026-07-28": 1,
       "2026-07-27": 5,
@@ -1154,20 +1154,19 @@
       "2025-07-01": 2,
       "2025-06-27": 1,
       "2025-06-26": 2,
-      "2025-06-25": 2,
-      "2025-06-24": 1,
+      "2025-06-25": 1,
+      "2026-07-18": 14,
+      "2026-07-17": 28,
+      "2026-07-16": 5,
+      "2026-07-14": 11,
+      "2026-07-13": 20,
+      "2026-07-12": 12,
       "2026-07-10": 2,
       "2026-04-11": 7,
       "2026-04-09": 1,
       "2026-03-23": 3,
       "2026-03-22": 3,
       "2026-02-22": 10,
-      "2026-07-18": 14,
-      "2026-07-17": 28,
-      "2026-07-16": 5,
-      "2026-07-14": 11,
-      "2026-07-13": 20,
-      "2026-07-12": 19,
       "2026-07-08": 2,
       "2026-07-07": 2,
       "2026-07-06": 1,
