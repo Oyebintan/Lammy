@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 /**
- * Accessibility gate. Fails the build on any serious or critical WCAG 2.1 AA
- * violation across every route at desktop and mobile widths.
+ * Front-end gate. Despite the name it covers four things, each added after the
+ * corresponding regression shipped:
+ *
+ *  - serious/critical WCAG 2.1 AA violations on every route, desktop and mobile
+ *  - horizontal overflow, which axe does not test and which made iOS zoom the
+ *    whole page out
+ *  - 24px minimum target size (WCAG 2.2), which axe does not test either
+ *  - the two rendering paths that fail silently: `.glass` losing its
+ *    `backdrop-filter`, and the Open Graph cards coming out blank
  *
  * BASE_URL defaults to a local `next start`. CHROMIUM_PATH overrides the
  * browser binary for environments that ship Chromium outside Playwright's
@@ -9,6 +16,7 @@
  */
 import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
+import sharp from 'sharp';
 
 const BASE_URL = process.env.BASE_URL ?? 'http://127.0.0.1:3000';
 const EXECUTABLE = process.env.CHROMIUM_PATH || undefined;
@@ -55,6 +63,51 @@ try {
       console.log(`✓ glass       backdrop-filter: ${applied}`);
     }
     await page.close();
+  }
+
+  // Open Graph cards render through Satori, which is not a browser and fails in
+  // ways the compiler cannot see — during implementation it produced a hard
+  // rectangle clipped to an element box, and then a card of white text on a
+  // white background, both from code that type-checked cleanly. A shared link
+  // is the first impression of this site, so a blank card is worth a red build.
+  for (const [label, path] of [
+    ['site', '/opengraph-image'],
+    ['project', '/work/siwes-finder/opengraph-image'],
+  ]) {
+    const res = await fetch(`${BASE_URL}${path}`);
+    const type = res.headers.get('content-type') ?? '';
+    const body = Buffer.from(await res.arrayBuffer());
+
+    const problems = [];
+    if (!res.ok) problems.push(`HTTP ${res.status}`);
+    if (!type.startsWith('image/png')) problems.push(`content-type ${type}`);
+    // A 1200x630 PNG carrying real type and a gradient is ~80KB. Anything an
+    // order of magnitude under that is a flat or near-empty frame.
+    if (body.length < 20_000) problems.push(`only ${(body.length / 1024).toFixed(1)}KB`);
+
+    if (!problems.length) {
+      const { mean, stdev } = (await sharp(body).greyscale().stats()).channels[0];
+
+      // Two different failures, two different signals.
+      //
+      // A flat frame — one colour, no type — has almost no spread. Healthy
+      // cards measure 40-42.
+      if (stdev < 10) problems.push(`flat image, stdev ${stdev.toFixed(1)}`);
+
+      // A washed-out frame is the one that actually shipped: `rgba()` gradient
+      // stops came out near-white, giving white text on a white background.
+      // That has plenty of spread, so only brightness catches it. These cards
+      // are near-black by design — measured 10.0, 11.7 and 17.3 across the
+      // three; the broken render measured 108.3.
+      if (mean > 60) problems.push(`washed out, mean brightness ${mean.toFixed(1)}`);
+    }
+
+    if (problems.length) {
+      failures += 1;
+      console.error(`\n✗ og ${label} (${path}) — ${problems.join(', ')}`);
+    } else {
+      console.log(`✓ og card     ${label.padEnd(8)} ${(body.length / 1024).toFixed(0)}KB`);
+    }
   }
 
   for (const viewport of VIEWPORTS) {
@@ -160,4 +213,6 @@ if (failures > 0) {
   console.error(`\n${failures} accessibility/layout failure(s).`);
   process.exit(1);
 }
-console.log('\n✓ No accessibility violations, no horizontal overflow, no undersized targets.');
+console.log(
+  '\n✓ No accessibility violations, no horizontal overflow, no undersized targets;\n  glass and Open Graph cards both render.',
+);

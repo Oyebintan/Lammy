@@ -155,10 +155,22 @@ export interface Activity {
   contributions: Record<string, number>;
 }
 
-export interface Manifest {
+/** A project as discovery writes it — before case study and screenshot are attached. */
+export type DiscoveredProject = Omit<Project, 'caseStudy' | 'screenshot'>;
+
+/**
+ * The shape of `data/manifest.json` as it sits on disk.
+ *
+ * `projects` is deliberately `DiscoveredProject[]` and not `Project[]`: the
+ * manifest has no case study and no screenshot, those are joined in at
+ * hydration by `lib/projects.ts`. An earlier version of this interface claimed
+ * `Project[]`, which was wrong, went unused, and would have broken hydration
+ * had anyone applied it.
+ */
+export interface RawManifest {
   generatedAt: string;
   owner: string;
-  projects: Project[];
+  projects: DiscoveredProject[];
   shipLog: ShipEvent[];
   activity: Activity;
 }

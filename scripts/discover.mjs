@@ -15,84 +15,21 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import {
+  DENY,
+  DENY_PATTERNS,
+  MIN_PUSHED_AT,
+  OVERRIDES,
+  OWNER,
+  VERCEL_TEAM,
+} from '../config/curation.mjs';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const DRY_RUN = process.argv.includes('--dry-run');
 
-const OWNER = 'Oyebintan';
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
-const VERCEL_TEAM = 'team_NbtaApRmcBWbfVVg7Eggo6sY';
-
-const DENY = new Set([
-  'skills-getting-started-with-github-copilot',
-  'Oyebintan', // profile README
-  'Lammy', // this site — a portfolio listing itself reads as a bug, not a feature
-  'Final-Year-Project-DL', // the repo's own description is "Project Duplicate"
-]);
-const DENY_PATTERNS = [/^skills-/i, /-test$/i, /^test-/i];
-const MIN_PUSHED_AT = '2024-01-01';
-
-/** Only renames, groups and annotates. Cannot introduce a project. */
-const OVERRIDES = {
-  'siwes-finder': {
-    name: 'SIWES Finder',
-    featured: true,
-    order: 1,
-    accent: 'emerald',
-    // Distribution repo for the SIWES Finder Android build. Its GitHub
-    // description ("Final Year project App") is stale and misattributes it.
-    mergeRepos: ['Android-APK'],
-  },
-  brandforge: { name: 'BrandForge', featured: true, order: 2, accent: 'amber' },
-  lammydeart: {
-    name: 'Lammy de Art',
-    featured: true,
-    order: 3,
-    accent: 'rose',
-    forceInclude: true,
-    // The Vercel project `thelammydeart` lists this domain and its latest
-    // production deployment is READY. The repo homepage field points at an
-    // address that project does not serve, so it is not trusted here.
-    liveUrlOverride: 'https://thelammydeart.vercel.app',
-  },
-  'email-spam-classifier': {
-    name: 'Hybrid Spam Classifier',
-    featured: true,
-    order: 4,
-    accent: 'violet',
-    // The demo front end is served from GitHub Pages on the Final-Year-Project
-    // repo, which is merged into this project below.
-    liveUrlOverride: 'https://oyebintan.github.io/Final-Year-Project/',
-    mergeRepos: ['Final-Year-Project'],
-  },
-  'career-recommender': {
-    name: 'Career Recommender',
-    order: 5,
-    accent: 'sky',
-    liveUrlOverride: 'https://lammyde-career-recommender.hf.space',
-  },
-  'teniola-graduation-tribute': {
-    name: 'OOU Times',
-    order: 6,
-    accent: 'lime',
-    liveUrlOverride: 'https://oyebintan.github.io/teniola-graduation-tribute/',
-  },
-};
-
-const TAGLINES = {
-  'siwes-finder':
-    'Industrial placement platform for Nigerian students — web app, Android app, and dashboards for students, employers and schools.',
-  brandforge:
-    'AI brand-identity studio. Five questions in, a complete brand kit out — strategy, voice, visual identity and an exportable PDF.',
-  lammydeart: 'Design portfolio and catalogue for brand identity, packaging and campaign work.',
-  'email-spam-classifier':
-    'Final year project. Two-stage feature selection feeding a deep neural network — 98.49% accuracy across 16,690 held-out emails.',
-  'career-recommender':
-    'Transparent, rule-based career matching across 42 careers with a personalised skill-gap analysis.',
-  'teniola-graduation-tribute':
-    'A newspaper-themed graduation tribute — broadsheet typography, a live ticker, and a compile-to-confetti colophon.',
-};
 
 const H = {
   Accept: 'application/vnd.github+json',
@@ -405,7 +342,7 @@ async function main() {
     projects.push({
       slug,
       name,
-      tagline: TAGLINES[slug] || repo.description || '',
+      tagline: override.tagline || repo.description || '',
       repos: repoRefs,
       primaryRepo: repoRefs[0],
       liveUrl,

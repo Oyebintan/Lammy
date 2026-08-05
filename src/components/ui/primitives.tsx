@@ -227,10 +227,6 @@ export function EvidenceChip({ evidence }: { evidence: Evidence }) {
 /* States                                                                      */
 /* -------------------------------------------------------------------------- */
 
-export function Skeleton({ className }: { className?: string }) {
-  return <div className={cn('shimmer rounded-md bg-bg-2', className)} />;
-}
-
 export function EmptyState({
   icon,
   title,

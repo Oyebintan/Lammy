@@ -1,17 +1,15 @@
 import manifestJson from '../../data/manifest.json';
 import screenshotsJson from '../../data/screenshots.json';
 import { caseStudies } from '../../content/case-studies';
-import type { Activity, CaseStudy, Project, Screenshot, ShipEvent } from './types';
-
-type DiscoveredProject = Omit<Project, 'caseStudy' | 'screenshot'>;
-
-interface RawManifest {
-  generatedAt: string;
-  owner: string;
-  projects: DiscoveredProject[];
-  shipLog: ShipEvent[];
-  activity: Activity;
-}
+import type {
+  Activity,
+  CaseStudy,
+  DiscoveredProject,
+  Project,
+  RawManifest,
+  Screenshot,
+  ShipEvent,
+} from './types';
 
 const manifest = manifestJson as unknown as RawManifest;
 const screenshots = screenshotsJson as unknown as Record<string, Screenshot>;
@@ -97,7 +95,7 @@ const CANONICAL_TECH: Record<string, string> = {
    names, and PLpgSQL is what GitHub calls Supabase's generated SQL. */
 const NOT_A_SKILL = new Set(['Procfile', 'Dockerfile', 'PLpgSQL']);
 
-export function canonicalTech(name: string): string {
+function canonicalTech(name: string): string {
   return CANONICAL_TECH[name] ?? name;
 }
 

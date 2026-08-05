@@ -1,15 +1,20 @@
 # Code audit — 2026-08-01
 
-Findings only. **Nothing here has been fixed.** Each item says what is wrong,
-the evidence, and the proposed change, so the work can be picked up piecemeal.
+Each item says what is wrong, the evidence, and the change. Ordered by
+consequence, not by effort.
 
-Ordered by consequence, not by effort.
+**Status:** A1–A7 and C3 are **done**. B1–B6, C1, C2, C4, C5 and D1–D3 are still
+open and unchanged. Completed items are kept rather than deleted, marked
+`✅ DONE`, because the reasoning is the useful part.
+
+One correction worth reading, recorded where it happened (C3): the check as
+first written **did not catch the bug it was written for**. See that section.
 
 ---
 
 ## A. Dead code
 
-### A1 — `config/projects.config.ts` is imported by nothing (101 lines)
+### A1 — `config/projects.config.ts` is imported by nothing (101 lines)  ✅ DONE
 
 The most dangerous item in the repo, because it does not look dead. It is a
 fully authored, carefully documented curation policy — owner, Vercel team ID,
@@ -34,16 +39,29 @@ no error, which is the worst possible failure mode.
 
 **Root cause:** `discover.mjs` is plain ESM and cannot import a `.ts` file.
 
-**Fix:** move the curation data to `config/curation.mjs` (plain JS, no types)
-and import it from both sides — `discover.mjs` directly, and a thin
-`config/curation.ts` that re-exports it with types for any future app-side use.
-Delete `projects.config.ts`. One source of truth, still typed where types are
-useful.
+**Root cause:** `discover.mjs` is plain ESM and cannot import a `.ts` file.
 
-**Risk:** low. Verify by running `npm run discover -- --dry-run` and diffing the
-manifest against the current one — it should be byte-identical.
+**Done:** curation lives in `config/curation.mjs` (plain ESM, imported directly
+by `discover.mjs`); `projects.config.ts` is deleted. The old `TAGLINES` map is
+folded into each override as `tagline`, removing a second map keyed by the same
+slugs. `VERCEL_TEAM` now falls back to `process.env.VERCEL_TEAM_ID`. No typed
+`.ts` re-export was added — nothing app-side consumes curation data, so one
+would have been exactly the dead export this item removes.
 
-### A2 — `Skeleton` and the `.shimmer` animation
+**The direction of the fix mattered more than expected.** The dead config was
+not merely unused, it was *stale*: it predated four `liveUrlOverride` entries,
+the `Android-APK` merge and two deny-list additions, and carried a typo plus a
+wrong `status: 'research'`. Adopting it as written — the obvious reading of
+"wire up the config that already exists" — would have dropped the production
+URL off four of six projects. `discover.mjs` was the source of truth; the new
+module took its values verbatim.
+
+**Verified:** a snapshot of the seven constants taken before the move
+deep-equals the new module afterwards, including every folded tagline; every
+tagline in the committed manifest still resolves identically; `data/` is
+untouched; and a `--dry-run` produces the same 6 projects and 43 ship events.
+
+### A2 — `Skeleton` and the `.shimmer` animation  ✅ DONE
 
 `src/components/ui/primitives.tsx:230` exports a `Skeleton` component that
 nothing renders. It is the only consumer of `.shimmer`
@@ -54,13 +72,13 @@ was speculative from the start.
 
 **Fix:** delete all three. ~20 lines.
 
-### A3 — `compactNumber` in `src/lib/utils.ts:13`
+### A3 — `compactNumber` in `src/lib/utils.ts:13`  ✅ DONE
 
 Never called. The counters render raw integers.
 
 **Fix:** delete.
 
-### A4 — `Manifest` interface in `src/lib/types.ts:158`
+### A4 — `Manifest` interface in `src/lib/types.ts:158`  ✅ DONE
 
 Never used. `src/lib/projects.ts:8` declares a **local `RawManifest`** with
 almost the same shape instead — the difference being that `RawManifest.projects`
@@ -74,19 +92,19 @@ So the exported type is both dead *and* incorrect, and a future edit that
 **Fix:** delete `Manifest`, move `RawManifest` into `types.ts` under that name,
 and import it in `projects.ts`.
 
-### A5 — `Site` type in `config/site.config.ts:25`
+### A5 — `Site` type in `config/site.config.ts:25`  ✅ DONE
 
 `export type Site = typeof site` — never referenced.
 
 **Fix:** delete, or keep only if something starts consuming it.
 
-### A6 — `canonicalTech` exported from `src/lib/projects.ts`
+### A6 — `canonicalTech` exported from `src/lib/projects.ts`  ✅ DONE
 
 Only `allTechnologies` is used externally; `canonicalTech` is called internally.
 
 **Fix:** drop the `export` keyword.
 
-### A7 — `axe-core` as a direct devDependency
+### A7 — `axe-core` as a direct devDependency  ✅ DONE
 
 `@axe-core/playwright` depends on it. No script imports `axe-core` directly.
 
@@ -193,18 +211,32 @@ configuration sitting in a script.
 **Fix:** folded into A1 — both belong in the shared curation module, with the
 team ID overridable by `VERCEL_TEAM_ID` in the environment.
 
-### C3 — No automated check that the OG images still render
+### C3 — No automated check that the OG images still render  ✅ DONE
 
 `opengraph-image.tsx` renders through Satori, which fails in ways TypeScript
 cannot catch — the three gradient attempts during implementation each compiled
 and produced a broken image. A future edit to `og.tsx` can silently regress the
 cards and nothing will fail.
 
-**Fix:** add a check to the UI audit script: fetch `/opengraph-image` and one
-project card, assert HTTP 200, `image/png`, non-trivial byte length, and that
-the decoded image is not a single flat colour (the same set-bit heuristic used
-for flat screenshots would do). Cheap, and it catches exactly the failure that
-already happened three times.
+**Done:** `scripts/a11y.mjs` now fetches `/opengraph-image` and one project card
+and asserts HTTP 200, `image/png`, a byte floor, and two image statistics.
+
+**The first version of this check was useless, and only testing it showed
+that.** As specified above it checked byte length and flatness — and when the
+`rgba()` gradient bug was deliberately reintroduced to test it, **the gate
+passed**. The washed-out card is a *full-size* PNG with *high* variance
+(123KB, stdev 101): white text on a white background is unreadable but not flat.
+Neither proposed signal could see it.
+
+The signal that separates them is mean brightness. These cards are near-black
+by design — the three healthy ones measure 10.0, 11.7 and 17.3; the broken
+render measures 108.3. So the check asserts `stdev > 10` (catches a genuinely
+blank frame) **and** `mean < 60` (catches the washed-out one), with more than
+3× headroom on both sides.
+
+Re-tested after the change: the reintroduced bug fails the gate with exit 1 and
+flags both cards. A guard that cannot fail is not a guard, and this one could
+not until it was tried.
 
 ### C4 — `error.tsx` logs to console in production
 
@@ -260,12 +292,13 @@ is upgraded — but the undeclared dependency should at least be in the README.
 
 ---
 
-## Suggested order
+## Remaining order
 
-1. **A1** — the config divergence, because it is a live trap.
-2. **A2–A7** — dead code, mechanical, makes everything else easier to read.
-3. **C3** — the OG render check, because that regression has happened before.
-4. **B1, B2** — script consolidation.
+1. ~~**A1** — the config divergence~~ ✅
+2. ~~**A2–A7** — dead code~~ ✅
+3. ~~**C3** — the OG render check~~ ✅
+4. **B1, B2** — script consolidation. `a11y.mjs` is now doing five jobs, not
+   four, so the case for splitting it is stronger than when this was written.
 5. **B3 / D2** — token unification.
 6. **C5** — unit tests for the pure logic.
 7. **B4** — splitting primitives; pure churn, do it last.
