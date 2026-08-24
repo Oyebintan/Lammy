@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T04:27:01.547Z",
+  "generatedAt": "2026-08-24T04:34:30.493Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -355,9 +355,82 @@
       "accent": "lime",
       "startedAt": "2026-06-28T08:41:33Z",
       "shippedAt": "2026-06-28T08:41:33Z"
+    },
+    {
+      "slug": "wedding-invitation",
+      "name": "wedding-invitation",
+      "tagline": "Premium animated wedding invitation website for Laura & Marco — Next.js 16, GSAP, Tailwind CSS 4",
+      "repos": [
+        {
+          "owner": "Oyebintan",
+          "name": "wedding-invitation",
+          "url": "https://github.com/Oyebintan/wedding-invitation",
+          "defaultBranch": "master",
+          "createdAt": "2026-08-23T16:18:58Z",
+          "pushedAt": "2026-08-23T16:50:39Z",
+          "languages": {
+            "TypeScript": 93891,
+            "CSS": 4654,
+            "JavaScript": 559
+          },
+          "stars": 0,
+          "topics": [],
+          "license": null
+        }
+      ],
+      "primaryRepo": {
+        "owner": "Oyebintan",
+        "name": "wedding-invitation",
+        "url": "https://github.com/Oyebintan/wedding-invitation",
+        "defaultBranch": "master",
+        "createdAt": "2026-08-23T16:18:58Z",
+        "pushedAt": "2026-08-23T16:50:39Z",
+        "languages": {
+          "TypeScript": 93891,
+          "CSS": 4654,
+          "JavaScript": 559
+        },
+        "stars": 0,
+        "topics": [],
+        "license": null
+      },
+      "liveUrl": null,
+      "liveUrlEvidence": null,
+      "status": "shipped",
+      "featured": false,
+      "order": 99,
+      "accent": "sky",
+      "startedAt": "2026-08-23T16:18:58Z",
+      "shippedAt": null
     }
   ],
   "shipLog": [
+    {
+      "id": "wedding-invitation:merge:aebf2203f12dcb9874b979706a46958032de94ea",
+      "slug": "wedding-invitation",
+      "projectName": "wedding-invitation",
+      "accent": "sky",
+      "kind": "merge",
+      "title": "feat: complete UI redesign with wedding elements, animations, new sections, and bug fixes",
+      "body": null,
+      "date": "2026-08-23T16:49:59Z",
+      "commit": {
+        "sha": "aebf2203f12dcb9874b979706a46958032de94ea",
+        "url": "https://github.com/Oyebintan/wedding-invitation/commit/aebf2203f12dcb9874b979706a46958032de94ea"
+      },
+      "url": "https://github.com/Oyebintan/wedding-invitation/commit/aebf2203f12dcb9874b979706a46958032de94ea"
+    },
+    {
+      "id": "wedding-invitation:repo_created:2026-08-23T16:18:58Z",
+      "slug": "wedding-invitation",
+      "projectName": "wedding-invitation",
+      "accent": "sky",
+      "kind": "repo_created",
+      "title": "wedding-invitation started",
+      "body": null,
+      "date": "2026-08-23T16:18:58Z",
+      "url": "https://github.com/Oyebintan/wedding-invitation"
+    },
     {
       "id": "lammydeart:merge:e11c778f9a1147624fd668268fdc474c9794814f",
       "slug": "lammydeart",
@@ -988,62 +1061,90 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-08-23T04:27:01.547Z",
+    "generatedAt": "2026-08-24T04:34:30.493Z",
     "totals": {
-      "repositories": 13,
-      "projectsShipped": 6,
+      "repositories": 14,
+      "projectsShipped": 7,
       "deployments": 6,
       "technologies": 9,
-      "commitsTracked": 256
+      "commitsTracked": 260
     },
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 1347462,
-        "share": 0.7107710566918543
+        "bytes": 1441353,
+        "share": 0.7225265291779601
       },
       {
         "name": "JavaScript",
-        "bytes": 193458,
-        "share": 0.10204692012501483
+        "bytes": 194017,
+        "share": 0.09725752790018843
       },
       {
         "name": "CSS",
-        "bytes": 122950,
-        "share": 0.06485474278329444
+        "bytes": 127604,
+        "share": 0.06396578439093298
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.04387756985929237
+        "share": 0.04169776713274339
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.039722013424588885
+        "share": 0.037748655432234234
       },
       {
         "name": "HTML",
         "bytes": 69915,
-        "share": 0.03687937650828817
+        "share": 0.03504723845406162
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0016436549696034603
+        "share": 0.0015619994997190306
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.0001893684640846092
+        "share": 0.00017996078960177535
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.00001529717397897957
+        "share": 0.000014537222558360682
       }
     ],
     "recentCommits": [
+      {
+        "repo": "wedding-invitation",
+        "sha": "aebf2203f12dcb9874b979706a46958032de94ea",
+        "message": "feat: complete UI redesign with wedding elements, animations, new sections, and bug fixes",
+        "date": "2026-08-23T16:49:59Z",
+        "url": "https://github.com/Oyebintan/wedding-invitation/commit/aebf2203f12dcb9874b979706a46958032de94ea"
+      },
+      {
+        "repo": "wedding-invitation",
+        "sha": "197ceb7c032ad21d51d9fa82ead2a9060ffb6928",
+        "message": "Add comprehensive handoff document for Claude",
+        "date": "2026-08-23T16:17:01Z",
+        "url": "https://github.com/Oyebintan/wedding-invitation/commit/197ceb7c032ad21d51d9fa82ead2a9060ffb6928"
+      },
+      {
+        "repo": "wedding-invitation",
+        "sha": "2ff51ff3d2cdee42014bace9efda41f1ffbe625c",
+        "message": "Hello",
+        "date": "2026-08-23T16:10:01Z",
+        "url": "https://github.com/Oyebintan/wedding-invitation/commit/2ff51ff3d2cdee42014bace9efda41f1ffbe625c"
+      },
+      {
+        "repo": "wedding-invitation",
+        "sha": "6917ce772235a935ee2e22cc024282a76900fdb0",
+        "message": "Initial commit from Create Next App",
+        "date": "2026-08-23T15:10:23Z",
+        "url": "https://github.com/Oyebintan/wedding-invitation/commit/6917ce772235a935ee2e22cc024282a76900fdb0"
+      },
       {
         "repo": "Lammydeart",
         "sha": "d820e00e8fa530560c05063ff26334fd5a7ca789",
@@ -1099,37 +1200,10 @@
         "message": "fix: five user-facing bugs found in the code audit",
         "date": "2026-08-04T19:34:02Z",
         "url": "https://github.com/Oyebintan/Siwes-Finder/commit/0ec46fa7c257bdf7d0e2367554042952cda7d91b"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "26bc8243e7f5b76280930851a0e3fbcc45ce804f",
-        "message": "docs: add CLAUDE.md as the entry point for a new session",
-        "date": "2026-08-04T19:25:39Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/26bc8243e7f5b76280930851a0e3fbcc45ce804f"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4",
-        "message": "fix: wide project cards span the full width on mobile, closing the grid gap",
-        "date": "2026-08-02T23:43:29Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/d74454c7f067f4f1d3ec7ba84e5f2ad946d0e5a4"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "72170850bb17f76a15f13e57edae669916a9926c",
-        "message": "content: raise hero project and client counts",
-        "date": "2026-08-02T23:31:42Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/72170850bb17f76a15f13e57edae669916a9926c"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "6a5bb64487fed9c8d442e72c6796363534bee134",
-        "message": "refactor: restructure repo and write handover documentation",
-        "date": "2026-08-02T23:30:46Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/6a5bb64487fed9c8d442e72c6796363534bee134"
       }
     ],
     "contributions": {
+      "2026-08-23": 4,
       "2026-08-05": 6,
       "2026-08-04": 3,
       "2026-08-02": 9,
