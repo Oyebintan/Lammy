@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T10:04:40.417Z",
+  "generatedAt": "2026-10-01T10:32:56.466Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -137,11 +137,11 @@
           "url": "https://github.com/Oyebintan/Lammydeart",
           "defaultBranch": "main",
           "createdAt": "2026-07-18T20:53:28Z",
-          "pushedAt": "2026-08-05T01:06:06Z",
+          "pushedAt": "2026-09-30T12:09:08Z",
           "languages": {
-            "JavaScript": 132345,
+            "JavaScript": 132162,
             "CSS": 5955,
-            "HTML": 3898
+            "HTML": 3904
           },
           "stars": 0,
           "topics": [],
@@ -154,11 +154,11 @@
         "url": "https://github.com/Oyebintan/Lammydeart",
         "defaultBranch": "main",
         "createdAt": "2026-07-18T20:53:28Z",
-        "pushedAt": "2026-08-05T01:06:06Z",
+        "pushedAt": "2026-09-30T12:09:08Z",
         "languages": {
-          "JavaScript": 132345,
+          "JavaScript": 132162,
           "CSS": 5955,
-          "HTML": 3898
+          "HTML": 3904
         },
         "stars": 0,
         "topics": [],
@@ -405,6 +405,21 @@
     }
   ],
   "shipLog": [
+    {
+      "id": "lammydeart:merge:1e9a53e2e97416c172787b9e958acd8f8da77d9a",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "feat: update portfolio name and social links",
+      "body": null,
+      "date": "2026-09-30T12:08:55Z",
+      "commit": {
+        "sha": "1e9a53e2e97416c172787b9e958acd8f8da77d9a",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/1e9a53e2e97416c172787b9e958acd8f8da77d9a"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/1e9a53e2e97416c172787b9e958acd8f8da77d9a"
+    },
     {
       "id": "wedding-invitation:merge:aebf2203f12dcb9874b979706a46958032de94ea",
       "slug": "wedding-invitation",
@@ -699,21 +714,6 @@
         "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
       },
       "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
-    },
-    {
-      "id": "lammydeart:merge:ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f",
-      "slug": "lammydeart",
-      "projectName": "Lammy de Art",
-      "accent": "rose",
-      "kind": "merge",
-      "title": "fix: audit pass — font inheritance, SPA links, dead project links, cleanup",
-      "body": null,
-      "date": "2026-07-26T04:44:58Z",
-      "commit": {
-        "sha": "ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f"
-      },
-      "url": "https://github.com/Oyebintan/Lammydeart/commit/ffdbdabfcc4c10b05ceddb4b40bd298fd9e0e84f"
     },
     {
       "id": "lammydeart:repo_created:2026-07-18T20:53:28Z",
@@ -1061,7 +1061,7 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-09-30T10:04:40.418Z",
+    "generatedAt": "2026-10-01T10:32:56.466Z",
     "totals": {
       "repositories": 14,
       "projectsShipped": 7,
@@ -1073,50 +1073,64 @@
       {
         "name": "TypeScript",
         "bytes": 1441353,
-        "share": 0.7225265291779601
+        "share": 0.7225906426122799
       },
       {
         "name": "JavaScript",
-        "bytes": 194017,
-        "share": 0.09725752790018843
+        "bytes": 193834,
+        "share": 0.09717441502540229
       },
       {
         "name": "CSS",
         "bytes": 127604,
-        "share": 0.06396578439093298
+        "share": 0.06397146039859589
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.04169776713274339
+        "share": 0.041701467186577246
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.037748655432234234
+        "share": 0.03775200506140767
       },
       {
         "name": "HTML",
-        "bytes": 69915,
-        "share": 0.03504723845406162
+        "bytes": 69921,
+        "share": 0.03505335634094717
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0015619994997190306
+        "share": 0.0015621381038370644
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00017996078960177535
+        "share": 0.00017997675843308927
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.000014537222558360682
+        "share": 0.000014538512519664592
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Lammydeart",
+        "sha": "1e9a53e2e97416c172787b9e958acd8f8da77d9a",
+        "message": "feat: update portfolio name and social links",
+        "date": "2026-09-30T12:08:55Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/1e9a53e2e97416c172787b9e958acd8f8da77d9a"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "f42ab3c63172d2dbadca315292dfe2ec1443faf0",
+        "message": "chore: update portfolio content and metadata",
+        "date": "2026-09-30T11:27:08Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/f42ab3c63172d2dbadca315292dfe2ec1443faf0"
+      },
       {
         "repo": "wedding-invitation",
         "sha": "aebf2203f12dcb9874b979706a46958032de94ea",
@@ -1186,24 +1200,10 @@
         "message": "fix: four real bugs, plus the dead code an audit turned up",
         "date": "2026-08-05T00:23:39Z",
         "url": "https://github.com/Oyebintan/Lammydeart/commit/2e41e866ab73058d2b453533f0f45d0186c198a9"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "3ccb2ef981c778d70e23b849b505f9f5e1c90752",
-        "message": "feat: let employers edit and close a posting",
-        "date": "2026-08-04T19:36:43Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/3ccb2ef981c778d70e23b849b505f9f5e1c90752"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "0ec46fa7c257bdf7d0e2367554042952cda7d91b",
-        "message": "fix: five user-facing bugs found in the code audit",
-        "date": "2026-08-04T19:34:02Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/0ec46fa7c257bdf7d0e2367554042952cda7d91b"
       }
     ],
     "contributions": {
-      "2026-08-23": 4,
+      "2026-09-30": 2,
       "2026-08-05": 6,
       "2026-08-04": 3,
       "2026-08-02": 9,
@@ -1225,8 +1225,8 @@
       "2025-12-19": 1,
       "2025-11-14": 5,
       "2025-11-13": 1,
-      "2025-08-18": 3,
-      "2025-07-05": 1,
+      "2025-08-18": 2,
+      "2026-08-23": 4,
       "2026-07-18": 14,
       "2026-07-17": 28,
       "2026-07-16": 5,
