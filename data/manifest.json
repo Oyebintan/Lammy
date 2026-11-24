@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:49:04.031Z",
+  "generatedAt": "2026-11-24T14:24:08.448Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -137,11 +137,11 @@
           "url": "https://github.com/Oyebintan/Lammydeart",
           "defaultBranch": "main",
           "createdAt": "2026-07-18T20:53:28Z",
-          "pushedAt": "2026-09-30T12:09:08Z",
+          "pushedAt": "2026-11-23T16:47:45Z",
           "languages": {
-            "JavaScript": 132162,
+            "JavaScript": 133356,
             "CSS": 5955,
-            "HTML": 3904
+            "HTML": 3898
           },
           "stars": 0,
           "topics": [],
@@ -154,11 +154,11 @@
         "url": "https://github.com/Oyebintan/Lammydeart",
         "defaultBranch": "main",
         "createdAt": "2026-07-18T20:53:28Z",
-        "pushedAt": "2026-09-30T12:09:08Z",
+        "pushedAt": "2026-11-23T16:47:45Z",
         "languages": {
-          "JavaScript": 132162,
+          "JavaScript": 133356,
           "CSS": 5955,
-          "HTML": 3904
+          "HTML": 3898
         },
         "stars": 0,
         "topics": [],
@@ -405,6 +405,21 @@
     }
   ],
   "shipLog": [
+    {
+      "id": "lammydeart:merge:64843519f0bb79577acaacbbb327e1dd58841ff0",
+      "slug": "lammydeart",
+      "projectName": "Lammy de Art",
+      "accent": "rose",
+      "kind": "merge",
+      "title": "fix: update footer year at new year",
+      "body": null,
+      "date": "2026-11-23T16:47:35Z",
+      "commit": {
+        "sha": "64843519f0bb79577acaacbbb327e1dd58841ff0",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/64843519f0bb79577acaacbbb327e1dd58841ff0"
+      },
+      "url": "https://github.com/Oyebintan/Lammydeart/commit/64843519f0bb79577acaacbbb327e1dd58841ff0"
+    },
     {
       "id": "lammydeart:merge:1e9a53e2e97416c172787b9e958acd8f8da77d9a",
       "slug": "lammydeart",
@@ -699,21 +714,6 @@
         "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
       },
       "url": "https://github.com/Oyebintan/Lammydeart/commit/5e78fe09b424a8584df2e67ef0ec993f6b1d27e6"
-    },
-    {
-      "id": "lammydeart:merge:92eb62253b72df3e3a5ba2bcc201463df28025fb",
-      "slug": "lammydeart",
-      "projectName": "Lammy de Art",
-      "accent": "rose",
-      "kind": "merge",
-      "title": "feat: real client names on reviews; lightbox backdrop actually reads as blurred",
-      "body": null,
-      "date": "2026-07-26T04:49:32Z",
-      "commit": {
-        "sha": "92eb62253b72df3e3a5ba2bcc201463df28025fb",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
-      },
-      "url": "https://github.com/Oyebintan/Lammydeart/commit/92eb62253b72df3e3a5ba2bcc201463df28025fb"
     },
     {
       "id": "lammydeart:repo_created:2026-07-18T20:53:28Z",
@@ -1061,7 +1061,7 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-11-23T13:49:04.031Z",
+    "generatedAt": "2026-11-24T14:24:08.448Z",
     "totals": {
       "repositories": 14,
       "projectsShipped": 7,
@@ -1073,50 +1073,71 @@
       {
         "name": "TypeScript",
         "bytes": 1441353,
-        "share": 0.7225906426122799
+        "share": 0.722160539909514
       },
       {
         "name": "JavaScript",
-        "bytes": 193834,
-        "share": 0.09717441502540229
+        "bytes": 195028,
+        "share": 0.09771480392205983
       },
       {
         "name": "CSS",
         "bytes": 127604,
-        "share": 0.06397146039859589
+        "share": 0.06393338310227517
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.041701467186577246
+        "share": 0.04167664550651589
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.03775200506140767
+        "share": 0.03772953419276613
       },
       {
         "name": "HTML",
-        "bytes": 69921,
-        "share": 0.03505335634094717
+        "bytes": 69915,
+        "share": 0.03502948559289339
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0015621381038370644
+        "share": 0.0015612082830216093
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00017997675843308927
+        "share": 0.00017986963209395306
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.000014538512519664592
+        "share": 0.000014529858859957213
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Lammydeart",
+        "sha": "64843519f0bb79577acaacbbb327e1dd58841ff0",
+        "message": "fix: update footer year at new year",
+        "date": "2026-11-23T16:47:35Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/64843519f0bb79577acaacbbb327e1dd58841ff0"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "bd3c3e292348ff42ddce8d2042761409bfaa0ea3",
+        "message": "Revert \"chore: update portfolio content and metadata\"",
+        "date": "2026-11-23T16:35:42Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/bd3c3e292348ff42ddce8d2042761409bfaa0ea3"
+      },
+      {
+        "repo": "Lammydeart",
+        "sha": "cbc220feb131090f8fef1a5e2a6679f552412711",
+        "message": "Revert \"feat: update portfolio name and social links\"",
+        "date": "2026-11-23T16:35:28Z",
+        "url": "https://github.com/Oyebintan/Lammydeart/commit/cbc220feb131090f8fef1a5e2a6679f552412711"
+      },
       {
         "repo": "Lammydeart",
         "sha": "1e9a53e2e97416c172787b9e958acd8f8da77d9a",
@@ -1179,30 +1200,10 @@
         "message": "refactor: shared UI primitives for the copy-pasted markup",
         "date": "2026-08-05T00:57:49Z",
         "url": "https://github.com/Oyebintan/Lammydeart/commit/44d7419cea112a01cacc4c0a73bfcd762e38ae4c"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "0709bbdfb6e51de1411bd2b36c91f75400159735",
-        "message": "refactor: one source for contact details, derive the category list",
-        "date": "2026-08-05T00:29:00Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/0709bbdfb6e51de1411bd2b36c91f75400159735"
-      },
-      {
-        "repo": "Siwes-Finder",
-        "sha": "d63ef572831ac9c27c6b31fac2fc8889c10066e2",
-        "message": "fix: five bugs from the code audit, plus employer job editing",
-        "date": "2026-08-05T00:28:54Z",
-        "url": "https://github.com/Oyebintan/Siwes-Finder/commit/d63ef572831ac9c27c6b31fac2fc8889c10066e2"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "2e41e866ab73058d2b453533f0f45d0186c198a9",
-        "message": "fix: four real bugs, plus the dead code an audit turned up",
-        "date": "2026-08-05T00:23:39Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/2e41e866ab73058d2b453533f0f45d0186c198a9"
       }
     ],
     "contributions": {
+      "2026-11-23": 3,
       "2026-09-30": 2,
       "2026-08-05": 6,
       "2026-08-04": 3,
@@ -1224,8 +1225,6 @@
       "2025-12-21": 5,
       "2025-12-19": 1,
       "2025-11-14": 5,
-      "2025-11-13": 1,
-      "2025-08-18": 2,
       "2026-08-23": 4,
       "2026-07-18": 14,
       "2026-07-17": 28,
