@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T13:17:40.880Z",
+  "generatedAt": "2026-11-28T12:32:50.379Z",
   "owner": "Oyebintan",
   "projects": [
     {
@@ -359,7 +359,7 @@
     {
       "slug": "teni-birthday",
       "name": "Teni-Birthday",
-      "tagline": "",
+      "tagline": "Birthday website for a friend ",
       "repos": [
         {
           "owner": "Oyebintan",
@@ -367,11 +367,11 @@
           "url": "https://github.com/Oyebintan/Teni-Birthday",
           "defaultBranch": "main",
           "createdAt": "2026-11-26T12:54:39Z",
-          "pushedAt": "2026-11-27T10:49:14Z",
+          "pushedAt": "2026-11-28T07:21:29Z",
           "languages": {
-            "CSS": 38650,
-            "JavaScript": 17313,
-            "HTML": 15149
+            "HTML": 46428,
+            "CSS": 38349,
+            "JavaScript": 17326
           },
           "stars": 0,
           "topics": [],
@@ -384,11 +384,11 @@
         "url": "https://github.com/Oyebintan/Teni-Birthday",
         "defaultBranch": "main",
         "createdAt": "2026-11-26T12:54:39Z",
-        "pushedAt": "2026-11-27T10:49:14Z",
+        "pushedAt": "2026-11-28T07:21:29Z",
         "languages": {
-          "CSS": 38650,
-          "JavaScript": 17313,
-          "HTML": 15149
+          "HTML": 46428,
+          "CSS": 38349,
+          "JavaScript": 17326
         },
         "stars": 0,
         "topics": [],
@@ -398,7 +398,7 @@
       "liveUrlEvidence": {
         "type": "repo-metadata",
         "repo": "Teni-Birthday",
-        "field": "github-pages",
+        "field": "homepage",
         "value": "https://oyebintan.github.io/Teni-Birthday/",
         "url": "https://github.com/Oyebintan/Teni-Birthday"
       },
@@ -1140,62 +1140,111 @@
     }
   ],
   "activity": {
-    "generatedAt": "2026-11-27T13:17:40.880Z",
+    "generatedAt": "2026-11-28T12:32:50.380Z",
     "totals": {
       "repositories": 15,
       "projectsShipped": 8,
       "deployments": 7,
       "technologies": 9,
-      "commitsTracked": 270
+      "commitsTracked": 277
     },
     "languages": [
       {
         "name": "TypeScript",
         "bytes": 1441353,
-        "share": 0.697315725867706
+        "share": 0.6870151616330464
       },
       {
         "name": "JavaScript",
-        "bytes": 212341,
-        "share": 0.10272897655638456
+        "bytes": 212354,
+        "share": 0.10121768757093089
       },
       {
         "name": "CSS",
-        "bytes": 166254,
-        "share": 0.0804324330600551
+        "bytes": 165953,
+        "share": 0.07910083589411404
       },
       {
         "name": "HTML",
-        "bytes": 85064,
-        "share": 0.041153322541536
+        "bytes": 116343,
+        "share": 0.05545442715967117
       },
       {
         "name": "Python",
         "bytes": 83182,
-        "share": 0.04024282511579573
+        "share": 0.039648368702850774
       },
       {
         "name": "Kotlin",
         "bytes": 75304,
-        "share": 0.036431508048855296
+        "share": 0.03589335140775017
       },
       {
         "name": "PLpgSQL",
         "bytes": 3116,
-        "share": 0.0015074973318845361
+        "share": 0.001485228978361701
       },
       {
         "name": "Dockerfile",
         "bytes": 359,
-        "share": 0.00017368149619593983
+        "share": 0.00017111591888056824
       },
       {
         "name": "Procfile",
         "bytes": 29,
-        "share": 0.000014029981586858649
+        "share": 0.000013822734394252031
       }
     ],
     "recentCommits": [
+      {
+        "repo": "Teni-Birthday",
+        "sha": "3c3cd86b18f428c58b23869e4ab2f44bdd7849d4",
+        "message": "Fix birthday music fade",
+        "date": "2026-11-28T07:21:19Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/3c3cd86b18f428c58b23869e4ab2f44bdd7849d4"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "c99d204b677f751a71b535adb5f6e57d0238b36a",
+        "message": "*",
+        "date": "2026-11-28T07:07:31Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/c99d204b677f751a71b535adb5f6e57d0238b36a"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "26adcd3163a9977398f6a3235daabee5d3f2ef08",
+        "message": "*",
+        "date": "2026-11-28T07:02:08Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/26adcd3163a9977398f6a3235daabee5d3f2ef08"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "7c747dd684e908ee59de37b9e8629c7ab2643463",
+        "message": "Restored static illistration",
+        "date": "2026-11-28T04:03:53Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/7c747dd684e908ee59de37b9e8629c7ab2643463"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "fe4928003cddd5667d15bd713dc6fbe779b7d4c0",
+        "message": "making sure everyting works properly",
+        "date": "2026-11-28T03:53:33Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/fe4928003cddd5667d15bd713dc6fbe779b7d4c0"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "a209d81d4f03c87def51ce04598d69279daab673",
+        "message": "*",
+        "date": "2026-11-27T21:52:48Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/a209d81d4f03c87def51ce04598d69279daab673"
+      },
+      {
+        "repo": "Teni-Birthday",
+        "sha": "05835cb2ca0cd3adb356969767e73808172f2222",
+        "message": "Fixed the illustrations motions that were not working",
+        "date": "2026-11-27T21:44:49Z",
+        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/05835cb2ca0cd3adb356969767e73808172f2222"
+      },
       {
         "repo": "Teni-Birthday",
         "sha": "2fd4649d2b2c21d534d6ee118df3b5cf8f359571",
@@ -1230,59 +1279,11 @@
         "message": "texts updated",
         "date": "2026-11-26T18:57:15Z",
         "url": "https://github.com/Oyebintan/Teni-Birthday/commit/5ca9869983aa54fa17ad1a3d40c4c35c640a743d"
-      },
-      {
-        "repo": "Teni-Birthday",
-        "sha": "25659b230e8d6f886b257511455566326ec73ebd",
-        "message": "Made music to play in the background",
-        "date": "2026-11-26T18:44:02Z",
-        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/25659b230e8d6f886b257511455566326ec73ebd"
-      },
-      {
-        "repo": "Teni-Birthday",
-        "sha": "00efa337e974eb0b6313f6c081a1a4cd4b30b11e",
-        "message": "Update README formatting and section headers",
-        "date": "2026-11-26T18:19:46Z",
-        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/00efa337e974eb0b6313f6c081a1a4cd4b30b11e"
-      },
-      {
-        "repo": "Teni-Birthday",
-        "sha": "6a57f1335af74f7e333521b9f60a07905b84d137",
-        "message": "Create README for birthday surprise project",
-        "date": "2026-11-26T18:18:53Z",
-        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/6a57f1335af74f7e333521b9f60a07905b84d137"
-      },
-      {
-        "repo": "Teni-Birthday",
-        "sha": "59055efd501878390038da9a07a10b85629842f0",
-        "message": "Music Added",
-        "date": "2026-11-26T16:24:03Z",
-        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/59055efd501878390038da9a07a10b85629842f0"
-      },
-      {
-        "repo": "Teni-Birthday",
-        "sha": "589fe66305a09b677127d5848c7ed3046324b322",
-        "message": "Initial commit",
-        "date": "2026-11-26T13:34:04Z",
-        "url": "https://github.com/Oyebintan/Teni-Birthday/commit/589fe66305a09b677127d5848c7ed3046324b322"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "64843519f0bb79577acaacbbb327e1dd58841ff0",
-        "message": "fix: update footer year at new year",
-        "date": "2026-11-23T16:47:35Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/64843519f0bb79577acaacbbb327e1dd58841ff0"
-      },
-      {
-        "repo": "Lammydeart",
-        "sha": "bd3c3e292348ff42ddce8d2042761409bfaa0ea3",
-        "message": "Revert \"chore: update portfolio content and metadata\"",
-        "date": "2026-11-23T16:35:42Z",
-        "url": "https://github.com/Oyebintan/Lammydeart/commit/bd3c3e292348ff42ddce8d2042761409bfaa0ea3"
       }
     ],
     "contributions": {
-      "2026-11-27": 2,
+      "2026-11-28": 5,
+      "2026-11-27": 4,
       "2026-11-26": 8,
       "2026-11-23": 3,
       "2026-09-30": 2,
